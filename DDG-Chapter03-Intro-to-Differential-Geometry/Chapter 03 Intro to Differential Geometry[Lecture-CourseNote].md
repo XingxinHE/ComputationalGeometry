@@ -11,7 +11,7 @@
 ___
 (*infml*) =How to *transform* vectors from one space to another. e.g.The $X$ in the left to $df(X)$ in the right.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets\image-20210128093534716.png" alt="image-20210128093534716" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets\image-20210128093534716.png" alt="image-20210128093534716" style="zoom:50%;" />
 
 The above transformation can be described via a map: 
 
@@ -122,7 +122,7 @@ The circular band on the left is ***orientable***.
 
 The Mobius band on the right is ***NOT orientable***.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128113047677.png" alt="image-20210128113047677" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128113047677.png" alt="image-20210128113047677" style="zoom:50%;" />
 
 
 
@@ -142,7 +142,7 @@ N: M \in S^2
 $$
 Because it must be `each point` and `unit normal`, the result can be illustrated as a sphere, $S^2$ as a subset of $\mathbb{R}^3$.包含所有从原点射出的单位向量 。
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128132251313.png" alt="image-20210128132251313" style="zoom: 50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128132251313.png" alt="image-20210128132251313" style="zoom: 50%;" />
 
 The Weingarten map is the differential of $N$ , denoted as $dN$, tell us the change in the normal direction as the point move from one to another. For example, we can look at the change in normal along a particular tangent direction $X$ by evaluating $dN(X)$. 从Strang的微积分Big Picture来看，分析曲面的法向变化就是在分析曲面的curvature.
 
@@ -176,7 +176,7 @@ So after the transformation to $\mathbb{R}^3$, the norm of any vector $X$ preser
 
 However, isometric parameterization does not always exist. Most of the time you need to stretch things out. e.g. The world map.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128140413851.png" alt="image-20210128140413851" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128140413851.png" alt="image-20210128140413851" style="zoom:50%;" />
 
 
 
@@ -200,7 +200,7 @@ $a$ is a positive function. In practice, $a$ is often replaced with $\mathbb{e}^
 
 $\langle \cdot ,\cdot \rangle$ is the usual inner product on $\mathbb{R}^2$
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128143048116.png" alt="image-20210128143048116" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128143048116.png" alt="image-20210128143048116" style="zoom:50%;" />
 
 Notice the surface can get :heavy_check_mark:***stretched out*** while the surface never gets :x:***sheared*** - for instance, orthogonal vectors$X, Y$ always stay orthogonal $df(X), df(Y)$.
 
@@ -224,11 +224,11 @@ Suppose a good old fashioned real-valued function $\phi (x)$ on the real line. W
 
 Normally thinking: $\phi '$  is the slope of $\phi (x)$ , the dashed line in the graph. 
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128153232333.png" alt="image-20210128153232333" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128153232333.png" alt="image-20210128153232333" style="zoom:50%;" />
 
 Geometrically thinking: $\phi$ stretches out the real line itself.  Imagine a curve of $y=x$ is evenly divided in Rhino, move the control point up and down. Then we will have the above graph. The change in node spacing is like this:
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128154111016.png" alt="image-20210128154111016" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128154111016.png" alt="image-20210128154111016" style="zoom:50%;" />
 
 derivative$\uparrow$ nodes space apart$\uparrow$
 
@@ -254,11 +254,11 @@ ___
 
 In last section, $\phi$ defines the $y$ value of $x$ in $\mathbb{R}$. So what about $\mathbb{R}^3$? Let's adopt the usual approach which is to draw a height function over the $\mathbb{R}^2$plane:
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128160744240.png" alt="image-20210128160744240" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128160744240.png" alt="image-20210128160744240" style="zoom:50%;" />
 
 Normally, we pick one vector$X$ to travel along the direction and document how quickly we travel uphill/downhill. This is called ***directional derivative***.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128161133692.png" alt="image-20210128161133692" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128161133692.png" alt="image-20210128161133692" style="zoom:50%;" />
 
 
 
@@ -266,7 +266,7 @@ Normally, we pick one vector$X$ to travel along the direction and document how q
 
 ## 3.3. The Geometry of Curves
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128181948501.png" alt="image-20210128181948501" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128181948501.png" alt="image-20210128181948501" style="zoom:50%;" />
 
 The function map one-dimensional curve from interval:
 
@@ -304,7 +304,7 @@ $$
 
 ___
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210128190647770.png" alt="image-20210128190647770" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210128190647770.png" alt="image-20210128190647770" style="zoom:50%;" />
 
 $\gamma$ : a unit-speed curve
 
@@ -351,11 +351,11 @@ $B = T \times N$ : this is *binormal*, the cyan arrow in the following graph
 
 $\therefore$ the $N$ of the following graph always points to the center of the circle because **it guides the tangent turn left... turn left... and turn left**.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
 
 Similarly:
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
 
 
 
@@ -419,7 +419,7 @@ Curve bending $\rightarrow$ curvature$(\kappa)\uparrow$ $\rightarrow$ circle gro
 $$
 \lim_{r\to0}\frac{1}{r}=\infty
 $$
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
 
 ***osculating circle***: the circle in the middle with a radius of $r=\frac{1}{k}$
 
@@ -435,7 +435,7 @@ $$
 
 The curvature of surface is quite interesting. Taking the beer as an example, the direction along vector $X_2$  is super flat while the direction along vector $X_1$ is curvy.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129102928582.png" alt="image-20210129102928582" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129102928582.png" alt="image-20210129102928582" style="zoom:50%;" />
 
 
 
@@ -445,7 +445,7 @@ The curvature of surface is quite interesting. Taking the beer as an example, th
 
 Construct a plane containing two vectors $df(X)$ and $N$. This plane intersects the surface in a curve:
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129120736799.png" alt="image-20210129120736799" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129120736799.png" alt="image-20210129120736799" style="zoom:50%;" />
 
 $df(X)$ : a unit tangent direction at some distinguished point on the surface, e.g. the peak of this surface
 
@@ -465,7 +465,7 @@ $\lvert df(X)\rvert^2$ : it normalizes any "stretching out" that occurs as we go
 
 ___
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129123637629.png" alt="image-20210129123637629" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129123637629.png" alt="image-20210129123637629" style="zoom:50%;" />
 
 $X_1,X_2$ : unit vectors which represent the *principle directions*
 
@@ -475,7 +475,7 @@ We can find the **maximum** and **minimum** normal curvatures( $\kappa_1,\kappa_
 
 e.g. Following picture, $\kappa_1$ has the maximum curvature and this direction is also kind of curvy, while $\kappa_2$ has the minimum curvature and this direction is flat.
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129130447795.png" alt="image-20210129130447795" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129130447795.png" alt="image-20210129130447795" style="zoom:50%;" />
 
 *shape operator* $S：TM\to TM$ which satisfies the following:
 $$
@@ -509,7 +509,7 @@ $\because X_1,X_2$ is *principal direction*, so we can express any tangent vecto
 $$
 \kappa_n(\Upsilon) = \kappa_1 \cos^2\theta + \kappa_2\sin^2\theta
 $$
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210205211858465.png" alt="image-20210205211858465" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210205211858465.png" alt="image-20210205211858465" style="zoom:50%;" />
 
 
 
@@ -552,7 +552,7 @@ ___
 
 Definition: Surfaces with zero Gaussian curvature are called *developable surfaces* because they can be “***developed***” or flattened out into the plane without any stretching or tearing. e.g. 你可以把一张A4纸卷成一个圆柱体
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129164124483.png" alt="image-20210129164124483" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129164124483.png" alt="image-20210129164124483" style="zoom:50%;" />
 
 
 
@@ -564,7 +564,7 @@ ___
 
 Definition: Surfaces with ***zero mean curvature*** are called *minimal surfaces* because they minimize surface area (with respect to certain constraints). 原来这就是“最小曲面”啊，百闻不如一见。
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129165043926.png" alt="image-20210129165043926" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129165043926.png" alt="image-20210129165043926" style="zoom:50%;" />
 
 Minimal surfaces tend to be *saddle-like*(又称为马鞍面) since principal curvatures have equal magnitude but opposite sign.(at the *saddle point*, therefore *mean curvature* = 0. Also, the *Gaussian curvature* of *minimal surfaces* is negative because the direction is opposite.
 
@@ -578,7 +578,7 @@ ___
 
 In this case: $\kappa_1=\kappa_2$ , and so principal directions are not uniquely defined—maximum (and minimum) curvature is achieved along any direction $X$. Any such point on a surface is called an *umbilic point*.（脐qí点，想象一下脐橙，上面是不是也有一个像下图的点）
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129172221482.png" alt="image-20210129172221482" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129172221482.png" alt="image-20210129172221482" style="zoom:50%;" />
 
 #### Planar Point
 
@@ -586,7 +586,7 @@ ___
 
 $K = \kappa_1\kappa_2 = 0$ , it is flat on any direction, therefore $\kappa_n=0$ , $K=0$
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210205184149463.png" alt="image-20210205184149463" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210205184149463.png" alt="image-20210205184149463" style="zoom:50%;" />
 
 
 
@@ -596,7 +596,7 @@ ___
 
 $K = \kappa_1\kappa_2 = 0$ , cyan direction is flat, therefore one of $\kappa=0, K=0$
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210205184244034.png" alt="image-20210205184244034" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210205184244034.png" alt="image-20210205184244034" style="zoom:50%;" />
 
 
 
@@ -606,7 +606,7 @@ ___
 
 $K = \kappa_1\kappa_2 < 0$ , they are with opposite curvature, therefore $K<0$
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210205184326307.png" alt="image-20210205184326307" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210205184326307.png" alt="image-20210205184326307" style="zoom:50%;" />
 
 
 
@@ -616,7 +616,7 @@ ___
 
 $K = \kappa_1\kappa_2 > 0$ , it is with max curvature on any direction, therefore $K>0$
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210205184410550.png" alt="image-20210205184410550" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210205184410550.png" alt="image-20210205184410550" style="zoom:50%;" />
 
 
 
@@ -652,7 +652,7 @@ I and II do not introduce any new geometric ideas—just another way of writing 
 
 ## 3.5. Geometry in Coordinates
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129192707823.png" alt="image-20210129192707823" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129192707823.png" alt="image-20210129192707823" style="zoom:50%;" />
 
 $M$ , you can see it as a set of infinite points(/a surface) in a 2D plane. $M\sub\mathbb{R}^2$
 
@@ -720,7 +720,7 @@ $$
 
 Taking the following chart as an example:
 
-<img src="Chapter 03 Intro to Differential Geometry[Lecture&CourseNote].assets/image-20210129211533361.png" alt="image-20210129211533361" style="zoom:50%;" />
+<img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/image-20210129211533361.png" alt="image-20210129211533361" style="zoom:50%;" />
 
 vector $u$ which is composed by $u^1,u^2$ is in the coordinate system$(x^1,x^2)$
 
