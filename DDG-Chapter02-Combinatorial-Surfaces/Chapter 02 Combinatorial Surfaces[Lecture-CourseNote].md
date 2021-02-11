@@ -373,20 +373,194 @@ Two distinct oriented simplices have the same ***relative orientation*** if the 
 
 
 
-2.3. Simplicial Surfaces 
+## 2.3. Simplicial Manifold
+
+ Intuitively, which one is manifold?
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211085127003.png" alt="image-20210211085127003" style="zoom:50%;" />
+
+Apparently, the left is manifold for it can be sampled any point with a cartesian x-y plane while the right can't. The "funky" and "chaotic" shape is not manifold.
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211085347556.png" alt="image-20210211085347556" style="zoom:50%;" />
+
+
+
+(fml.) **Definition**:  A simplicial ***k-complex*** is ***manifold*** if the *link* of every vertex looks like a *(k-1)*-dimensional sphere.
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211085859603.png" alt="image-20210211085859603" style="zoom:50%;" />
+
+How hard is it to check if a given simplicial complex is manifold?
+
+•(k=1) trivial—is it a loop?
+•(k=2) trivial—is each link a loop?
+•(k=3) is each link a 2-sphere? Just check if $V-E+F = 2$ (Euler’s formula)
+•(k=4) is each link a 3-sphere? …Well, it’s known to be in NP! [S. Schleimer 2004]
+
+
+
+### :star:Manifold Triangle Mesh (*k=2*)
+
+___
+
+Manifold triangle mesh is of enormous importance in geometric processing and modeling.
+
+(fml.)Requirements for a triangle mesh is manifold:
+
+| simplex            | requirement                                                  | Image                                                        |
+| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| edges              | every edge is contained in **exactly** **2** triangles       | <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211091304661.png" alt="image-20210211091304661" style="zoom:50%;" /> |
+| edges(boundary)    | just **1** along the **boundary**                            | <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211091329785.png" alt="image-20210211091329785" style="zoom:50%;" /> |
+| vertices           | every vertex is contained in **a single “loop”** of triangles | <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211091341963.png" alt="image-20210211091341963" style="zoom:50%;" /> |
+| vertices(boundary) | **a single “fan”** along the **boundary**                    | <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211091352783.png" alt="image-20210211091352783" style="zoom:50%;" /> |
+
+
+
+Non-manifold :
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211095856217.png" alt="image-20210211095856217" style="zoom:50%;" />
+
+
+
+#### Why Manifold Meshes would be preferable?
+
+___
+
+In a nutshell, it is neat ingredient for **datastructure** which is easy to process and comfortable to access its "neighbor".
 
 
 
 
 
-
-
-2.4. Adjacency Matrices 
-
+## 2.4. Topological Data Structures
 
 
 
+### 2.4.1. Adjacency List
+
+___
+
+Adjacency List only stores top-dimensional simplices. For example, it only stores information of faces from a tetrahedron..
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211102434629.png" alt="image-20210211102434629" style="zoom:33%;" />
+
+Pros: simple, small storage cost
+
+Cons: hard to iterate over, e.g. expensive to access its neighbors
 
 
 
-2.5. Halfedge Mesh
+### 2.4.2. Incidence Matrix
+
+___
+
+(fml.) Definition: Let $K$ be a simplicial complex, let $n_k$ denote the number of $k$-simplices in $K$, and suppose that for each $k$ we give the $k$-simplices a canonical ordering so that they can be specified via indices $1,...,n_k$. The $k$th *incidence matrix* is then a $n_{k+1}\times n_k$ matrix $E^k$ with entries $E^{k}_{ij}=1$ if the $j$th $k$-simplex is contained in the $i$th $(k+1)$-simplex, and $E^k_{ij}=0$ otherwise.
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211103600717.png" alt="image-20210211103600717" style="zoom:50%;" />
+
+(infml.) Explanation: 
+
+- the matrix from *left to right* is getting **higher dimension**, e.g. vertices->edges->faces.
+- the column of each matrix is the ingredient to construct row which is the upper dimension, e.g. columns of $E^0$ is vertices, row is edges
+- seeing from the column picture, if the ingredient is used, then it is positive(**1**), otherwise negative(**0**)
+
+
+
+### 2.4.3. Sparse Matrix
+
+___
+
+Incidence Matrix is not appropriate for a very large complex with a relatively small number of connections—**most** of the entries are going to be **zero**. In practice, it’s therefore essential to use a **sparse matrix**, i.e., a data structure that efficiently stores only the location and value of nonzero entries.
+
+Taking the following matrix as an example:
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211112658410.png" alt="image-20210211112658410" style="zoom:50%;" />
+
+#### Associative Array
+
+(row, col) to value
+
+:heavy_check_mark: easy to find and set entries (e.g. hash table)
+
+:x: harder to do matrix operation (e.g. multiply)
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211112644158.png" alt="image-20210211112644158" style="zoom:50%;" />
+
+#### Array of linked lists
+
+:heavy_check_mark: conceptually simple
+
+:x: slow access time; incoherent memory access
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211112849197.png" alt="image-20210211112849197" style="zoom:50%;" />
+
+#### Compress column format
+
+:heavy_check_mark: fast for actual matrix operation (e.g. multiply)
+
+:x: hard to add/remove entries
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211113027967.png" alt="image-20210211113027967" style="zoom:50%;" />
+
+In practice, build "raw" list of entries first, then convert to final (e.g., compressed) data structure.
+
+
+
+### 2.4.4. Signed Incidence Matrix
+
+___
+
+(fml.)Definition: A *signed incidence matrix* is an incidence matrix where the sign of each nonzero entry is determined by the relative orientation of the two simplices corresponding to that row/column.
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211105539406.png" alt="image-20210211105539406" style="zoom:50%;" />
+
+
+
+(infml.) Explanation: 
+
+- in the dimension of vertices-edges, `-1 = start point` 	`1 = end point`
+- in the dimension of edges-faces, `-1 = reverse orientation`   `1 = the orientation`
+
+
+
+### 2.4.5. Half Edge Mesh
+
+___
+
+(infml.) Each edge gets split into two *oppositely-oriented* **half edges**.
+
+![image-20210211114819727](Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211114819727.png)
+
+
+
+
+
+(fml.) Definition: Let $H$ be any set with an even number of elements, let $\rho:H\rightarrow H$ be any permutation of $H$, and let $\eta:H\rightarrow H$ be an involution without any fixed points, i.e., $\eta\circ\eta=$identity and $\eta(h)\neq h$ for any $h\in H$. Then $(H,\rho,\eta)$ is a ***half edge mesh***, the elements of $H$ are called ***half edges***, the orbits of $\eta$ are ***edges***, the orbits of $\rho$ are ***faces***, and the orbits of $\eta\circ\rho$ are ***vertices***.
+
+![image-20210211120014221](Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211120014221.png)
+
+(infml.) Explanation: 
+
+$\rho$ = "next" , along the orientation, the "next halfedge" of current halfedge
+
+$\eta$ = "twin" , the "twin halfedge" sticking in the same edge with opposite orientation
+
+
+
+the orbits of $\eta$ are ***edges***:
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/orbits_edges.gif" alt="orbits_edges" style="zoom:67%;" />
+
+
+
+the orbits of $\rho$ are ***faces***:
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/orbits_faces.gif" alt="orbits_faces" style="zoom:67%;" />
+
+
+
+the orbits of $\eta\circ\rho$ are ***vertices***:
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/orbits_vertices.gif" alt="orbits_vertices" style="zoom:67%;" />
+
+
+
