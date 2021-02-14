@@ -1,4 +1,4 @@
-# 2Chapter 02 Combinatorial Surfaces
+# Chapter 02 Combinatorial Surfaces
 
 
 
@@ -34,7 +34,15 @@ ___
 
 
 
+### Topological Disk
 
+___
+
+A topological disk is **any shape** you can get **by deforming the unit disk** in the plane **without** *tearing* it, *puncturing* it, or *gluing* its edges together. Some examples of shapes that are disks include a flag, a leaf. Some examples of shapes that are not disks include a circle (i.e., *a disk without its interior*), a *hollow* sphere, a *donut*, a fidget *spinner*, and a *teapot*.
+
+The objects in the first row are manifolds while the second row aren't.
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210214090549801.png" alt="image-20210214090549801" style="zoom:50%;" />
 
 
 
@@ -251,6 +259,16 @@ $S$ is a given set of simplices.
 
 
 
+***Boundary*** $bd(K')$ is a pure $k$-subcomplex $K' \subseteq K$. The boundary is the closure of the set of all simplices $\sigma$ that are proper faces of exactly one simplex of $K'$.
+
+***Interior*** $int(K') = K' \backslash  bd(K')$ is then everything but the boundary (as pictured above)
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210214094326255.png" alt="image-20210214094326255" style="zoom:50%;" />
+
+You may wonder what is the difference between ***Link*** and ***Boundary***, ***Closure*** and ***Interior***? Due to their similarity...
+
+:warning: The difference is that ***Link*** and ***Closure*** are referring to **simplex** while ***Link*** and ***Interior*** are referring to **Complex/Subcomplex**.
+
 
 
 ### Vertices, Edges, and Faces
@@ -370,6 +388,8 @@ Two distinct oriented simplices have the same ***relative orientation*** if the 
 <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210210225920570.png" alt="image-20210210225920570" style="zoom:50%;" />
 
 共面的边方向相冲，则为relative orientation.
+
+:warning: The left is referred as **consistent orientation** while the right is referred as **inconsistent orientation**.
 
 
 
