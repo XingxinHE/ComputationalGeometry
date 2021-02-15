@@ -9,7 +9,7 @@
 
 #### What is *differential* ?
 ___
-(*infml*) =How to *transform* vectors from one space to another. e.g.The $X$ in the left to $df(X)$ in the right.
+(*infml*) =How to *transform* vectors from one space to another. e.g.The $X$ in the left to $df(X)$ in the right by stretching or "pushing" forward.
 
 <img src="Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets\image-20210128093534716.png" alt="image-20210128093534716" style="zoom:50%;" />
 

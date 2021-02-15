@@ -40,7 +40,7 @@ ___
 
 A topological disk is **any shape** you can get **by deforming the unit disk** in the plane **without** *tearing* it, *puncturing* it, or *gluing* its edges together. Some examples of shapes that are disks include a flag, a leaf. Some examples of shapes that are not disks include a circle (i.e., *a disk without its interior*), a *hollow* sphere, a *donut*, a fidget *spinner*, and a *teapot*.
 
-The objects in the first row are manifolds while the second row aren't.
+The objects in the first row **are** manifolds while the second row **aren't**.
 
 <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210214090549801.png" alt="image-20210214090549801" style="zoom:50%;" />
 
@@ -293,6 +293,14 @@ Most of the time, **1-complexes** and **2-complexes** are 2 entities been resear
 
 ___
 
+***Oriented simplicial complex*** is an abstract simplicial complex where we can assign a **consistent orientation** to every triangle.
+
+***Unorientable simplicial complex*** is the opposite. The famous Möbius band is one of the cases:
+
+<img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210215164317369.png" alt="image-20210215164317369" style="zoom:50%;" />
+
+
+
 #### Orientation of a 1-Simplex
 
 ___
@@ -393,6 +401,10 @@ Two distinct oriented simplices have the same ***relative orientation*** if the 
 
 
 
+
+
+
+
 ## 2.3. Simplicial Manifold
 
  Intuitively, which one is manifold?
@@ -435,7 +447,11 @@ Manifold triangle mesh is of enormous importance in geometric processing and mod
 
 
 
-Non-manifold :
+### Nonmanifold
+
+___
+
+We will henceforth call such configurations **nonmanifold**: meeting at an edge, or multiple “cones” of vertices meeting at a vertex.
 
 <img src="Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/image-20210211095856217.png" alt="image-20210211095856217" style="zoom:50%;" />
 
