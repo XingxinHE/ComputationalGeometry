@@ -157,6 +157,25 @@ In $\mathbb{R}^3$, there are 2 opposite orientations corresponding to "**inward*
 
 
 
+####  :bangbang: RULES OF ORIENTATION SWITCHES
+
+Any **even permutation** of vectors **preserves** orientation!!!
+
+Any **odd permutation** of vectors **reverses** orientation!!!
+
+In CHN, we said"负负得正"
+
+For example:
+
+$u\land v\land w = v\land w \land u = w\land u \land v$ , 可以看成把$v,w$两个都挪到$u$前面
+
+$w\land v\land u = v\land u\land w = u\land w\land v$
+
+
+
+
+
+
 #### Wedge product - degeneracy
 
 $u\land u=0$ , geometrically, spans a region of *zero area*.
@@ -189,9 +208,7 @@ $u\land v_1 + u\land v_2 = u\land(v_1+v_2)$
 
 
 
-### 4.1.3. Rules of Wedge Product
-
-___
+#### Rules of Wedge Product
 
 For any collection of vectors $u, v, w \in \mathbb{R}^n$ and scalars $a, b \in\mathbb{R}$ we have
 
@@ -204,13 +221,145 @@ Except the first one which illustrates the orientation, others can all be interp
 
 
 
-## 4.2. Examples of Wedge and Star in $\mathbb{R}^n$ 
+### 4.1.3. The Hodge Star
+
+___
+
+Why use "Hodge Star"? The ideology of "**complement**".
+
+- Question - “*what foods do you like?*”
+- Answer - (*positive* **all**) "*I like pizza, and apples, and hamburgers, and sushi, and fesenjan, and chicken & waffles, and . . .*"
+- Answer - (*negative* **complement**) "*I like everything except for natto and doogh*"
+
+
+
+#### Orthogonal Complement - "complement" in Linear Algebra
+
+Definition: Let $U\subseteq V$ be a linear subspace of a vector space $V$ with an inner product $\langle\cdot,\cdot\rangle$. The *orthogonal complement* of $U$ is the collection of vectors denoted as $U^\bot$.
+
+$$
+U^{\bot}:=\{v\in V | \langle u,v\rangle=0, \forall u\in U\}
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210217090707345.png" alt="image-20210217090707345" style="zoom:50%;" />
+
+
+
+#### Hodge Star - "complement" in Exterior Algebra
+
+In exterior algebra, the ***Hodge star***$\star$(pronounced “star”) provides a sort of *orthogonal complement* for $k$-vectors. If we have a $k$-vector $v$ in $\mathbb{R}^n$, then $\star v$ will be an $(n−k)$-vector that is in some sense “complementary.” 
+
+
+
+The analogy can be summarized:
+
+|                          | Linear Algebra                                               | Exterior Algebra                                             |
+| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| image                    | <img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210217091633014.png" alt="image-20210217091633014" style="zoom:50%;" /> | <img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210217091714194.png" alt="image-20210217091714194" style="zoom:50%;" /> |
+| ideology of "complement" | Orthogonal Complement                                        | Hodge Star                                                   |
+| orientation & magnitude  | :x:                                                          | :heavy_check_mark:                                           |
+
+
+
+#### Hodge Star - orientation & magnitude
+
+Then the question shifts to how to determine these two?
+
+orientation: 
+
+- right hand rule, we asked: det$(u,v,\star(u\land v))>0$ , 
+- i.e. the determinant of the two vectors comprising u ∧ v and the third vector given by its Hodge star should be positive
+
+magnitude: 
+
+- suppose there are 2 orthonormal vectors $u_1,u_2$ , 
+- we asked: det$(u_1.u_2,\star(u_1\land u_2))=1$
+
+General rules:
+
+- orthonormal basis for $\mathbb{R}^n$ : $e_1,...,e_n$ 
+- $k$ orthonormal vectors : $u_1,...,u_k$ 
+- Relationship is that: $(u_1\land \cdot\cdot\cdot\land u_k)\land\star(u_1\land \cdot\cdot\cdot\land u_k)=e_1\land \cdot\cdot\cdot\land e_n$
+- Conclusion of this relationship: their wedge and their hodge star must be the base of the whole space.
+
+
+
+
+
+#### Hodge Star - 2D
+
+Since  we are talking in $\mathbb{R}^2$, then we have 1-vector $u$. Hodge star $\star u$ will be $(n-k)=2-1=1$-vector. Therefore, it merely is 90 degree rotation.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210217092117200.png" alt="image-20210217092117200" style="zoom:30%;" />
 
 
 
 
 
 
+
+### 4.1.4. Examples of Wedge and Star in $\mathbb{R}^n$ 
+
+___
+
+Example 1. Let $u:=e_1+2e_2$ and $v:=e_1+e_2-e_3$ be 1-vectors in $\mathbb{R}^3$. Then their wedge product is given by
+$$
+\begin{align}
+u\land v &= (e_1+2e_2)\land(e_1+e_2-e_3)\\
+&= e_1\land(e_1+e_2-e_3) + 2e_2\land(e_1+e_2-e_3)\\
+&= \cancelto{0}{e_1\land e_1} + e_1\land e_2-e_1\land e_3+2e_2\land e_1+\cancelto{0}{2e_2\land e_2}-2e_2\land e_3\\
+&=e_1\land e_2-2e_1\land e_2-e_1\land e_3-2e_2\land e_3\\
+&=-e_1\land e_2-e_1\land e_3-2e_2\land e_3
+\end{align}
+$$
+*key notes: $e_1\land e_1=0, \space 2e_2\land e_1=-2e_1\land e_2$
+
+
+
+Example 2. Let $w:=-e_1\land e_2-e_1\land e_3-2e_2\land e_3$ be the 2-vector from the previous example. Its Hodge star is given by:
+$$
+\begin{align}
+\star w &= \star(-e_1\land e_2-e_1\land e_3-2e_2\land e_3)\\
+&=-\star(e_1\land e_2)-\star(e_1\land e_3)-2\star(e_2\land e_3)\\
+&=-e_3-(-e_2)-2e_1\\
+&=-2e_1+e_2-e_3
+\end{align}
+$$
+*key notes: right hand rule, $\star(e_1\land e_3)=-e_2$
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210217105816252.png" alt="image-20210217105816252" style="zoom:50%;" />
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210217110304240.png" alt="image-20210217110304240" style="zoom:50%;" />
+
+
+
+Example 3. Let $u:=e_1+e_2+e_3, v:=e_1+2e_2+3e_3, w:=e_1-e_3$ be 1-vectors in $\mathbb{R}^3$, compute $u\land v\land w$ . Due to the associativity, the process can be divided into $u\land(v\land w)$:
+
+$$
+\begin{align}
+v\land w &= (e_1+2e_2+3e_3)\land(e_1-e_3)\\
+&=\cancelto{0}{e_1\land e_1}-e_1\land e_3+2e_2\land e_1-2e_2\land e_3+3e_3\land e_1 -3\cancelto{0}{e_3\land e_3}\\
+&=-2e_1\land e_2-4e_1\land e_3 -2e_2\land e_3\\
+\\
+u\land(v\land w)&=(e_1+e_2+e_3)\land (-2e_1\land e_2-4e_1\land e_3 -2e_2\land e_3)\\
+&=0
+\end{align}
+$$
+
+*key notes: any term involving multiple copies of the same basis 1-vector (e.g., $e_1\land e_1\land e_2$) would have zero volume
+
+
+
+### 4.1.5. Coordinate Representation
+
+___
+
+#### Basis
+
+Definition: Let $V$ be a vector space. A collection of vectors is *linearly independent* if no vector in the collection can be expressed as a linear combination of the others. A linearly independent collection of vectors $\{e_1,...,e_n\}$ is a ***basis*** for $V$ if every vector $v\in V$ can be expressed as:
+$$
+v=v_1e_1+\cdot\cdot\cdot+v_ne_n
+$$
+for some collection of coefficients $v_1,...,v_n\in\mathbb{R}$ , i.e., if every vector can be uniquely expressed as a linear combination of the *basis vector* $e_i$.
 
 
 
