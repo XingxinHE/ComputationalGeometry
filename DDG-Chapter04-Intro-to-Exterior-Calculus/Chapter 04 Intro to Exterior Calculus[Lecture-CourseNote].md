@@ -359,19 +359,147 @@ Definition: Let $V$ be a vector space. A collection of vectors is *linearly inde
 $$
 v=v_1e_1+\cdot\cdot\cdot+v_ne_n
 $$
-for some collection of coefficients $v_1,...,v_n\in\mathbb{R}$ , i.e., if every vector can be uniquely expressed as a linear combination of the *basis vector* $e_i$.
+for some collection of coefficients $v_1,...,v_n\in\mathbb{R}$ , i.e., if every vector can be uniquely expressed as a linear combination of the *basis vector* $e_i$. In this case, we say that $V$ is **finite dimensional**, with dimension *n*.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218175753880.png" alt="image-20210218175753880" style="zoom:33%;" />
+
+
+
+#### Basic $k$-Vectors - visualized
+
+Reminds once again: $k$-Vectors is a **volume**!! Therefore, **basis $k$-vector** is also a **volume**!!
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218175859849.png" alt="image-20210218175859849" style="zoom:50%;" />
+
+
+
+#### Basic $k$-Vectors - amounts
+
+Consider $V=\mathbb{R}^4$ with basis $\{e_1,e_2,e_3,e_4\}$
+
+**How many basis 2-vectors?
+
+​	$e_1\land e_2, e_1\land e_3,e_2\land e_3, e_1\land e_4, e_2\land e_4, e_3\land e_4$
+
+**How many basis 3-vectors?
+
+​	$e_1\land e_2\land e_3, e_1\land e_2\land e_4, e_1\land e_3\land e_4,e_2\land e_3\land e_4$
+
+**How many basis 4-vectors?
+
+​	$e_1\land e_2\land e_3\land e_4$
+
+The **pattern** is this:
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218180721431.png" alt="image-20210218180721431" style="zoom:40%;" />
+
+
+
+#### Basic $k$-Vectors - Hodge Star
+
+Consider $V=\mathbb{R}^3$ with orthogonal basis $\{e_1,e_2,e_3\}$
+
+Given $\alpha:=e_2$, find $\star\alpha$ such that det$(e_2\land\star e_2)=1$
+
+Must have $\star\alpha=e_3\land e_1$, 
+
+therefore $e_2\land\star e_2=e_2\land e_3\land e_1$,  which is the even permutation of $e_1,e_2,e_3$ , :bangbang: determinant是1
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218215919621.png" alt="image-20210218215919621" style="zoom:60%;" />
 
 
 
 
 
-## 4.3. Vectors and 1-Forms
+
+
+## 4.2. $k$-Vectors and $k$-Forms
+
+:bangbang:  In a nutshell, $k$-Forms are to **measure** $k$-Vectors.
+
+wedging together vectors yields  =>  $k$-vectors
+
+wedging together covectors yields  =>  $k$-forms
 
 
 
+### 4.2.1. Vector-Covector Duality
+
+___
+
+***Duality*** is a pervasive idea in mathematics - two sets of objects that are in ***one-to-one correspondence***, but play complementary roles. Very much similar to Ancient Chinese philosophy - Yin-Yang阴阳。
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218221855693.png" alt="image-20210218221855693" style="zoom:50%;" />
 
 
 
+#### Duality in differential geometry and exterior calculus
+
+<span style="color:blue">vectors</span> $u$ - vector of any magnitude, objects that get **measured** , 
+
+<span style="color:red">covectors</span> $\alpha$ - covector with unit magnitude, objects that **measure**
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218222929918.png" alt="image-20210218222929918" style="zoom:67%;" />
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218223459465.png" alt="image-20210218223459465" style="zoom:43%;" />
+
+The notation $\alpha(u)$ here is meant to emphasize the idea that $\alpha$ is a **function**: in particular, it’s **a linear function** that *eats a vector and produces a scalar*. Any such function is called a **1-form** (also known as a **covector**).
+
+
+
+#### Dual Space & Covectors
+
+Definition: Let $V$ be any real vector space. Its **dual space** $V^*$ is the collection of all **linear functions** $\alpha:V\to\mathbb{R}$ together with the operations of ***addition*** and ***scalar multiplication***:
+$$
+(\alpha+\beta)(u):=\alpha(u)+\beta(u)\\
+(c\alpha)(u):=c(\alpha(u))
+$$
+for all $\alpha,\beta\in V^*, u\in V,$ and $c\in\mathbb{R}$
+
+
+
+Definition: An element of a dual vector space is called a ***dual vector*** or ***covector***.
+
+
+
+#### Covectors - Example in $\mathbb{R}^3$
+
+linear map $f$ , vectors $u,v$ , scalars $a$ . Then we have:
+
+$f(u+v)=f(u)+f(v)$	and	$f(au)=af(u)$
+
+**Q**: What’s an example of a linear map from $\mathbb{R}^3$ to $\mathbb{R}$?
+
+​	A: One good example is to express vectors in coordinates $u = (x,y,z)$. One of many example could be $f (x,y,z) = x + 2y + 3z$
+
+**Q**: What are all the possibilities?
+
+​	A: It can be summarized as: $f(x,y,z) = ax + by + cz$  for constants $a,b,c$
+
+**Conclusion**: In Euclidean $\mathbb{R}^3$, a covector looks like just another 3-vector!
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218231219069.png" alt="image-20210218231219069" style="zoom:50%;" />
+
+
+
+#### Covectors - Example in Functions
+
+Let $V$ be the set of integrable functions $f:[0,1]\to\mathbb{R}$ a.k.a. the blue,red, and green curve.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210218233155643.png" alt="image-20210218233155643" style="zoom:50%;" />
+
+We say **covector** eats a vector and **produce** a **scalar**. So what is the covector of above 3 curves??:thinking:
+
+The integral!!
+$$
+\phi:V\to\mathbb{R}; f\mapsto \smallint_0^1f(x)dx\\
+\delta:V\to\mathbb{R}; f\mapsto f(0)
+$$
+How to interpret above equation?
+
+一个函数叫$\phi$，它将$V$变成$\mathbb{R}$, 本质是将函数$f$ 影射到函数$f$ 的0-1区间的积分
+
+一个函数叫$\delta$， 它将$V$变成$\mathbb{R}$, 本质是将函数$f$ 影射到函数$f(0)$
 
 
 
