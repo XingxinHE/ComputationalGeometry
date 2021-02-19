@@ -568,8 +568,6 @@ $k$-form will measure $k$-vectors
 
 
 
-#### Computing the Projected Length
-
 Since we think of $u$ as the vector “**getting measured**” and $\alpha$ as the vector “**doing the measurement**”, we’ll write this as a function $\alpha(u)$:
 $$
 \alpha(u)=\sum^n_{i=1}\alpha_iu^i
@@ -592,7 +590,9 @@ How to interpret?
 
 
 
-#### (review) Determinants & Signed Volume
+___
+
+**(review) Determinants & Signed Volume[START]**
 
 :star:Don't memorize the equation and matrix of determinants. Just remember **determinant = signed volume**
 
@@ -601,6 +601,80 @@ Determinant of 2-vectors = 2D signed area
 Determinant of 3-vectors = 3D signed volume
 
 <img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219125309001.png" alt="image-20210219125309001" style="zoom:50%;" />
+
+**(review) Determinants & Signed Volume [END]**
+
+___
+
+
+
+
+
+#### 2-form : measurement of 2-vectors
+
+(*Intuition*) a multilinear measurement of a 2-vector is a size of “shadow” of one parallelogram on another.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219151605174.png" alt="image-20210219151605174" style="zoom:50%;" />
+
+How to **compute** the "**shadow**"?
+
+- (1) pick orthonormal basis $\alpha,\beta$ for the plane
+- (2) project vector to the plane
+- (3) apply cross product formula
+
+*Projection*:
+$$
+u\mapsto(\alpha(u),\beta(u))\\
+v\mapsto(\alpha(v),\beta(v))
+$$
+*Area*:
+$$
+(\alpha(u),\beta(v))-(\alpha(v),\beta(u))
+$$
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219153209638.png" alt="image-20210219153209638" style="zoom:40%;" />
+
+Definition of 2-form (even when $\alpha,\beta$ are not orthonormal):
+$$
+(\alpha\land \beta)(u,v):=\alpha(u)\beta(v)-\alpha(v)\beta(u)
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219153538364.png" alt="image-20210219153538364" style="zoom:50%;" />
+
+
+
+Intuitively interpret 2-form: Projected area of $u,v$ gets scaled by area of parallelogram with edges $\alpha,\beta$.
+
+
+
+:star:**Antisymmetry of 2-Forms**
+
+exchanging the arguments of a 2-form:
+$$
+\begin{align}
+(\alpha\land\beta)(v,u)&=\alpha(v)\beta(u)-\alpha(u)\beta(v)\\
+&=-(\alpha(u)\beta(v)-\alpha(v)\beta(u))\\
+&=-(\alpha\land\beta)(u,v)
+\end{align}
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219171048214.png" alt="image-20210219171048214" style="zoom:50%;" />
+
+exchanging the argument to a wedge product:
+$$
+\begin{align}
+(\beta\land\alpha)(u,v)&=\beta(u)\alpha(v)-\beta(v)\alpha(u)\\
+&=-(\alpha(u)\beta(v)-\alpha(v)\beta(u))\\
+&=-(\alpha\land\beta)(u,v)
+\end{align}
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219171402433.png" alt="image-20210219171402433" style="zoom:50%;" />
+
+
+
+#### 3-form : measurement of 3-vectors
+
+(*Intuition*) a multilinear measurement of a 3-vector is in $\mathbb{R}^3$, all 3-vectors have same “direction”, a.k.a. is to measure "magnitude" 
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219172637991.png" alt="image-20210219172637991" style="zoom:50%;" />
 
 
 
