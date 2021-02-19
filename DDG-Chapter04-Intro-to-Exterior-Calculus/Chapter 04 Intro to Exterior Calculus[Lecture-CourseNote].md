@@ -576,6 +576,16 @@ $$
 
 
 
+#### 0-form
+
+0-form must take 0-vector and produce a scalar. 0-form is a scalar!
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219230236667.png" alt="image-20210219230236667" style="zoom:50%;" />
+
+*Has ***magnitude***, while it has only one possible "direction".
+
+
+
 #### 1-form
 
 We can of course apply this same expression when $\alpha$ does not have unit length:
@@ -642,7 +652,7 @@ $$
 
 
 
-Intuitively interpret 2-form: Projected area of $u,v$ gets scaled by area of parallelogram with edges $\alpha,\beta$.
+Intuitively interpret 2-form: Projected area of $u,v$ gets **scaled** by area of **parallelogram** with edges $\alpha,\beta$.
 
 
 
@@ -676,11 +686,114 @@ $$
 
 <img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219172637991.png" alt="image-20210219172637991" style="zoom:50%;" />
 
+How to **compute** the "**volume**"?
+
+- (1) suppose $(\alpha,\beta,\gamma)$ is any orthonormal basis
+- (2) project vector $u,v,w$ onto this basis
+- (3) apply standard formula for volume
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219225630738.png" alt="image-20210219225630738" style="zoom:70%;" />
+
+
+
+Definition of 3-form (even when $\alpha,\beta,\gamma$ are not orthonormal):
+
+![image-20210219225828131](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219225828131.png)
+
+Intuitively interpret 3-form: Projected volume of $u,v,w$ gets **scaled** by volume of **parallelepiped** with edges $\alpha,\beta,\gamma$.
+
+
+
+### $k$-form
+
+Definition: $k$-form is a *fully antisymmetric*, *multilinear* measurement of a $k$-vector. Typically think of this as a **map** $\alpha$ from **$k$-vectors** to a **scalar**:
+$$
+\alpha:\underbrace{V\times\dotsm V}_{\text{$k$ times}}\to\mathbb{R}
+$$
+:one:**Multilinear** means "linear in each argument", e.g. for a 2-form:
+$$
+\begin{align}
+\alpha(au+bv,w)&=a\alpha(u,w)+b\alpha(v,w)\\
+\alpha(u,av+bw)&=a\alpha(u,v)+b\alpha(u,w)\\
+\forall u,v,w\in V,a,b,\in\mathbb{R}
+\end{align}
+$$
+:two:Fully **antisymmetric** means exchanging two arguments reverse sign(一负为负，负负得正):
+$$
+\begin{align}
+&\alpha(u,v,w) = \\
+-&\alpha(u,w,v)
+\end{align}
+$$
+:three: $k$-form as a determinant: "project" onto $k$-dimensional space and measure volume there:
+$$
+(\alpha_1\land\dotsm\land\alpha_k)(u_1\land\dotsm\land u_k):=\begin{vmatrix}\alpha_1(u_1)&\cdots&\alpha_1(u_k)\\\vdots&\ddots&\vdots\\\alpha_k(u_1)&\cdots&\alpha_k(u_k)\end{vmatrix}
+$$
+For example, **k=1**:
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219233030052.png" alt="image-20210219233030052" style="zoom:50%;" />
+
+For example, **k=2**:
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219233050988.png" alt="image-20210219233050988" style="zoom:50%;" />
+
+
+
+### 4.2.3. $k$-Forms in Coordinates
+
+___
+
+The vector can be represented as followed once we have a coordinate system.
+
+- (1) measure along each coordinate axis
+- (2) use such measurements to take a weighted linear combination of bases
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219233347750.png" alt="image-20210219233347750" style="zoom:67%;" />
+
+
+
+#### Dual Basis: vector basis and covector basis
+
+**Vector**:
+
+In an $n$-dimensional vector space $V$, can express vectors $v$ in a basis <span style="color:blue">$e_1, …, e_n$</span>:
+<span style="color:blue">$
+v=v^1e_1+\dotsm+v^ne_n
+$
+</span>
+
+$v^i$ , scalar value of the **coordinate** of $v$
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219234500842.png" alt="image-20210219234500842" style="zoom:67%;" />![image-20210219234511024](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219234511024.png)
+
+**Covector**:
+
+We can also write covectors $\alpha$ in a so-called **dual basis** <span style="color:red">$e_1,..., e_n$</span>:
+
+<span style="color:red">$\alpha=\alpha_1e^1+\dotsm+\alpha_ne^n$</span>
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219234511024.png" alt="image-20210219234511024" style="zoom:67%;" />
+
+**Notes**:
+
+These bases have a special **relationship**, namely:
+$$
+e^i(e_j)=\begin{cases}
+1, \space i=j\\
+0,\space\text{otherwise}
+\end{cases}
+$$
+:star:How to interpret? Take a look on:
+
+:one:$e_1$ of vector basis and $e^1$ of covector basis, they are with **same** $n=1$, therefore, they are **lined up**, same amount equivalence.
+
+:two: ​$e_1$ of vector basis and $e^2$ of covector basis, they are with **different** $n$, therefore, they are **not lined up**, in this case orthogonal! Therefore it is 0.
+
+## 4.3. Differential Forms and the Wedge Product 
 
 
 
 
-## 4.4. Differential Forms and the Wedge Product 
 
 
 
@@ -688,11 +801,7 @@ $$
 
 
 
-
-
-
-
-## 4.5. Hodge Duality
+## 4.4. Hodge Duality
 
 
 
@@ -706,7 +815,7 @@ $$
 
 
 
-## 4.6. Differential Operators
+## 4.5. Differential Operators
 
 
 
@@ -718,7 +827,7 @@ $$
 
 
 
-## 4.7. Integration and Stokes’ Theorem 
+## 4.6. Integration and Stokes’ Theorem 
 
 
 
@@ -730,4 +839,4 @@ $$
 
 
 
-## 4.8. Discrete Exterior Calculus
+## 4.7. Discrete Exterior Calculus
