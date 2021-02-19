@@ -268,6 +268,7 @@ orientation:
 
 - right hand rule, we asked: det$(u,v,\star(u\land v))>0$ , 
 - i.e. the determinant of the two vectors comprising u ∧ v and the third vector given by its Hodge star should be positive
+- :bangbang::warning:when heard the word "**determinant**", you should instead think "**volume**" !!
 
 magnitude: 
 
@@ -500,6 +501,106 @@ How to interpret above equation?
 一个函数叫$\phi$，它将$V$变成$\mathbb{R}$, 本质是将函数$f$ 影射到函数$f$ 的0-1区间的积分
 
 一个函数叫$\delta$， 它将$V$变成$\mathbb{R}$, 本质是将函数$f$ 影射到函数$f(0)$
+
+
+
+#### Sharp and Flat
+
+***sharp*** ($\sharp$) : convert a 1-form into a vector
+
+***flat*** ($\flat$) : convert a vector into a 1-form
+
+How to memorize?
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219102956120.png" alt="image-20210219102956120" style="zoom:50%;" />
+
+Keep it in mind: ***sharp*** ($\sharp$) and ***flat*** ($\flat$) are both *musical isomorphisms*. 
+
+***sharp*** ($\sharp$) : tune going up $\uparrow$
+
+***flat*** ($\flat$) : tune going down $\downarrow$
+
+$k$-form is underneath, so "sharp" will bring it up to $k$-vector $\uparrow$
+
+$k$-vector is above, so "flat" will bring it down to $k$-form $\downarrow$
+
+
+
+Therefore, for 1-vector $v$ and 1-form $\alpha$, we can write like this:
+
+$v^\flat(v)$ , which is equivalent to $\alpha(v)$
+
+$\alpha(\alpha^\sharp)$ , which is equivalent to $\alpha(v)$
+
+
+
+#### Sharp and Flat w/ Inner Product
+
+<span style="color:red">$\begin{bmatrix}u_1&u_2&u_3\end{bmatrix}\begin{bmatrix}M_{11}&M_{12}&M_{13}\\M_{12}&M_{22}&M_{23}\\M_{13}&M_{23}&M_{33}\end{bmatrix}$</span><span style="color:blue">$\begin{bmatrix}v_1\\v_2\\v_3\end{bmatrix}$</span>
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219110614609.png" alt="image-20210219110614609" style="zoom:50%;" />
+
+
+
+#### Sharp and Flat - Example
+
+In *curved* space, suppose we want to measure the length of a vector $v$ along the direction of another vector $u$.
+
+$f:\mathbb{R}^2\supset M\to\mathbb{R}^3$  , the map $f$ stretch out the tangent vector, take us from the plane to some surface in $\mathbb{R}^3$, then we have:
+$$
+u^\flat(v)=g(u,v)
+$$
+$g$  , is the metric. In a nutshell, a *distance function*. 因为$u^\flat()$是变成1-form，喂$v$进去，得出**scalar**，而这个scalar就是distance function $g$得出的。
+
+
+
+
+
+### 4.2.2. $k$-Forms
+
+___
+
+Just a sum-up and warm-up:
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219112734239.png" alt="image-20210219112734239" style="zoom:50%;" />
+
+$k$-form will measure $k$-vectors
+
+
+
+#### Computing the Projected Length
+
+Since we think of $u$ as the vector “**getting measured**” and $\alpha$ as the vector “**doing the measurement**”, we’ll write this as a function $\alpha(u)$:
+$$
+\alpha(u)=\sum^n_{i=1}\alpha_iu^i
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219113319825.png" alt="image-20210219113319825" style="zoom:40%;" />
+
+
+
+#### 1-form
+
+We can of course apply this same expression when $\alpha$ does not have unit length:
+$$
+\alpha(u) := \sum_ia_iu^i
+$$
+How to interpret? 
+
+- Projected length gets scaled by magnitude of $\alpha$.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219113912828.png" alt="image-20210219113912828" style="zoom:33%;" />
+
+
+
+#### (review) Determinants & Signed Volume
+
+:star:Don't memorize the equation and matrix of determinants. Just remember **determinant = signed volume**
+
+Determinant of 2-vectors = 2D signed area 
+
+Determinant of 3-vectors = 3D signed volume
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219125309001.png" alt="image-20210219125309001" style="zoom:50%;" />
 
 
 
