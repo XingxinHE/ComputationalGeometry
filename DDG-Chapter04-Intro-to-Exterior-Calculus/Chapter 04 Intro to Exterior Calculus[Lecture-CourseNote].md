@@ -600,9 +600,11 @@ How to interpret?
 
 
 
+#### :page_with_curl:SOME NOTES
+
 ___
 
-**(review) Determinants & Signed Volume[START]**
+**(review) Determinants & Signed Volume**
 
 :star:Don't memorize the equation and matrix of determinants. Just remember **determinant = signed volume**
 
@@ -611,8 +613,6 @@ Determinant of 2-vectors = 2D signed area
 Determinant of 3-vectors = 3D signed volume
 
 <img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219125309001.png" alt="image-20210219125309001" style="zoom:50%;" />
-
-**(review) Determinants & Signed Volume [END]**
 
 ___
 
@@ -739,6 +739,22 @@ For example, **k=2**:
 
 
 
+#### :page_with_curl:SOME NOTES
+
+___
+
+**A Note on Notation**
+
+Convention dictates that the argument $u,v$ should be written as $(u,v)$
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220084732555.png" alt="image-20210220084732555" style="zoom:33%;" />
+
+___
+
+
+
+
+
 ### 4.2.3. $k$-Forms in Coordinates
 
 ___
@@ -764,7 +780,7 @@ $
 
 $v^i$ , scalar value of the **coordinate** of $v$
 
-<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219234500842.png" alt="image-20210219234500842" style="zoom:67%;" />![image-20210219234511024](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219234511024.png)
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210219234500842.png" alt="image-20210219234500842" style="zoom:67%;" />
 
 **Covector**:
 
@@ -787,7 +803,102 @@ $$
 
 :one:$e_1$ of vector basis and $e^1$ of covector basis, they are with **same** $n=1$, therefore, they are **lined up**, same amount equivalence.
 
-:two: ​$e_1$ of vector basis and $e^2$ of covector basis, they are with **different** $n$, therefore, they are **not lined up**, in this case orthogonal! Therefore it is 0.
+:two: $e_1$ of vector basis and $e^2$ of covector basis, they are with **different** $n$, therefore, they are **not lined up**, in this case orthogonal! Therefore it is 0.
+
+
+
+#### 1-form : Example in coordinates
+
+Considering we have:
+$$
+\begin{align}
+\textcolor{blue}{v}&=2\textcolor{blue}{e_1}+2\textcolor{blue}{e_2}\\
+\textcolor{red}{\alpha}&=-2\textcolor{red}{e^1}+3\textcolor{red}{e^2}
+\end{align}
+$$
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220085343214.png" alt="image-20210220085343214" style="zoom:33%;" />
+$$
+\begin{align}
+\textcolor{red}{\alpha}(\textcolor{blue}{v})
+&=(-2\textcolor{red}{e^1}+3\textcolor{red}{e^2})(2\textcolor{blue}{e_1}+2\textcolor{blue}{e_2})\\
+&=-4\textcolor{red}{e^1}\textcolor{blue}{e_1}-4\textcolor{red}{e^1}\textcolor{blue}{e_2}+6\textcolor{red}{e^2}\textcolor{blue}{e_1}+6\textcolor{red}{e^2}\textcolor{blue}{e_2}\\
+&=-4\cancelto{1}{\textcolor{red}{e^1}\textcolor{blue}{e_1}}-4
+\cancelto{0}{\textcolor{red}{e^1}\textcolor{blue}{e_2}}+6
+\cancelto{0}{\textcolor{red}{e^2}\textcolor{blue}{e_1}}+6
+\cancelto{1}{\textcolor{red}{e^2}\textcolor{blue}{e_2}}\\
+&=-4+6\space\ \ \ \ \ \ \ \text{just like dot product}\\
+&=2
+\end{align}
+$$
+
+#### 2-form : Example in coordinates
+
+Considering we have:
+$$
+\begin{align}
+\textcolor{blue}{u}&=2\textcolor{blue}{e_1}+2\textcolor{blue}{e_2}\\
+\textcolor{blue}{v}&=-2\textcolor{blue}{e_1}+2\textcolor{blue}{e_2}\\
+\textcolor{red}{\alpha}&=\textcolor{red}{e^1}+3\textcolor{red}{e^2}\\
+\textcolor{red}{\beta}&=2\textcolor{red}{e^1}+\textcolor{red}{e^2}\\
+\end{align}
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220092156638.png" alt="image-20210220092156638" style="zoom:50%;" />
+
+We then have:
+$$
+\begin{align}
+(\textcolor{red}{\alpha\land\beta})(\textcolor{blue}{u,v})&=\textcolor{red}{\alpha}(\textcolor{blue}{u})\textcolor{red}{\beta}(\textcolor{blue}{v})-\textcolor{red}{\alpha}(\textcolor{blue}{v})\textcolor{red}{\beta}(\textcolor{blue}{u})\\
+\textcolor{red}{\alpha}(\textcolor{blue}{u})&=2+6=8\\
+\textcolor{red}{\alpha}(\textcolor{blue}{v})&=-2+6=4\\
+\textcolor{red}{\beta}(\textcolor{blue}{u})&=4+2=6\\
+\textcolor{red}{\beta}(\textcolor{blue}{v})&=-4+2=-2\\
+&=8\cdot(-2)-4\cdot6\\
+&=-40
+\end{align}
+$$
+**Q**: What does this value mean, **geometrically**? Why is it ***negative***?
+
+- **A**: 40 is the **shadow area** $u\land v$ casting on $\alpha\land\beta$. They have **different orientation** so it is negative.
+
+
+
+#### :page_with_curl:SOME NOTES
+
+___
+
+**Einstein Summation Notation**
+$$
+x^iy_i:=\sum^n_{i=1}x^iy_i
+$$
+
+This convention is by Einstein. However, for clarity, we will stick to use sum symbol. But keep it in mind the convention here since many math books assume you already know.
+
+**Musical Isomorphisms**
+
+We mentioned the sharp$\sharp$ and flat$\flat$ in above. It **also affect the coefficient of vector and covecto**r!!
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220094910315.png" alt="image-20210220094910315" style="zoom:50%;" />
+
+Suppose we have $\alpha(v)=\langle u,v\rangle$ for all $v\in V$. Then:
+$$
+\alpha=\alpha_1e^1+\dotsm+\alpha_ne^n \qquad \begin{matrix}\overset{\sharp}{\Longrightarrow}\\\overset{\flat}{\Longleftarrow}\end{matrix} \qquad u=u^1e_1+\dotsm+u^ne_n
+$$
+:arrow_forward: From	 left(covector, underneath) 		raise pitch(sharp)		to 		right(vector, above),      **coefficient from down to up**
+
+:arrow_backward: From	 right(vector, above)	lower pitch(flat)		to 		left(covector, underneath), 	**coefficient from up to down** 
+
+**Alphabet Notation**
+
+Roman alphabet for vector and vector fields, e.g. $u,v,w,X,Y,Z$
+
+Greek alphabet for covector and $k$-form, e.g. $\alpha,\beta,\gamma$
+
+___
+
+
+
+
 
 ## 4.3. Differential Forms and the Wedge Product 
 
