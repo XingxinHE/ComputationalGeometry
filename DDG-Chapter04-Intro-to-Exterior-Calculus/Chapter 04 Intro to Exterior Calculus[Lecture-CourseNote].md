@@ -900,14 +900,310 @@ ___
 
 
 
-## 4.3. Differential Forms and the Wedge Product 
+## 4.3. Differential Forms in $\mathbb{R}^n$ 
+
+A quick review:
+
+- vector: \
+- vector field: an assignment of a vector to **each point of space**
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220112945965.png" alt="image-20210220112945965" style="zoom:50%;" />
+
+Likewise, we can have similar analogy on $k$-form
+
+- $k$-form: \
+- differential $k$-form: an assignment of a $k$-form to **each point**
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220113135728.png" alt="image-20210220113135728" style="zoom:50%;" />
+
+*sometime some guy will simplify differential $k$-form to $k$-form.
+
+
+
+### 4.3.1. Differential $k$-Form
+
+___
+
+#### *Differential* 0-Form
+
+Definition: Assigns **a scalar** to each point. (no direction, **only magnitude**)
+
+E.g., in 2D we have a value at each point $(x_1,x_2)$:
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220113739285.png" alt="image-20210220113739285" style="zoom:50%;" />
+
+:star:Differential 0-form is the same as *scalar function*!
+
+
+
+#### *Differential* 1-Form
+
+Definition: Assigns a **1-form** to each point. 
+
+E.g., in 2D we have a 1-form at each point $(x_1,x_2)$:
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220113932052.png" alt="image-20210220113932052" style="zoom:50%;" />
+
+:bangbang::star:Differential 1-form is **NOT** the same as *vector field* !!!
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220115601680.png" alt="image-20210220115601680" style="zoom:33%;" />
+
+:thinking:Why? Although vector fields and differential 1-forms look the same(in $\mathbb{R}^n$), **differential 1-form can produce scalar** while vector field can't!!
+
+In a nutshell, differential 1-form $\alpha()$ can eat vector field $X$!! and produce scalar! 
+
+Zone A: the 1-vector in the vector field is **orthogonal** to the 1-form in the differential 1-form, therefore it produce a **50%** intensity.
+
+Zone B: the 1-vector in the vector field is **parallel** to the 1-form in the differential 1-form, therefore it produce a **100%** intensity.
+
+Zone C: the 1-vector in the vector field is **opposite** to the 1-form in the differential 1-form, therefore it produce a **0%** intensity.
+
+![image-20210220115736614](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220115736614.png)
+
+
+
+#### Differential 2-Form
+
+Definition: A differential 2-form is an **area measurement** at each point$(x_1,x_2,x_3)$: 
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220121353210.png" alt="image-20210220121353210" style="zoom:40%;" />
+
+Resulting function says how much a 2-vector field “**lines up**” with a given 2-form.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220140553210.png" alt="image-20210220140553210" style="zoom:40%;" />
 
 
 
 
 
+#### *Differential* $k$-Forms :  Pointwise Operations
+
+Most operations on differential $k$-forms simply **apply that operation at each point**. Followings are the demo of 3 operation:
+
+:one: Hodge Star
+
+:two: Wedge
+
+:three: $k$-form
+
+Consider two differential forms $α, β$ on $\mathbb{R}^n$. At each point $p := (x_1,…,x_n)$, the
+
+:one:	apply the Hodge star to the individual $k$ forms at each point $p$
+$$
+\begin{align}
+(\star\alpha)_p&:=\star(\alpha_p)\\
+\end{align}
+$$
+:two:	wedge their values at each point
+$$
+\begin{align}
+(\alpha\land\beta)_p&:=(\alpha_p)\land(\beta_p)
+\end{align}
+$$
+if $X_1, …, X_k$ are vector fields on all of $\mathbb{R}^n$, then:
+
+:three:	vector field can also computed point-wise
+$$
+\alpha(X_1,...,X_k)_p:=(\alpha_p)((X_1)_p,...,(X_k)_p)
+$$
 
 
+
+
+### 4.3.2. *Differential* $k$-Forms in Coordinates
+
+___
+
+#### Basis Vector Fields
+
+Left: basis for *vectors*
+
+Right: *basis for vector fields* on $\mathbb{R}^n$ - **constant** vector fields of **unit magnitude** pointing along each of the coordinate axes:
+
+![image-20210220152053210](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220152053210.png)
+
+
+
+[:bangbang::star:!!! the names of the basis vector fields look like partial derivatives, but **please temporally forget anything with derivatives** when you saw the name.]
+
+
+
+#### Basis Vector Fields 👉 other Vector Fields
+
+:star::star:$\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2}$ are the ingredients used to construct!! 
+
+**Any other** vector field is then **a linear combination** of the basis vector fields! The **coefficients** of linear combination **can vary** across the domain.
+
+$a,b$ are the coefficients and $\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2}$ are the ingredients of linear combination of $a\frac{\partial}{\partial x^1}+b\frac{\partial}{\partial x^2}$.
+
+![image-20210220171351796](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220171351796.png)
+
+:green_heart: <span style="color:green"> GREEN ZONE</span> The coefficient $a$ is with **high intensity**(1) while the coefficient $b$ is with **low intensity**(0). Hence, the output on the right is 100% $\frac{\partial}{\partial x^1}$, 0% $\frac{\partial}{\partial x^2}$, pointing :arrow_down:
+:heart: <span style="color:red"> RED ZONE</span> The coefficient $a$ is with **low intensity**(0) while the coefficient $b$ is with **high intensity**(1). Hence, the output on the right is 0% $\frac{\partial}{\partial x^1}$, 100% $\frac{\partial}{\partial x^2}$ , pointing up :arrow_up:
+
+
+
+#### Bases for Vector Fields and Differential 1-forms
+
+The analogy is nearly identical here:
+
+1-vector $\iff$ 1-form
+
+vector fields $\iff$  Differential 1-form
+
+![image-20210220174951796](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220174951796.png)
+
+The two bases $dx^i$ and $\frac{\partial}{\partial x^i}$ are referred to as ***dual bases***, meaning they satisfy the **relationship**:
+$$
+dx^i\bigg(\frac{\partial}{\partial x^j}\bigg)
+=\delta^i_j:=
+\begin{cases}
+1, \space i=j\\
+0,\space\text{otherwise}
+\end{cases}
+$$
+
+
+
+#### Example: Hodge Star of Differential 1-form
+
+Consider the differential 1-form:
+
+$$
+\alpha:=(1-x)dx+xdy
+$$
+
+:page_facing_up: Note: the $(1-x)$ ad $x$ can be conceived of as the **coefficients** of bases differential 1-form $dx$ and $dy$.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220214100840.png" alt="image-20210220214100840" style="zoom:67%;" />
+
+
+
+:question: Q: Why does this differential 1-form look like this?
+
+​	A: Remember $dx$ is basis pointing right, $dy$ is basis pointing up. As $x$ becoming bigger, $(1-x)$ becoming smaller, therefore when $x=0$, 100% $dx$ pointing right, 0% $dy$ pointing up. So as when $x=1$
+
+
+
+:question: Q: What is its Hodge star?
+
+​	A: Hodge star in 2D plane is counter-clockwise 90 degree rotation. Therefore:
+$$
+\begin{align}
+\star\alpha&=\star((1-x)dx)+\star(xdy)\\
+&=(1-x)(\star dx)+x(\star dy)\\
+&=(1-x)dy + x(-dx)\\
+&=-xdx+(1-x)dy
+\end{align}
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220215126583.png" alt="image-20210220215126583" style="zoom:67%;" />
+
+:question: Q: What does it look like with both overlaid?
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220215239884.png" alt="image-20210220215239884" style="zoom:67%;" />
+
+
+
+#### Example: Wedge of Differential 1-Forms
+
+Consider the differential 1-forms:
+$$
+\alpha:=xdx, \qquad \beta:=(1-x)dx+(1-y)dy
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220220939884.png" alt="image-20210220220939884" style="zoom:50%;" />
+
+:question: Q: Why does it look like this?
+
+$\alpha$ :
+
+- :green_heart: $x=0\to$ , from nothing to basis $dx$. (there is no $dy$ in $\alpha$  !!)
+
+- :large_orange_diamond: $x=\to1$ , basis $dx$
+
+
+$\beta$ :
+
+- :purple_heart: $x=0,y=0\space\to\space(1-x)=1,(1-y)=1$, therefore $dx+dy$ is pointing upper right
+
+- :large_blue_diamond: $x=1,y=1\space\to\space(1-x)=0,(1-y)=0$, therefore $dx+dy$ is nothing
+
+
+
+
+:question: Q: What is their wedge product?
+$$
+\begin{align}
+\alpha\land\beta &= xdx\land[(1-x)dx+(1-y)dy]\\
+&=x(1-x)dx\land dx+x(1-y)dx\land dy\\
+&=x(1-x)\cancelto{0}{dx\land dx}+x(1-y)dx\land dy\\
+&=(x-xy)dx\land dy
+\end{align}
+$$
+:question: Q: What does it look like?
+
+​	:star::star:A: Since $dx\land dy$ is wedge product between two bases! You can **imagine each points are placed 1*1 parallelogram**(unit area), and then **multiply magnitude** $(x-xy)$ which can be saw as scalar function.
+
+- :green_heart: $x=0\space\to\space x-xy=0$ , no wedge product 
+
+- :yellow_heart: $y=1\space\to\space x-xy=x-x=0$ , no wedge product
+
+- :blue_heart: $x=1\space\to\space x-xy=1-y$, therefore as $y$ is going down(decrease), it is approaching parallelogram. 
+
+- :purple_heart: $x=1,y=0\space\to\space x-xy=x$, therefore as $x$ is going right(increase), it is approaching parallelogram.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220224239884.png" alt="image-20210220224239884" style="zoom:40%;" />
+
+We can easily imagine its Hodge star which just flip over the intensity.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220230309968.png" alt="image-20210220230309968" style="zoom:67%;" />
+
+In $n$-dimensions, any  positive multiple of  $dx^1\land dx^2\land\dotsm\land dx^n$ is called a **volume form**.
+
+
+
+#### Differential 1-form EATS vector field
+
+After digesting lots of knowledge, we finally reached the goal is that **using differential 1-form to measure vector fields**.
+
+Suppose we have differential 1-form $\alpha$ and vector fields $X$:
+$$
+\begin{align}
+\alpha&:=xdx\\
+X&:=(1-x)\frac{\partial}{\partial x}+(1-y)\frac{\partial}{\partial y}
+\end{align}
+$$
+Then we can compute:
+$$
+\begin{align}
+\alpha(X)&=xdx\bigg((1-x)\frac{\partial}{\partial x}+(1-y)\frac{\partial}{\partial y}\bigg)\\
+&=x(1-x)dx\frac{\partial}{\partial x}+x(1-y)dx\frac{\partial}{\partial y}\\
+&=x(1-x)\cancelto{1}{dx\frac{\partial}{\partial x}}+x(1-y)\cancelto{0}{dx\frac{\partial}{\partial y}}\\
+&=x-x^2
+\end{align}
+$$
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220232553955.png" alt="image-20210220232553955" style="zoom:50%;" />
+
+:mag: What do you notice from the intensity map?
+
+1. There is no $y$ , the variation of $y$ does not affect the intensity. Therefore, it is mirrored up and down.
+2. $x=0,x=1\Rightarrow x-x^2=0$, therefore the left and right are 0% intensity.
+
+
+
+#### :star:Differential Forms in $\mathbb{R}^n$ - Summary
+
+Started with a vector space $V (e.g.,\mathbb{R}^n)$
+•(1-forms) Dual space $V$* of covectors, i.e., linear measurements of vectors
+•($k$-forms) Wedge together $k$ covectors to get a measurement of $k$-dimensional volumes
+•(differential $k$-forms) Put a $k$-form at each point of space
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210220233812799.png" alt="image-20210220233812799" style="zoom:67%;" />
+
+|                       | primal (阴)       | dual (阳)              |
+| --------------------- | ----------------- | ---------------------- |
+| **vector space**      | vectors           | covector               |
+| **exterior algebra**  | $k$-vectors       | $k$-forms              |
+| **spatially-varying** | $k$-vector fields | differential $k$-forms |
 
 
 
