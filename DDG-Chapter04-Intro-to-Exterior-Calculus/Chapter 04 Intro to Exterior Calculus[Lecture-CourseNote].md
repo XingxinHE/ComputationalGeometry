@@ -1208,6 +1208,20 @@ Started with a vector space $V (e.g.,\mathbb{R}^n)$
 
 
 
+
+
+
+## 4.3. Exterior Calculus - Differentiation
+
+:star: Big picture, from exterior algebra to exterior calculus, it aims to solve 2 things:
+
+
+
+
+
+
+
+
 ## 4.4. Hodge Duality
 
 
