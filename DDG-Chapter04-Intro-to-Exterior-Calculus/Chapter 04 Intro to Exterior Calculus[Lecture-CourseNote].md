@@ -1215,9 +1215,18 @@ Started with a vector space $V (e.g.,\mathbb{R}^n)$
 
 :star: Big picture, from exterior algebra to exterior calculus, it aims to solve 2 things:
 
+1. how quantities change? - **differentiation**微分
+2. how to measure the change? - **integration**积分
 
 
 
+The *differential df* of a surface $f:M\to\mathbb{R}^3$, which tells how the tangent vector "stretched out" from $M$ to $\mathbb{R}^3$.
+
+*d* : is called the *exterior derivative*, which tells how quickly a $k$-form changes along *every possible direction*.
+
+![image-20210128093534716](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210128093534716.png)
+
+In this section, we will take a deep insight of it.
 
 
 
