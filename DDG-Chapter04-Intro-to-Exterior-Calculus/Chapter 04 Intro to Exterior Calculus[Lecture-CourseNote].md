@@ -1230,6 +1230,67 @@ In this section, we will take a deep insight of it.
 
 
 
+### Curl and Divergence - (review)
+
+The following content is a review of calculus.
+
+#### What is vector field?
+
+All the points in the space are associated with a vector.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/image-20210330222126040.png" alt="image-20210330222126040" style="zoom:50%;" />
+
+#### What is fluid field?
+
+Vector field is a static and steady case while fluid field is dynamic.
+
+![fluid-field](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/fluid-field.gif)
+
+#### What is divergence?
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/divergence-positive.gif" alt="divergence-positive" style="zoom: 80%;" />
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/divergence-negative.gif" alt="divergence-negative" style="zoom:80%;" />
+
+The divergence of a vector field at a particular point in a plane tell you how much this fluid tends to flow **OUT OF** or **INTO** the small region.
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/divergence-incompressible.gif" alt="divergence-incompressible" style="zoom: 67%;" />
+
+<img src="Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/divergence-positive_flow.gif" alt="divergence-positive_flow"  />
+
+#### What is Curl?
+
+How much the fluid at the point tends to rotate.
+
+Positive: counter-clockwise
+
+Negative: Clockwise
+
+![curl](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/curl.gif)
+
+![curl-flow](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/curl-flow.gif)
+
+
+
+One of the application of "curl" is phase flow. Somehow it looks like a dynamic balance.
+
+![phase-flow](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/phase-flow.gif)
+
+#### The Equation of Divergence and Curl
+
+Divergence: $\text{div F} = \triangledown \cdot \text{F}$ 
+
+Curl: $\text{curl F} = \triangledown \times \text{F}$
+
+​	- Why dot product for divergence? Why cross product for curl?
+
+	- The **dot product** is expected to **measure** how these **two vectors line up**. If 100% match, then flows out, $\text{div F}  > 0$
+	- The **cross product** is expected to **measure** how these **two vectors spin around**. If =1, then tends to rotate 90°.
+
+![how_divergence_curl_calculate](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/how_divergence_curl_calculate.gif)
+
+
+
 
 ## 4.4. Hodge Duality
 
