@@ -1215,8 +1215,8 @@ Started with a vector space $V (e.g.,\mathbb{R}^n)$
 
 :star: Big picture, from exterior algebra to exterior calculus, it aims to solve 2 things:
 
-1. how quantities change? - **differentiation**微分
-2. how to measure the change? - **integration**积分
+1. how quantities change? - **differentiation**微分 (typically differentiation of $k$-form, exterior derivative)
+2. how to measure the change? - **integration**积分 (typically integration of $k$-form, measure volume)
 
 
 
@@ -1282,12 +1282,18 @@ Divergence: $\text{div F} = \triangledown \cdot \text{F}$
 
 Curl: $\text{curl F} = \triangledown \times \text{F}$
 
-​	- Why dot product for divergence? Why cross product for curl?
+Why dot product for divergence? Why cross product for curl?
+The **dot product** is expected to **measure** how these **two vectors line up**. If 100% match, then flows out, $\text{div F}  > 0$
+The **cross product** is expected to **measure** how these **two vectors spin around**. If =1, then tends to rotate 90°.
 
-	- The **dot product** is expected to **measure** how these **two vectors line up**. If 100% match, then flows out, $\text{div F}  > 0$
-	- The **cross product** is expected to **measure** how these **two vectors spin around**. If =1, then tends to rotate 90°.
 
 ![how_divergence_curl_calculate](Chapter 04 Intro to Exterior Calculus[Lecture-CourseNote].assets/how_divergence_curl_calculate.gif)
+
+#### What is partial derivative?
+
+Partial derivative: a partial derivative of a function of **several variables** is its derivative with respect to one of those variables, with the **others held constant**.
+
+Total derivative: (opposite to above) all variables are allowed to vary.
 
 
 
