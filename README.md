@@ -2,7 +2,7 @@
 
 
 
-### Welcome
+### Welcome:wave:
 
 
 <div align="center">God ever geometrizes. - PLATO </div>
@@ -11,9 +11,17 @@
 
 Welcome to this repo. As the development of geometric deep learning and geometry processing, geometry is playing an ever-growing important role in the field of architecture, computational design, and robotic fabrication. Although I am able to write geometric algorithm from time to time, I aim to have a big and thorough picture over this topic. Therefore, I felt compelled to study computational geometry across different subject.
 
+### Structure🧩
 
+In light of different sources of materials, this repo is organized as follows:
 
-### Recommended Material
+- Book:books:   the must read books
+- Lecture:school:    the popular online lecture
+- Library:computer:    the popular geometry processing library
+- Paper:page_with_curl:    the must read paper
+- Workshop:video_camera:  the short-period of workshop
+
+### Recommended Material:thumbsup:
 
 My recommended study material is followed:
 
@@ -26,7 +34,7 @@ My recommended study material is followed:
 
 
 
-### Learning progress:
+### Learning progress
 
 ##### Discrete Differential Geometry:
 
@@ -45,20 +53,27 @@ My recommended study material is followed:
 
 
 
-<img src="DDG-Chapter02-Combinatorial-Surfaces/Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/orbits_faces.gif" alt="orbits_faces" style="zoom:67%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter02-Combinatorial-Surfaces/Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/orbits_faces.gif" alt="orbits_faces" style="zoom:67%;" />
 
 
 
-<img src="DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
 
 
 
-<img src="DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
 
 
 
-<img src="DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
 
 
 
+### Disclaimer
+
+1.This repo is merely a collection of notes and I highly recommend YOU to learn by yourself. 
+
+2.The update of this repo may be very very very slow...
+
+3.Please cite the authors for their contribution!
 
