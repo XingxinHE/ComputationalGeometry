@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "101_FileIO", "101_FileIO\101_FileIO.vcxproj", "{1763D784-9F06-4115-9CBF-486FC97F7CFE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "102_DrawMesh", "102_DrawMesh\102_DrawMesh.vcxproj", "{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{1763D784-9F06-4115-9CBF-486FC97F7CFE}.Release|x64.Build.0 = Release|x64
 		{1763D784-9F06-4115-9CBF-486FC97F7CFE}.Release|x86.ActiveCfg = Release|x64
 		{1763D784-9F06-4115-9CBF-486FC97F7CFE}.Release|x86.Build.0 = Release|x64
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Debug|x64.ActiveCfg = Debug|x64
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Debug|x64.Build.0 = Debug|x64
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Debug|x86.ActiveCfg = Debug|Win32
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Debug|x86.Build.0 = Debug|Win32
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x64.ActiveCfg = Release|x64
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x64.Build.0 = Release|x64
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x86.ActiveCfg = Release|Win32
+		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
