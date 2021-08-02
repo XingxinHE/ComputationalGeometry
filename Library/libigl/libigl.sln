@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "101_FileIO", "101_FileIO\10
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "102_DrawMesh", "102_DrawMesh\102_DrawMesh.vcxproj", "{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "103_Events", "103_Events\103_Events.vcxproj", "{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x64.Build.0 = Release|x64
 		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x86.ActiveCfg = Release|Win32
 		{A7CED357-7E96-4FC8-A75C-32FD1A2B7FDA}.Release|x86.Build.0 = Release|Win32
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Debug|x64.ActiveCfg = Debug|x64
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Debug|x64.Build.0 = Debug|x64
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Debug|x86.Build.0 = Debug|Win32
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Release|x64.ActiveCfg = Release|x64
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Release|x64.Build.0 = Release|x64
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Release|x86.ActiveCfg = Release|Win32
+		{EB5A07A0-AFF4-4BEB-8B5F-A3B313C869F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
