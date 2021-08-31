@@ -36,7 +36,11 @@ My recommended study material is followed:
 
 ### Learning progress
 
-##### Discrete Differential Geometry:
+#### Book:books:
+
+#### Lecture:school:
+
+##### Discrete Differential Geometry: :arrow_right:(navigate [here][ddg_md])
 
 - [x] Chapter 01 Overview
 - [x] Chapter 02 Combinatorial Surfaces
@@ -47,25 +51,39 @@ My recommended study material is followed:
 - [ ] Chapter 07 Surface Parameterization
 - [ ] Chapter 08 Vector Field Decomposition and Design
 
+#### Library:computer:
+
+##### libigl
+
+##### CGAL
+
+#### Paper:page_with_curl:
+
+//TODO
+
+#### Workshop:video_camera:
+
+//TODO
+
 
 
 ### Outputs
 
 
 
-<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter02-Combinatorial-Surfaces/Chapter 02 Combinatorial Surfaces[Lecture-CourseNote].assets/orbits_faces.gif" alt="orbits_faces" style="zoom:67%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/img/orbits_faces.gif" alt="orbits_faces" style="zoom:67%;" />
 
 
 
-<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
 
 
 
-<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
 
 
 
-<img src="Lecture/DiscreteDifferentialGeometry/DDG-Chapter03-Intro-to-Differential-Geometry/Chapter 03 Intro to Differential Geometry[Lecture-CourseNote].assets/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
+<img src="Lecture/DiscreteDifferentialGeometry/img/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
 
 
 
@@ -77,3 +95,4 @@ My recommended study material is followed:
 
 3.Please cite the authors for their contribution!
 
+[ddg_md]: Lecture/DiscreteDifferentialGeometry/DDG.md
