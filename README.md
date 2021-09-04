@@ -51,6 +51,10 @@ My recommended study material is followed:
 - [ ] Chapter 07 Surface Parameterization
 - [ ] Chapter 08 Vector Field Decomposition and Design
 
+##### Geometry Modeling and Processing::arrow_right: (navigate [here][gmp_md])
+
+
+
 #### Library:computer:
 
 ##### libigl
@@ -96,3 +100,4 @@ My recommended study material is followed:
 3.Please cite the authors for their contribution!
 
 [ddg_md]: Lecture/DiscreteDifferentialGeometry/DDG.md
+[gmp_md]: Lecture/GeometryModelingandProcessing/GMP.md
