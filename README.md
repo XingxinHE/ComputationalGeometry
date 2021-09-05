@@ -38,6 +38,8 @@ My recommended study material is followed:
 
 #### Book:books:
 
+
+
 #### Lecture:school:
 
 ##### Discrete Differential Geometry: :arrow_right:(navigate [here][ddg_md])
@@ -61,9 +63,15 @@ My recommended study material is followed:
 
 ##### CGAL
 
+
+
 #### Paper:page_with_curl:
 
-//TODO
+:arrow_right:(navigate [here][paper_md])
+
+- Mark Meyer, Mathieu Desbrun, Peter Schröder and Alan H. Barr, Discrete Differential-Geometry Operators for Triangulated 2-Manifolds, 2003.
+
+
 
 #### Workshop:video_camera:
 
@@ -101,3 +109,4 @@ My recommended study material is followed:
 
 [ddg_md]: Lecture/DiscreteDifferentialGeometry/DDG.md
 [gmp_md]: Lecture/GeometryModelingandProcessing/GMP.md
+[paper_md]: Paper/PAPER.md
