@@ -208,7 +208,7 @@ $$
 $$
 
 
-:pushpin: **Fourier series**
+:pushpin: **Fourier series(periodic)**
 
 $$
 f(t) = A_0+\sum_{n=1}^{\infin}[a_n\cos(nwt)+b_nsin(nwt)]  \\
@@ -381,6 +381,9 @@ $$
         <figcaption>Polynomial Regression as an example of approximation</figcaption>
      </center>
 </figure>
+:bulb: Why **least squares method最小二乘法** is favored in optimization?  That's because its derivative is $1$-polynomial.(a.k.a. easier to find local or global minima)
+
+
 
 :pushpin: **C.2. How to find?**
 
@@ -460,7 +463,8 @@ $$
 
 Therefore, we can optimize to select an appropriate base function.
 
-- the $L_0$ norm of coefficient vector(nonzero counts) is as smaller as possible.
+- the **$L_0$ norm of coefficient vector(≈nonzero counts)** is as smaller as possible.
+  - zero elements↑ sparsity↑ choices of $W$↓ easier to compute↑
 - pick the RIGHT base function
 
 $$
@@ -473,9 +477,19 @@ $$
 
 :pushpin: **Compressed sensing**
 
-If we have $y$ and $\phi$, there might be infinite solution $x$.
+<img src="img/image-20210905152608292.png" alt="image-20210905152608292" style="zoom:50%;" />
 
-For **sparse** signals, we can reconstruct $x$ by optimization under certain condition.
+$x$ , the sparse vector representing data
+
+$y$ , the compressed vector excluding $0$. 
+
+$\Phi$ , sampling matrix
+
+
+
+If we have $y$ and $\Phi$, there might be infinite solution of $x$. 
+
+But according to [Candes and Tao 2005](https://arxiv.org/abs/math/0502327) : for **sparse** signals, we can reconstruct $x$ by optimization under certain condition.
 $$
 \min\norm{X}_0\\
 \text{s.t. }\Phi x=y
