@@ -85,49 +85,17 @@ My recommended study material is followed:
 
 ### Outputs
 
-<figure>
-    <center>
-  <img src="Lecture/DiscreteDifferentialGeometry/img/orbits_faces.gif" alt="orbits_faces" style="width:25%">
-        <figcaption>"Next" Operation in HalfEdge data structure</figcaption>
-     </center>
-</figure>
+| <img src="Lecture/DiscreteDifferentialGeometry/img/orbits_faces.gif" width="310"/> | <img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho.gif" width="310"/> |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|         "Next" Operation in HalfEdge data structure          |      Why tangent vector is orothogonal to normal vector      |
 
+| <img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho1.gif" width="310"/> | <img src="Lecture/DiscreteDifferentialGeometry/img/curvature-of-curve.gif" height="310"/> |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|      Why tangent vector is orothogonal to normal vector      |              Visualize the curvature of a curve              |
 
-
-<figure>
-    <center>
-  <img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:30%;">
-        <figcaption>Why tangent vector is orothogonal to normal vector</figcaption>
-     </center>
-</figure>
-
-
-
-<figure>
-    <center>
-  <img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:30%;" >
-        <figcaption>Why tangent vector is orothogonal to normal vector</figcaption>
-     </center>
-</figure>
-
-
-
-<figure>
-    <center>
-  <img src="Lecture/DiscreteDifferentialGeometry/img/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:35%;" >
-        <figcaption>Visualize the curvature of a curve</figcaption>
-     </center>
-</figure>
-
-
-
-<figure>
-    <center>
-  <img src="Lecture/DiscreteDifferentialGeometry/img/simplicial-operator-preview.gif" alt="Simplicial Operator" style="zoom:50%;" >
-        <figcaption>Simplicial Operator written in C++</figcaption>
-     </center>
-</figure>
-
+| <img src="Lecture/DiscreteDifferentialGeometry/img/simplicial-operator-preview.gif" width="310"/> |      |
+| :----------------------------------------------------------: | :--: |
+| [Simplicial Operator written in C++](Lecture/DiscreteDifferentialGeometry/code/00_simplicial-complex-operators/src/simplicial-complex-operators.cpp) |      |
 
 
 
