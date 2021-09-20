@@ -11,6 +11,8 @@
 
 Welcome to this repo. As the development of geometric deep learning and geometry processing, geometry is playing an ever-growing important role in the field of architecture, computational design, and robotic fabrication. Although I am able to write geometric algorithm from time to time, I aim to have a big and thorough picture over this topic. Therefore, I felt compelled to study computational geometry across different subject.
 
+
+
 ### Structure🧩
 
 In light of different sources of materials, this repo is organized as follows:
@@ -20,6 +22,8 @@ In light of different sources of materials, this repo is organized as follows:
 - Library:computer:    the popular geometry processing library
 - Paper:page_with_curl:    the must read paper
 - Workshop:video_camera:  the short-period of workshop
+
+
 
 ### Recommended Material:thumbsup:
 
@@ -81,21 +85,49 @@ My recommended study material is followed:
 
 ### Outputs
 
-
-
-<img src="Lecture/DiscreteDifferentialGeometry/img/orbits_faces.gif" alt="orbits_faces" style="zoom:67%;" />
-
-
-
-<img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:50%;" />
-
-
-
-<img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:50%;" />
+<figure>
+    <center>
+  <img src="Lecture/DiscreteDifferentialGeometry/img/orbits_faces.gif" alt="orbits_faces" style="width:25%">
+        <figcaption>"Next" Operation in HalfEdge data structure</figcaption>
+     </center>
+</figure>
 
 
 
-<img src="Lecture/DiscreteDifferentialGeometry/img/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
+<figure>
+    <center>
+  <img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho.gif" alt="why-tangent-normal-ortho" style="zoom:30%;">
+        <figcaption>Why tangent vector is orothogonal to normal vector</figcaption>
+     </center>
+</figure>
+
+
+
+<figure>
+    <center>
+  <img src="Lecture/DiscreteDifferentialGeometry/img/why-tangent-normal-ortho1.gif" alt="why-tangent-normal-ortho1" style="zoom:30%;" >
+        <figcaption>Why tangent vector is orothogonal to normal vector</figcaption>
+     </center>
+</figure>
+
+
+
+<figure>
+    <center>
+  <img src="Lecture/DiscreteDifferentialGeometry/img/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:35%;" >
+        <figcaption>Visualize the curvature of a curve</figcaption>
+     </center>
+</figure>
+
+
+
+<figure>
+    <center>
+  <img src="Lecture/DiscreteDifferentialGeometry/img/simplicial-operator-preview.gif" alt="Simplicial Operator" style="zoom:50%;" >
+        <figcaption>Simplicial Operator written in C++</figcaption>
+     </center>
+</figure>
+
 
 
 
