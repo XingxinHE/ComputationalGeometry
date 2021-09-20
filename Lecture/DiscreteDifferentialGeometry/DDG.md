@@ -1,3 +1,22 @@
+# Table of Content
+
+:notebook_with_decorative_cover:[    **Lecture Notes**    ]:notebook_with_decorative_cover:
+
+- [1. Overview](#chapter-01-overview)
+- [2. Combinatorial Surfaces](#chapter-02-combinatorial-surfaces)
+  - [2.1. Abstract Simplicial Complex](#21-abstract-simplicial-complex)
+  - [2.2. Anatomy of a Simplicial Complex: Star, Closure, and Link ](#22-anatomy-of-a-simplicial-complex-star-closure-and-link)
+  - [2.3. Simplicial Manifold](#23-simplicial-manifold)
+
+:book:[    **Reading Assignment**    ]:book:
+
+
+
+:keyboard:[    **Coding Assignment**    ]:keyboard:
+
+
+
+
 # Chapter 01: Overview
 
 There are few application of Discrete Differential Geometry:
@@ -3299,7 +3318,7 @@ Nearly rectangular panels are sustainable and preferable in fabrication since it
 
 
 
-
+# 1. Simplicial Operator
 
 
 
