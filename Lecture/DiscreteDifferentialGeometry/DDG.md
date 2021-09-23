@@ -867,7 +867,7 @@ Cons: hard to iterate over, e.g. expensive to access its neighbors
 
 ___
 
-(fml.) Definition: Let $K$ be a simplicial complex, let $n_k$ denote the number of $k$-simplices in $K$, and suppose that for each $k$ we give the $k$-simplices a canonical ordering so that they can be specified via indices $1,...,n_k$. The $k$th *incidence matrix* is then a $n_{k+1}\times n_k$ matrix $E^k$ with entries $E^{k}_{ij}=1$ if the $j$th $k$-simplex is contained in the $i$th $(k+1)$-simplex, and $E^k_{ij}=0$ otherwise.
+(fml.) Definition: Let $K$ be a simplicial complex, let $n_k$ denote the number of $k$-simplices in $K$, and suppose that for each $k$ we give the $k$-simplices a canonical ordering so that they can be specified via indices $1,...,n_k$. The $k$-th *incidence matrix* is then a $n_{k+1}\times n_k$ matrix $E^k$ with entries $E^{k}_{ij}=1$ if the $j$th $k$-simplex is contained in the $i$-th $(k+1)$-simplex, and $E^k_{ij}=0$ otherwise.
 
 <img src="img/image-20210211103600717.png" alt="image-20210211103600717" style="zoom:50%;" />
 
@@ -3320,9 +3320,105 @@ Nearly rectangular panels are sustainable and preferable in fabrication since it
 
 
 
+# Coding Assignment
 
 
-# 1. Simplicial Operator
+
+## 1. Simplicial Operator
+
+
+
+### 1.1. Build Vertex-Edge Adjacency Matrix
+
+:keyboard: **Task 1**
+
+```c++
+SparseMatrix<size_t> SimplicialComplexOperators::buildVertexEdgeAdjacencyMatrix() const {
+
+    // TODO
+    // Note: You can build an Eigen sparse matrix from triplets, then return it as a Geometry Central SparseMatrix.
+    // See <https://eigen.tuxfamily.org/dox/group__TutorialSparse.html> for documentation.
+
+    return identityMatrix<size_t>(1); // placeholder
+}
+```
+
+
+
+:pushpin: **What is `size_t`?**
+
+It is a data structure define by the architect. Just remember it is related to the architecture of your device like `x32` or `x64`.
+
+```c++
+// Definitions of common types
+#ifdef _WIN64
+    typedef unsigned __int64 size_t;
+    typedef __int64          ptrdiff_t;
+    typedef __int64          intptr_t;
+```
+
+
+
+:pushpin: **Recap of Adjacency Matrix**
+
+You can review [topological data structure](#24-topological-data-structures).
+
+
+
+:pushpin: **A0 and A1 Matrix**
+
+In the framework of `ddg-exercise`, they are:
+
+- `A0` matrix : **edges-vertices matrix** which is the $E_0$ [matrix](#242-incidence-matrix).
+- `A1` matrix : **faces-edges matrix** which is the $E_1$ [matrix](#242-incidence-matrix).
+
+
+
+:pushpin: **How to remember what is A0 and A1?**
+
+I would like to interpret this way.
+
+- $k$ of $E^k/A^k$ indicates the $k$-simplex of the column!
+- the row is $k+1$-simplex
+
+e.g. 
+
+- $E^0/A^0$ , $k=0$, column = **0**-simplex = vertices, row = **0+1**-simplex = edges
+- $E^1/A^1$ , $k=1$, column = **1**-simplex = edges, row = **1+1**-simplex = faces
+
+
+
+:pushpin: **$E^0$/$A^0$ matrix**
+
+So the column is $0$-simplex which is vertex, the row is $1$-simplex which is edge.
+$$
+E^0 = \begin{bmatrix}\end{bmatrix}
+$$
+
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
+
+
+
+:pushpin: ****
+
+
 
 
 
