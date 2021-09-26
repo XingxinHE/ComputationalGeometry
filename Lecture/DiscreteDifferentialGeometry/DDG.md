@@ -3328,17 +3328,24 @@ Nearly rectangular panels are sustainable and preferable in fabrication since it
 
 
 
-### 1.1. Build Vertex-Edge Adjacency Matrix
+### 1.1. Build Adjacency Matrix
 
-:keyboard: **Task 1**
+:keyboard: **Task 1 - Build Vertex-Edge Adjacency Matrix**
 
 ```c++
 SparseMatrix<size_t> SimplicialComplexOperators::buildVertexEdgeAdjacencyMatrix() const {
 
     // TODO
-    // Note: You can build an Eigen sparse matrix from triplets, then return it as a Geometry Central SparseMatrix.
-    // See <https://eigen.tuxfamily.org/dox/group__TutorialSparse.html> for documentation.
+    return identityMatrix<size_t>(1); // placeholder
+}
+```
 
+:keyboard: **Task 2 - Build Face-Edge Adjacency Matrix**
+
+```c++
+SparseMatrix<size_t> SimplicialComplexOperators::buildFaceEdgeAdjacencyMatrix() const {
+
+    // TODO
     return identityMatrix<size_t>(1); // placeholder
 }
 ```
@@ -3388,31 +3395,146 @@ e.g.
 
 
 
-:pushpin: **$E^0$/$A^0$ matrix**
+:pushpin: **$E^0$/$A^0$ and $E^1$/$A^1$ matrix**
 
-So the column is $0$-simplex which is vertex, the row is $1$-simplex which is edge.
+$E^0$/$A^0$ in short:
+
+> ​	So the column is $0$-simplex which is vertex, the row is $1$-simplex which is edge.
+
+// TODO - A nice matrix representation here rather than an image.
+
+
+$E^1$/$A^1$ in short:
+
+> ​	So the column is $1$-simplex which is vertex, the row is $2$-simplex which is edge.
+
+<img src="img/image-20210211103600717.png" style="zoom:50%;" />
 $$
-E^0 = \begin{bmatrix}\end{bmatrix}
+E^0 = \begin{bmatrix}\end{bmatrix}
 $$
+How to do it?
+
+> ​	Loop over all the edges and their vertices, set the column as **1** if these vertices construct current row of edge.
 
 
 
+:pushpin: **Algorithm**
 
-:pushpin: ****
+```
+get the amount of vertices as nVertices
+get the amount of edges as nEdges
+declare the dimension of sparse matrix with row=nEdges, column=nVertices
+⭐build the sparse matrix from Triplet
+for Edge in Edges:
+	get index of this edge (row index)
+	get the vertices of this edge (column index)
+	assign Triplet
+build Sparse Matrix from triplets
+compress it
+```
+
+The data structure of Triplet is [here](https://eigen.tuxfamily.org/dox/classEigen_1_1Triplet.html).
 
 
 
+:pushpin: **Task 1 Solution**
+
+```c++
+SparseMatrix<size_t> SimplicialComplexOperators::buildVertexEdgeAdjacencyMatrix() const {
+    size_t nVertices = mesh->nVertices();
+    size_t nEdges = mesh ->nEdges();
+    Eigen::SparseMatrix<size_t> M(nEdges, nVertices);
+    std::vector<Eigen::Triplet<size_t>> T;
+    for (Edge e : mesh->edges())
+    {
+        size_t eIndex = e.getIndex();
+        T.emplace_back(eIndex, e.firstVertex().getIndex(), 1);
+        T.emplace_back(eIndex, e.secondVertex().getIndex(), 1);
+    }
+
+    M.setFromTriplets(T.begin(), T.end());
+    M.makeCompressed();
+    
+    return M;
+}
+```
 
 
-:pushpin: ****
+
+:pushpin: **Task 2 Solution**
+
+It is similar to `Build Vertex-Edge Adjacency Matrix`, except you have to loop the edges of a face.
+
+```c++
+SparseMatrix<size_t> SimplicialComplexOperators::buildFaceEdgeAdjacencyMatrix() const {
+
+    size_t nFaces = mesh->nFaces();
+    size_t nEdges = mesh->nEdges();
+    Eigen::SparseMatrix<size_t> M(nFaces, nEdges);
+    std::vector<Eigen::Triplet<size_t>> T;
+    for (Face f : mesh->faces())
+    {
+        size_t fIndex = f.getIndex();
+        for (Edge e : f.adjacentEdges())
+        {
+            T.emplace_back(fIndex, e.getIndex(), 1);
+        }
+    }
+
+    M.setFromTriplets(T.begin(), T.end());
+    M.makeCompressed();
+
+    return M;
+}
+```
 
 
 
+### 1.2. Build Vertex, Edge, Face Vector
+
+The following 3 tasks are almost the same. Build the corresponding vectors of the simplices.
+
+:keyboard: **Task 3 - Build Vertex Vector**
+
+```c++
+Vector<size_t> SimplicialComplexOperators::buildVertexVector(const MeshSubset& subset) const {
+
+    // TODO
+    return Vector<size_t>::Zero(1);
+}
+```
 
 
-:pushpin: ****
+
+:keyboard: **Task 4 - Build Edge Vector**
+
+```c++
+Vector<size_t> SimplicialComplexOperators::buildEdgeVector(const MeshSubset& subset) const {
+
+    // TODO
+    return Vector<size_t>::Zero(1);
+}
+```
 
 
+
+:keyboard: **Task 5 - Build Face Vector**
+
+```c++
+Vector<size_t> SimplicialComplexOperators::buildFaceVector(const MeshSubset& subset) const {
+
+    // TODO
+    return Vector<size_t>::Zero(1);
+}
+```
+
+
+
+:pushpin: **What is the input? Recap of simplex**
+
+Input is `MeshSubset& subset` which are **selected subset of simplices**.
+
+For example, a manifold mesh is a simplicial COMPLEX. Its elements are simplices. You can refer to [simplex section](#simplex).
 
 
 
