@@ -3538,7 +3538,22 @@ For example, a manifold mesh is a simplicial COMPLEX. Its elements are simplices
 
 
 
-:pushpin: ****
+:pushpin: **What is XXX Vector exactly?**
+
+It is a SPARSE vector whose dimension corresponds to the elements of simplicial complex.
+
+For example, a face vector's dimension is $n\cross1$ where $n$ is the amount of faces in a mesh. The subset of a simplicial complex is called simplices.
+$$
+\begin{bmatrix}1\\0\\1\\0\\1\end{bmatrix}
+$$
+
+
+
+Suppose it is a vertex vector above and it means the simplices are the **1st**, **3th** and **5th** vertex from the complex which composes the current `MeshSubset`.
+
+
+
+:pushpin:**Solution**
 
 
 
@@ -3546,6 +3561,3 @@ For example, a manifold mesh is a simplicial COMPLEX. Its elements are simplices
 
 
 
-
-
-  
