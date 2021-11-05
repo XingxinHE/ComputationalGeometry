@@ -173,6 +173,21 @@ Vector<size_t> SimplicialComplexOperators::buildFaceVector(const MeshSubset& sub
 MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
     MeshSubset star = subset.deepCopy();
 
+    //Vector<size_t> VertexVector = this->buildVertexVector(star);
+    //Vector<size_t> EdgeVector = this->buildEdgeVector(star);
+    //Vector<size_t> FaceVector = this->buildFaceVector(star);
+
+    Vector<size_t> EdgeVector = this->A0 * this->buildVertexVector(star);
+    
+    size_t edgeLength = EdgeVector.size();
+    for (size_t i = 0; i < edgeLength; i++)
+    {
+        if (EdgeVector[i] != 0)
+        {
+            star.addEdge(i);
+        }
+    }
+
     for (size_t iVertex : star.vertices)
     {
         for (Edge e : mesh->vertex(iVertex).adjacentEdges())
@@ -303,7 +318,7 @@ int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
     {
         Vector<size_t> faceVertices = this->A0.transpose().operator*(this->A1.transpose().operator*(faceVector));
 
-        
+
         for (size_t i = 0; i < nVertices; i++)
         {
             if (faceVertices(i, 0) == 0 && vertexVector(i, 0) != 0)
@@ -367,5 +382,5 @@ MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const 
 
     }
     return this->closure(boundary);
-    
+
 }

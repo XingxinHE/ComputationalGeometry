@@ -3555,6 +3555,135 @@ Suppose it is a vertex vector above and it means the simplices are the **1st**, 
 
 :pushpin:**Solution**
 
+```c++
+Vector<size_t> SimplicialComplexOperators::buildVertexVector(const MeshSubset& subset) const {
+    
+    size_t nVertices = mesh->nVertices();
+    Vector<size_t> VertexVector(nVertices);
+
+    for (size_t iVertex : subset.vertices)
+    {
+        VertexVector(iVertex, 0) = 1;
+    }
+    
+    return VertexVector;
+}
+```
+
+1. use `nVertices()` to acquire the amount of vertices of the mesh
+2. Build a vector with a full dimension of the amount of vertices `Vector<size_t>`. (now they are all $0$)
+3. Loop over the vector, if $i$-th vertex is in the `subset`, then assign $1$ to $i$-th row of the vector
+
+
+
+The others are similar
+
+```c++
+Vector<size_t> SimplicialComplexOperators::buildEdgeVector(const MeshSubset& subset) const {
+
+    size_t nEdges = mesh->nEdges();
+    Vector<size_t> EdgeVector(nEdges);
+
+    for (size_t iEdge : subset.edges)
+    {
+        EdgeVector(iEdge, 0) = 1;
+    }
+
+    return EdgeVector;
+}
+
+Vector<size_t> SimplicialComplexOperators::buildFaceVector(const MeshSubset& subset) const {
+
+    size_t nFaces = mesh->nFaces();
+    Vector<size_t> FaceVector(nFaces);
+
+    for (size_t iFace : subset.faces)
+    {
+        FaceVector(iFace, 0) = 1;
+    }
+
+    return FaceVector;
+}
+```
+
+
+
+:book:**Review**
+
+To review the concept of `star`, `closure`, `link`, and `boundary`. Please click [here](#22-anatomy-of-a-simplicial-complex-star-closure-and-link).
+
+
+
+### 1.3 Star
+
+![star_cpp](img/star_cpp-16361033879841.jpg)
+
+:pushpin:**Overview of `Star`**
+
+In short, the star of an object is what enclose it. For example, an edge encloses a point, a face encloses an edge. Therefore, the star of a subset is what encloses it.
+
+
+
+:pushpin:**Initial attempt**
+
+```c++
+MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
+    MeshSubset star = subset.deepCopy();
+
+    for (size_t iVertex : star.vertices)
+    {
+        for (Edge e : mesh->vertex(iVertex).adjacentEdges())
+        {
+            star.addEdge(e.getIndex());
+        }
+        for (Face f : mesh->vertex(iVertex).adjacentFaces())
+        {
+            star.addFace(f.getIndex());
+        }
+    }
+
+    for (size_t iEdge : star.edges)
+    {
+        for (Face f : mesh->edge(iEdge).adjacentFaces())
+        {
+            star.addFace(f.getIndex());
+        }
+    }
+
+    return star;
+}
+```
+
+
+
+:pushpin:**Evaluation of 1st attempt**
+
+There are **TWO** big shortages in my code.
+
+- They are `for` loops in my code which cannot be parallelized:x:.
+- If a face includes a vertex, it must include the adjacent edge of such vertex. Therefore, there are redundancy:turtle: in my code.
+
+
+
+:pushpin:**Implementation**
+
+- The following `for` loop can be deleted since the second `for` loop will add faces from edges
+
+```c++
+for (Face f : mesh->vertex(iVertex).adjacentFaces())
+{
+    star.addFace(f.getIndex());
+}
+```
+
+- To speed up computing, we can take advantage of Matrix-computing in Eigen library.
+
+  - :one: First, what encloses vertex, it is edge. Therefore, we can use `vertex-edge` adjacent matrix to have the edge vector
+
+  - :two: Second, after adding edges, we can use `edge-face` adjacent matrix to have face vector.
+
+
+
 
 
 
