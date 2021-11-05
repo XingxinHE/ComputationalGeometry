@@ -171,43 +171,29 @@ Vector<size_t> SimplicialComplexOperators::buildFaceVector(const MeshSubset& sub
  * Returns: The star of the given subset.
  */
 MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
+    //1.Deep copy a subset as a star
     MeshSubset star = subset.deepCopy();
-
-    //Vector<size_t> VertexVector = this->buildVertexVector(star);
-    //Vector<size_t> EdgeVector = this->buildEdgeVector(star);
-    //Vector<size_t> FaceVector = this->buildFaceVector(star);
-
-    Vector<size_t> EdgeVector = this->A0 * this->buildVertexVector(star);
-    
-    size_t edgeLength = EdgeVector.size();
+    //2.Use vertex-edge matrix to find all the edges
+    Vector<size_t> edgeVector = this->A0 * this->buildVertexVector(star);
+    size_t edgeLength = edgeVector.size();
     for (size_t i = 0; i < edgeLength; i++)
     {
-        if (EdgeVector[i] != 0)
+        if (edgeVector[i] != 0)
         {
             star.addEdge(i);
         }
     }
-
-    for (size_t iVertex : star.vertices)
+    //3.Use edge-face matrix to find all the faces
+    Vector<size_t> faceVector = this->A1 * this->buildFaceVector(star);
+    size_t faceLength = faceVector.size();
+    for (size_t i = 0; i < faceLength; i++)
     {
-        for (Edge e : mesh->vertex(iVertex).adjacentEdges())
+        if (faceVector[i] != 0)
         {
-            star.addEdge(e.getIndex());
-        }
-        for (Face f : mesh->vertex(iVertex).adjacentFaces())
-        {
-            star.addFace(f.getIndex());
+            star.addFace(i);
         }
     }
-
-    for (size_t iEdge : star.edges)
-    {
-        for (Face f : mesh->edge(iEdge).adjacentFaces())
-        {
-            star.addFace(f.getIndex());
-        }
-    }
-
+    //4.Return the star
     return star;
 }
 
