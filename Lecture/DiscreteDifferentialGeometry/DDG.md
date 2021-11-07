@@ -3616,7 +3616,9 @@ To review the concept of `star`, `closure`, `link`, and `boundary`. Please click
 
 ### 1.3 Star
 
-![star_cpp](img/star_cpp-16361033879841.jpg)
+***Star*** $St(S)$ is the collection of all simplices in $K$ that contain any simplex in $S$. In the following diagram, $S$ is a vertex.
+
+![star_cpp](img/star_cpp.jpg)
 
 :pushpin:**Overview of `Star`**
 
@@ -3684,7 +3686,319 @@ for (Face f : mesh->vertex(iVertex).adjacentFaces())
 
 
 
+:pushpin:**Final Solution**
 
+```c++
+MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
+
+    //1.Deep copy a subset as a star
+    MeshSubset star = subset.deepCopy();
+
+    //2.Use vertex-edge matrix to find all the edges
+    Vector<size_t> edgeVector = this->A0 * this->buildVertexVector(star);
+    size_t edgeLength = edgeVector.size();
+    for (size_t i = 0; i < edgeLength; i++)
+    {
+        if (edgeVector[i] != 0)
+        {
+            star.addEdge(i);
+        }
+    }
+
+    //3.Use edge-face matrix to find all the faces
+    Vector<size_t> faceVector = this->A1 * this->buildEdgeVector(star);
+    size_t faceLength = faceVector.size();
+    for (size_t i = 0; i < faceLength; i++)
+    {
+        if (faceVector[i] != 0)
+        {
+            star.addFace(i);
+        }
+    }
+
+    //4.Return the star
+    return star;
+}
+```
+
+
+
+### 1.4 Closure
+
+***Closure*** $Cl(S)$ is the smallest (i.e., fewest elements) subcomplex of $K$ that contains $S$. In the following diagram, $S$ is a set of 1×triangle and an 1×edge.
+
+![closure_cpp](img/closure_cpp.jpg)
+
+:pushpin:**Overview of `closure`**
+
+In short, the `closure` of a mesh subset is its downward level. For instance, the `closure` of a face is its edges and vertices. The `closure` of an edge is its vertices. There is no `closure` of a vertex since it has no downward level.
+
+
+
+:pushpin:**Initial Attempt**
+
+```c++
+MeshSubset SimplicialComplexOperators::closure(const MeshSubset& subset) const {
+
+    //Make a deepcopy of the input simplices
+    MeshSubset closure = subset.deepCopy();
+
+    // For closure, we only need to 
+    // (1) add the adjacent edges from faces
+    // (2) add the adjacent vertices from faces
+    // (3) add the adjacent vertices from edges
+    for (size_t iFace : subset.faces)
+    {
+        for (Edge e : mesh->face(iFace).adjacentEdges())
+        {
+            closure.addEdge(e.getIndex());
+        }
+        for (Vertex v : mesh->face(iFace).adjacentVertices())
+        {
+            closure.addVertex(v.getIndex());
+        }
+    }
+
+    for (size_t iEdge : subset.edges)
+    {
+        for (Vertex v : mesh->edge(iEdge).adjacentVertices())
+        {
+            closure.addVertex(v.getIndex());
+        }
+    }
+
+    return closure;
+}
+```
+
+
+
+:pushpin:**Evaluation of 1st attempt**
+
+Same with the solution of `Star` , there are **TWO** big shortages in my code.
+
+- They are `for` loops in my code which cannot be parallelized:x:.
+- There are redundancy:turtle: in adding vertices since it operates twice.
+
+
+
+:pushpin:**Implementation**
+
+- The following `for` loop can be deleted since the second `for` loop will add faces from edges
+
+```c++
+for (Vertex v : mesh->face(iFace).adjacentVertices())
+{
+    closure.addVertex(v.getIndex());
+}
+```
+
+- To speed up computing, we can take advantage of Matrix-computing in Eigen library as we did in `Star`.
+
+  - :one: Use `face-edge` matrix and `edge-vertex` matrix, a downward solution
+  - :two: Use matrix operation to speed up
+
+
+
+:pushpin:**Final Solution**
+
+```c++
+MeshSubset SimplicialComplexOperators::closure(const MeshSubset& subset) const {
+
+    //1. Make a deepcopy of the input simplices
+    MeshSubset closure = subset.deepCopy();
+
+    //2. Use transpose of edge-face matrix, to have all the edges
+    Vector<size_t> edgeVector = this->A1.transpose() * this->buildFaceVector(closure);
+    size_t edgeLength = edgeVector.size();
+    for (size_t i = 0; i < edgeLength; i++)
+    {
+        if (edgeVector[i] != 0)
+        {
+            closure.addEdge(i);
+        }
+    }
+
+    //3. Use the transpose of vertex-edge matrix, to have all the vertices
+    Vector<size_t> vertexVector = this->A0.transpose() * this->buildEdgeVector(closure);
+    size_t vertexLength = vertexVector.size();
+    for (size_t i = 0; i < vertexLength; i++)
+    {
+        if (vertexVector[i] != 0)
+        {
+            closure.addVertex(i);
+        }
+    }
+    
+    //4. Return the closure
+    return closure;
+}
+```
+
+
+
+### 1.5 Link
+
+***Link*** $Lk(S)$ is equal to $Cl(St(S)) \backslash St(Cl(S))$ which means taking out the $star\space St(s)$ from $closure\space Cl(S)$. In the following diagram, $S$ is a vertex.
+
+:pushpin:**Solution**
+
+With development of `Star` and `Closure`, the `Link` can be computed via $Cl(St(S)) \backslash St(Cl(S))$.
+
+```c++
+MeshSubset SimplicialComplexOperators::link(const MeshSubset& subset) const {
+
+    MeshSubset closureStar = SimplicialComplexOperators::closure(SimplicialComplexOperators::star(subset));
+    MeshSubset starClosure = SimplicialComplexOperators::star(SimplicialComplexOperators::closure(subset));
+
+    closureStar.deleteSubset(starClosure);
+
+    return closureStar;
+}
+```
+
+
+
+### 1.6 isComplex
+
+:pushpin: **Definition**
+
+A MeshSubset is a `complex` **if and only** if its `closure` is itself.
+
+:pushpin:**Assignment**
+
+The method is expected to return a `bool` to see if this is a `complex`.
+
+```c++
+bool SimplicialComplexOperators::isComplex(const MeshSubset& subset) const {
+
+    // TODO
+    return false; // placeholder
+}
+```
+
+
+
+:pushpin:**Solution**
+
+```c++
+bool SimplicialComplexOperators::isComplex(const MeshSubset& subset) const {
+
+    MeshSubset closure = SimplicialComplexOperators::closure(subset);
+    bool flag = subset.equals(closure);
+    return flag;
+}
+```
+
+
+
+### 1.7 isPureComplex
+
+:pushpin:**Definition**
+
+A complex $K$ is a pure $k$-*simplicial complex* if every simplex $\sigma'\in K $ is contained in some simplex of degree $k$ (possibly itself).
+
+:pushpin: **Category**
+
+The following is the category of $k$ degree.
+
+| $k$-simplex | Geometry   |
+| ----------- | ---------- |
+| 0-simplex   | A point    |
+| 1-simplex   | An edge    |
+| 2-simplex   | A triangle |
+
+:pushpin:**Assignment**
+
+The method is expected to compute the degree of this meshsubset in `int`.
+
+```c++
+int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
+
+    // TODO
+    return -1; // placeholder
+}
+```
+
+:pushpin: **Illustration**
+
+The diagram illustrates the degree of $k$ of a pure complex.
+
+<img src="img/isPureComplex.jpg" style="zoom:33%;" />
+
+The diagram illustrates those NOT a complex. For example, the vertex of an edge is not shown.
+
+<img src="img/isPureComplex_Not.jpg" style="zoom:33%;" />
+
+:pushpin:**Solution**
+
+It can be sliced into following steps:
+
+1. Check if it is a `complex`, if NOT, return `-1`
+2. From $k=2$ to $k=0$ check if it is qualified, if NOT, return `-1`
+
+```c++
+int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
+
+    //1. Check if it is a complex
+    if (!SimplicialComplexOperators::isComplex(subset))
+    {
+        return -1;
+    }
+
+    //2. Prepare the ingredients for computing
+    Vector<size_t> vertexVector = this->buildVertexVector(subset);
+    Vector<size_t> edgeVector = this->buildEdgeVector(subset);
+    Vector<size_t> faceVector = this->buildFaceVector(subset);
+    size_t nVertices = mesh->nVertices();
+
+    //3. See if it is a 2-complex
+    if (subset.faces.size() > 0)
+    {
+        Vector<size_t> faceVertices = this->A0.transpose().operator*(this->A1.transpose().operator*(faceVector));
+
+        for (size_t i = 0; i < nVertices; i++)
+        {
+            if (faceVertices(i, 0) == 0 && vertexVector(i, 0) != 0)
+            {
+                return -1;
+            }
+        }
+        return 2;
+    }
+
+    //4. See if it is a 1-complex
+    else if (subset.edges.size() > 0)
+    {
+        Vector<size_t> edgeVertices = this->A0.transpose().operator*(edgeVector);
+
+        for (size_t i = 0; i < nVertices; i++)
+        {
+            if (edgeVertices(i, 0) == 0 && vertexVector(i, 0) != 0)
+            {
+                return -1;
+            }
+        }
+        return 1;
+    }
+
+    //5. See if it is a 0-complex
+    else if (subset.vertices.size() > 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 0;
+    }
+}
+```
+
+
+
+### 1.8 Boundary
+
+***Boundary*** $bd(K')$ is a pure $k$-subcomplex $K' \subseteq K$. The boundary is the closure of the set of all simplices $\sigma$ that are proper faces of exactly one simplex of $K'$.
 
 
 
