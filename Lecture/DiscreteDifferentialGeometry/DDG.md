@@ -3998,7 +3998,65 @@ int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
 
 ### 1.8 Boundary
 
+:pushpin:**Definition**
+
 ***Boundary*** $bd(K')$ is a pure $k$-subcomplex $K' \subseteq K$. The boundary is the closure of the set of all simplices $\sigma$ that are proper faces of exactly one simplex of $K'$.
+
+:pushpin:**Assignment**
+
+Return a meshsubset representing the boundary.
+
+```c++
+MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const {
+
+    // TODO
+    return subset; // placeholder
+}
+```
+
+:pushpin:**Solution**
+
+```c++
+MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const {
+
+    //1. Made a brandnew empty meshsubset
+    MeshSubset boundary;
+
+    //2.1. If it has faces
+    if (subset.faces.size() > 0) {
+        Vector<size_t> faceEdges = this->A1.transpose().operator*(this->buildFaceVector(subset));
+        size_t nEdges = mesh->nEdges();
+        for (size_t i = 0; i < nEdges; i++) {
+            if (faceEdges(i, 0) == 1) {
+                boundary.addEdge(i);
+            }
+        }
+    }
+    //2.2. If it has edges
+    else if (subset.edges.size() > 0) {
+        Vector<size_t> edgeVertices = this->A0.transpose().operator*(this->buildEdgeVector(subset));
+        size_t nVertices = mesh->nVertices();
+        for (size_t i = 0; i < nVertices; i++) {
+            if (edgeVertices(i, 0) == 1) {
+                boundary.addVertex(i);
+            }
+        }
+    }
+
+    //3. Return
+    return this->closure(boundary);
+}
+```
+
+1. Make a brand new meshsubset to store the lower level elements
+2. To make a subset
+   1. if it has faces
+   2. if it has edges
+3. To return the `closure`. 
+
+
+
+//TODO Please explain why `faceEdges` is the outer most edges not including the inner edges???
 
 
 

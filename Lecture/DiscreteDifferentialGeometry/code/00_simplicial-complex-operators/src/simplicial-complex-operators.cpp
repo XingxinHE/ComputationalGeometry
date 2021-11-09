@@ -338,8 +338,10 @@ int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
  */
 MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const {
 
+    //1. Made a brandnew empty meshsubset
     MeshSubset boundary;
 
+    //2.1. If it has faces
     if (subset.faces.size() > 0) {
         Vector<size_t> faceEdges = this->A1.transpose().operator*(this->buildFaceVector(subset));
         size_t nEdges = mesh->nEdges();
@@ -349,6 +351,7 @@ MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const 
             }
         }
     }
+    //2.2. If it has edges
     else if (subset.edges.size() > 0) {
         Vector<size_t> edgeVertices = this->A0.transpose().operator*(this->buildEdgeVector(subset));
         size_t nVertices = mesh->nVertices();
@@ -358,5 +361,8 @@ MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const 
             }
         }
     }
+
+    //3. Return
     return this->closure(boundary);
 }
+
