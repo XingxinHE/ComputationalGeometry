@@ -3998,6 +3998,8 @@ int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
 
 ### 1.8 Boundary
 
+<img src="img/boundary_cpp.jpg" style="zoom:33%;" />
+
 :pushpin:**Definition**
 
 ***Boundary*** $bd(K')$ is a pure $k$-subcomplex $K' \subseteq K$. The boundary is the closure of the set of all simplices $\sigma$ that are proper faces of exactly one simplex of $K'$.
