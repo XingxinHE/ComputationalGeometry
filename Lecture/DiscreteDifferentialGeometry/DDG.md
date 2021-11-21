@@ -65,6 +65,14 @@ In a nutshell, DDG translate differential geometry into language suitable for **
 
 
 
+### :star::star::star:What is the study Roadmap?
+
+(Always looking at a bigger picture)
+
+<img src="img/image-20211121140539317.png" alt="image-20211121140539317" style="zoom: 67%;" />
+
+
+
 ### What is discrete setting and smooth setting?
 
 ___
@@ -2997,6 +3005,14 @@ In this section, we will take a deep insight of it.
 ### Curl and Divergence - (review)
 
 The following content is a review of calculus.
+
+
+
+#### Illustration of Gradient, Divergence, and Curl
+
+![image-20211119181749069](img/image-20211119181749069.png)
+
+
 
 #### What is vector field?
 
