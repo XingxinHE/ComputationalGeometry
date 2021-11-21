@@ -36,7 +36,9 @@ In a nutshell, **GEOMETRY IS EVERYWHERE**!
 
 
 
-### What is Differential Geometry?
+## 1.1. What and Why DDG?
+
+:pushpin:**What is Differential Geometry?**
 
 ___
 
@@ -47,7 +49,7 @@ ___
 
 
 
-### What is *Discrete* Differential Geometry?
+:pushpin:**What is *Discrete* Differential Geometry?**
 
 ___
 
@@ -57,7 +59,7 @@ ___
 
 
 
-### Why *Discrete* Differential Geometry is important?
+:pushpin:**Why *Discrete* Differential Geometry is important?**
 
 ___
 
@@ -65,15 +67,30 @@ In a nutshell, DDG translate differential geometry into language suitable for **
 
 
 
-### :star::star::star:What is the study Roadmap?
+## 1.2. :star::star::star:Study Roadmap of DDG
 
-(Always looking at a bigger picture)
+- :one: Combinatorial Surfaces
+- :two: Exterior Calculus
+  - Exterior Algebra
+  - Differential Forms (3D calculus)
+  - Discrete Exterior Calculus
+- :three: Curves (2D&3D)
+  - Smooth
+  - Discrete
+- :four: Surfaces
+  - Smooth
+  - Discrete
+- :five: Curvature
+- :six: Laplace-Beltrami
+- :seven: Geodesics
+- :eight: Conformal Geometry
+- :nine: Homology & Cohomology
 
-<img src="img/image-20211121140539317.png" alt="image-20211121140539317" style="zoom: 67%;" />
 
 
+## 1.3. Discrete setting & Smooth setting
 
-### What is discrete setting and smooth setting?
+:pushpin:**What is discrete setting and smooth setting?**
 
 ___
 
@@ -85,7 +102,7 @@ ___
 
 
 
-### How to convert smooth setting to discrete setting?
+:pushpin:**How to convert smooth setting to discrete setting?**
 
 ___
 
@@ -95,7 +112,7 @@ We therefore need to determine which properties should be captured.
 
 
 
-#### Smooth->Discrete || curves in plane(ok)
+:pushpin:**Case 1 - curves in plane: Smooth->Discrete = (ok:smile:)**
 
 ___
 
@@ -111,7 +128,7 @@ In the ***discrete*** setting, a *parameterized curve* is ***piecewise linear***
 
 
 
-#### Smooth->Discrete || Tangent of a curve(not easy)
+:pushpin: **Case 2 - Tangent of a curve: Smooth->Discrete = (not easy:no_mouth: )**
 
 ___
 
@@ -127,9 +144,11 @@ ___
 
 
 
-#### :question: So what is the equivalent definition of curvature in discrete setting?
+## 1.4. A Case Study of Smooth to Discrete
 
 ___
+
+To well explain the **distinction** between **smooth** setting and **discrete** setting, here introduce a case study of such transition on curvature.
 
 There are 4:
 
@@ -139,7 +158,7 @@ There are 4:
 
 
 
-### Turning Angle
+### 1.4.1. Turning Angle
 
 ___
 
@@ -151,11 +170,11 @@ P.S. The angle of  $\phi$  is measured with the angle the tangent makes with the
 
 
 
-### Length Variation
+### 1.4.2. Length Variation
 
 ___
 
-#### smooth setting
+:pushpin:**smooth setting**
 
 How to measure?  First let's take a look on the smooth setting:
 
@@ -173,7 +192,7 @@ For the circle(most curvy) in the middle, the length varies a lot.
 
 <img src="img/image-20210208113543296.png" alt="image-20210208113543296" style="zoom:50%;" />
 
-#### discrete setting
+:pushpin:**discrete setting**
 
 Suppose we have a single line segment:
 
@@ -203,7 +222,7 @@ $$
 \triangledown_{\gamma_i}L = 2sin(\theta_i/2)N_i
 $$
 
-#### sum up
+:pushpin: **sum up**
 
 in smooth setting, gradient length = curvature × normal($-\kappa N$)
 
@@ -221,7 +240,7 @@ in discrete setting, length variation = *discrete* curvature × *discrete* norma
 
 
 
-### Steiner Formula
+### 1.4.3. Steiner Formula
 
 ___
 
@@ -275,9 +294,9 @@ Steiner’s formula says **change in length** is *proportional* to **curvature**
 
 
 
-### Osculating Circle
+### 1.4.4. Osculating Circle
 
-#### smooth setting
+:pushpin: **smooth setting**
 
 The curvature is the reciprocal of the radius:
 $$
@@ -287,7 +306,7 @@ $$
 
 <img src="img/image-20210208161533603.png" alt="image-20210208161533603" style="zoom:50%;" />
 
-#### discrete setting
+:pushpin: **discrete setting**
 
 Similarly, what we do in discrete is that:
 
@@ -300,24 +319,21 @@ $$
 \kappa^{D}_{i} = \frac{1}{r_i} = 2sin(\theta_i)/\omega_i
 $$
 
-
-
-
-### Which curvature should we use in application?
+### 1.4.5. Application of Curvature
 
 ___
+
+:pushpin: **Which curvature should we use in application?**
 
 Just pick the right one for your job!
 
 
 
-
-
-### Curvature Flow
+:pushpin: **Application - Curvature Flow**
 
 ___
 
-There are many application using curvature.
+There are many applications using curvature and curvature flow is just one of them.
 
 
 
@@ -331,11 +347,11 @@ There are many application using curvature.
 
 
 
-### Apply 4 Formula in Curvature Flow
+### 1.4.6. Apply 4 Theories in Curvature Flow
 
 ___
 
-#### smooth setting
+:pushpin: **smooth setting**
 
 A simple version of this topic is ***curve shortening flow***, where a *closed curve* moves in the **normal** direction with **speed**
 *proportional* to **curvature**.
@@ -354,7 +370,7 @@ $$
 
 
 
-#### discrete setting
+:pushpin: **discrete setting**
 
 *No Free Lunch!!
 
@@ -386,9 +402,9 @@ D: It has a round shape.
 
 # Chapter 02 Combinatorial Surfaces
 
+## 2.0. Prerequisite - Convex
 
-
-### Convex Set
+### 2.0.1. Convex Set
 
 ___
 
@@ -400,7 +416,7 @@ Now you can tell which are convex set:
 
 <img src="img/image-20210209223738504.png" alt="image-20210209223738504" style="zoom:50%;" />
 
-### Convex Hull
+### 2.0.2. Convex Hull
 
 ___
 
@@ -408,7 +424,7 @@ Definition: For any subset $S\sub\mathbb{R}^n$, its convex hull $conv(S)$ is the
 
 <img src="img/image-20210209224202999.png" alt="image-20210209224202999" style="zoom:50%;" />
 
-### Convex Hull - Example
+### 2.0.3. Convex Hull - Example
 
 ___
 
@@ -420,7 +436,7 @@ ___
 
 
 
-### Topological Disk
+### 2.0.4. Topological Disk
 
 ___
 
@@ -434,9 +450,9 @@ The objects in the first row **are** manifolds while the second row **aren't**.
 
 ## 2.1. Abstract Simplicial Complex
 
+### 2.1.1. Basic Math
 
-
-### Linear Independence(for vector)
+:pushpin: **Linear Independence(for vector)**
 
 ___
 
@@ -446,7 +462,7 @@ This is a topic in Linear Algebra.
 
 
 
-### Affine Independence(for points)
+:pushpin: **Affine Independence(for points)**
 
 ___
 
@@ -456,7 +472,7 @@ Introduce concept of linear independence to geometry: A collection of points $p_
 
 
 
-### Simplex
+### 2.1.2. Simplex
 
 ___
 
@@ -477,7 +493,7 @@ ___
 
 
 
-#### Barycentric Coordinates
+:pushpin: **Barycentric Coordinates**
 
 ___
 
@@ -485,7 +501,7 @@ A **barycentric coordinate system** is a coordinate system in which **the locati
 
 
 
-#### Barycentric Coordinates Example:  *1-simplex*
+:pushpin: **Barycentric Coordinates Example:  *1-simplex***
 
 ___
 
@@ -499,7 +515,7 @@ Why $a\times(1-t)$ rather than $t$ ? Easy to comprehend, e.g. $t=\frac{3}{4}, p$
 
 
 
-#### Barycentric Coordinates Example:  *k-simplex*
+:pushpin: **Barycentric Coordinates Example:  *k-simplex***
 
 ___
 
@@ -513,7 +529,7 @@ This is also known as **Convex Combination** which defined as a linear combinati
 
 
 
-#### Probability Simplex
+:pushpin: **Probability Simplex**
 
 ___
 
@@ -527,7 +543,7 @@ The above diagram is a *2-simplex* which lies in $\mathbb{R}^3$. Imagine all the
 
 
 
-### Simplicial Complex
+### 2.1.3. Simplicial Complex
 
 ___
 
@@ -546,7 +562,7 @@ ___
 
 
 
-#### (Abstract) Simplicial Complex  ||  (Geometric) Simplicial Complex
+:pushpin: **(Abstract) Simplicial Complex  ||  (Geometric) Simplicial Complex**
 
 ___
 
@@ -560,7 +576,7 @@ Definition: Let $S$ be a collection of sets. If for each set $\sigma\in S$ all s
 
 
 
-#### Abstract Simplicial Complex—Graphs
+:pushpin: **Abstract Simplicial Complex—Graphs**
 
 ___
 
@@ -574,7 +590,7 @@ Any *(undirected) graph* $G = (V,E)$ is an abstract simplicial (1-)complex
 
 
 
-#### Abstract Simplicial Complex—Example
+:pushpin: **Abstract Simplicial Complex—Example**
 
 ___
 
@@ -589,7 +605,7 @@ $S:=$ {{1,2,:black_heart:}, {2,:black_heart:,:slightly_smiling_face:},{1,2},{2,:
 
 
 
-#### Application of Simplicial Complex
+### 2.1.4. Application of Simplicial Complex
 
 ___
 
@@ -611,7 +627,7 @@ As the radius increasing(axis of birth), the "D", "O", "G" are created(**birth**
 
 
 
-### Comparison Chart of Noun
+### 2.1.5. Simplex in Rhino and PyTorch (analogy)
 
 ___
 
@@ -627,7 +643,27 @@ ___
 
 
 
-## 2.2. Anatomy of a Simplicial Complex: Star, Closure, and Link 
+## 2.2. Anatomy of a Simplicial Complex
+
+### 2.2.1. $1$-Complexes & $2$-Complexes
+
+___
+
+Most of the time, **1-complexes** and **2-complexes** are 2 entities been researched the most. The former is called **graphs** which relates to Graph Machine Learning, Graph Theory, Space Syntax, etc. The later is called **triangle mesh**(trimesh) which relates to Architecture, design, manufacturing, everything!
+
+| simplicial k-complexes | alias         | notation      | Image                                                        |
+| ---------------------- | ------------- | ------------- | ------------------------------------------------------------ |
+| simplicial 1-complexes | graph         | $G = (V,E)$   | <img src="img/image-20210210213615618.png" alt="image-20210210213615618" style="zoom:33%;" /> |
+| simplicial 2-complexes | triangle mesh | $K = (V,E,F)$ | <img src="img/image-20210210213627501.png" alt="image-20210210213627501" style="zoom:33%;" /> |
+
+- V = vertices
+- E = edges
+- F = faces
+- *K = komplex(in German)
+
+
+
+### 2.2.2. Star, Closure, Link, Boundary, and Interior
 
 $S$ is a given set of simplices.
 
@@ -657,25 +693,9 @@ You may wonder what is the difference between ***Link*** and ***Boundary***, ***
 
 
 
-### Vertices, Edges, and Faces
-
-___
-
-Most of the time, **1-complexes** and **2-complexes** are 2 entities been researched the most. The former is called **graphs** which relates to Graph Machine Learning, Graph Theory, Space Syntax, etc. The later is called **triangle mesh**(trimesh) which relates to Architecture, design, manufacturing, everything!
-
-| simplicial k-complexes | alias         | notation      | Image                                                        |
-| ---------------------- | ------------- | ------------- | ------------------------------------------------------------ |
-| simplicial 1-complexes | graph         | $G = (V,E)$   | <img src="img/image-20210210213615618.png" alt="image-20210210213615618" style="zoom:33%;" /> |
-| simplicial 2-complexes | triangle mesh | $K = (V,E,F)$ | <img src="img/image-20210210213627501.png" alt="image-20210210213627501" style="zoom:33%;" /> |
-
-- V = vertices
-- E = edges
-- F = faces
-- *K = komplex(in German)
 
 
-
-### 2.2.1. Oriented Simplicial Complex
+### 2.2.3. Oriented Simplicial Complex
 
 ___
 
@@ -685,9 +705,25 @@ ___
 
 <img src="img/image-20210215164317369.png" alt="image-20210215164317369" style="zoom:50%;" />
 
+In this section, the following definitions will be covered:
+
+> ​	:one: Orientation of a 1-Simplex
+>
+> ​	:two: Orientation of a 2-Simplex
+>
+> ​	:three: Oriented $k$-Simplex
+>
+> ​	:four: Oriented 0-Simplex
+>
+> ​	:five: Oriented 3-Simplex
+>
+> ​	:six: Oriented Simplicial Complex :star:
+>
+> ​	:seven: Relative Orientation
 
 
-#### Orientation of a 1-Simplex
+
+:pushpin: **Orientation of a 1-Simplex**
 
 ___
 
@@ -702,8 +738,7 @@ $$
 \int^b_a f(x)dx = -\int^a_b f(x)dx
 $$
 
-
-#### Orientation of a 2-Simplex
+:pushpin: **Orientation of a 2-Simplex**
 
 ___
 
@@ -713,7 +748,7 @@ For a 2-simplex, orientation given by "winding order" of vertices. An ***oriente
 
 
 
-#### Oriented *k-Simplex*
+:pushpin: **Oriented *k-Simplex***
 
 ___
 
@@ -727,7 +762,7 @@ Why permutation is even? Because there are always **2** orientation **positive-n
 
 
 
-#### Oriented 0-Simplex
+:pushpin: **Oriented 0-Simplex**
 
 ___
 
@@ -739,7 +774,7 @@ Only one permutation of vertices(the zero-index), so only one orientation - $(a)
 
 
 
-#### Oriented 3-Simplex
+:pushpin: **Oriented 3-Simplex**
 
 ___
 
@@ -763,7 +798,7 @@ Therefore you got this:
 
 
 
-#### Oriented Simplicial Complex
+:pushpin: **Oriented Simplicial Complex**
 
 ___
 
@@ -773,7 +808,7 @@ An ***oriented simplicial complex*** is a simplicial complex where each simplex 
 
 
 
-#### Relative Orientation
+:pushpin: **Relative Orientation**
 
 ___
 
@@ -816,7 +851,7 @@ How hard is it to check if a given simplicial complex is manifold?
 
 
 
-### :star:Manifold Triangle Mesh (*k=2*)
+### 2.3.1. Manifold Triangle Mesh (*k=2*):star:
 
 ___
 
@@ -833,7 +868,7 @@ Manifold triangle mesh is of enormous importance in geometric processing and mod
 
 
 
-### Nonmanifold
+### 2.3.2. Nonmanifold
 
 ___
 
@@ -843,7 +878,7 @@ We will henceforth call such configurations **nonmanifold**: meeting at an edge,
 
 
 
-#### Why Manifold Meshes would be preferable?
+:pushpin: **Why Manifold Meshes would be preferable?**
 
 ___
 
@@ -897,7 +932,9 @@ Taking the following matrix as an example:
 
 <img src="img/image-20210211112658410.png" alt="image-20210211112658410" style="zoom:50%;" />
 
-#### Associative Array
+The followings are 3 kinds of datastructure with the concept of "sparse".
+
+#### 2.4.3.1. Associative Array
 
 (row, col) to value
 
@@ -907,7 +944,7 @@ Taking the following matrix as an example:
 
 <img src="img/image-20210211112644158.png" alt="image-20210211112644158" style="zoom:50%;" />
 
-#### Array of linked lists
+#### 2.4.3.2. Array of linked lists
 
 :heavy_check_mark: conceptually simple
 
@@ -915,7 +952,7 @@ Taking the following matrix as an example:
 
 <img src="img/image-20210211112849197.png" alt="image-20210211112849197" style="zoom:50%;" />
 
-#### Compress column format
+#### 2.4.3.3. Compress column format
 
 :heavy_check_mark: fast for actual matrix operation (e.g. multiply)
 
@@ -994,10 +1031,10 @@ the orbits of $\eta\circ\rho$ are ***vertices***:
 
 ## 3.1 The Geometry of Surface
 
+### 3.1.0. Math Review
 
+:pushpin: **What is *differential* ?**
 
-
-#### What is *differential* ?
 ___
 (*infml*) =How to *transform* vectors from one space to another. e.g.The $X$ in the left to $df(X)$ in the right by stretching or "pushing" forward.
 
@@ -1026,7 +1063,8 @@ $$
 
 
 
-#### Different representation of *dot product*
+:pushpin: **Different representation of *dot product***
+
 ___
 In $\mathbb{R}^2$: use angle bracket, e.g.
 $$
@@ -1046,7 +1084,7 @@ $$
 
 
 
-#### *metric* of a surface?
+:pushpin: ***metric* of a surface**
 
 ___
 
@@ -1059,7 +1097,7 @@ $$
 
 
 
-#### *vector field*?
+:pushpin: ***vector field***
 
 ___
 
@@ -1067,11 +1105,7 @@ A vector at every point of $M$.
 
 
 
-
-
-
-
-#### *tangent bundle*?
+:pushpin: ***tangent bundle***
 
 ___
 
@@ -1081,9 +1115,7 @@ The set of all tangent vectors of $M$. denoted as $TM$.
 
 
 
-
-
-#### normal vector
+:pushpin: **normal vector**
 
 ___
 
@@ -1096,13 +1128,7 @@ $$
 
 
 
-
-
-
-
-
-
-#### orientable?
+:pushpin: **orientable**
 
 ___
 
@@ -1116,13 +1142,7 @@ The Mobius band on the right is ***NOT orientable***.
 
 
 
-
-
-
-
-
-
-#### *Gauss map and Weingarten map?*
+:pushpin: ***Gauss map and Weingarten map?***
 
 ___
 
@@ -1140,15 +1160,9 @@ The Weingarten map is the differential of $N$ , denoted as $dN$, tell us the cha
 
 
 
-
-
-
-
 ### 3.1.1 Conformal Coordinates
 
-
-
-#### isometric parameterization?
+:pushpin: **isometric parameterization?**
 
 ___
 
@@ -1170,11 +1184,7 @@ However, isometric parameterization does not always exist. Most of the time you 
 
 
 
-
-
-
-
-#### conformal parameterization
+:pushpin: **conformal parameterization**
 
 ___
 
@@ -1317,7 +1327,7 @@ $$
 
 
 
-##### Why $T$ and $N$ are always orthogonal?
+:pushpin: **Why $T$ and $N$ are always orthogonal?**
 
 ___
 
@@ -1353,7 +1363,7 @@ Similarly:
 
 
 
-##### Frenet-Serret formula in details
+:pushpin: **Frenet-Serret formula in details**
 
 ___
 
@@ -1362,7 +1372,7 @@ $$
 \underbrace{\begin{bmatrix}T'\\N'\\B'\end{bmatrix}}_{Q'\in \mathbb{R}^{3\times3}}= \underbrace{\begin{bmatrix}0&-\kappa&0\\\kappa&0&-\tau\\0&\tau&0\end{bmatrix}}_{A\in \mathbb{R}^{3\times3}}\underbrace{\begin{bmatrix}T\\N\\B\end{bmatrix}}_{Q\in\mathbb{R}^{3\times3}}
 $$
 
-###### Why $QQ^T = I$ ?
+:pushpin: **Why $QQ^T = I$ ?**
 
 We have:
 $$
@@ -1390,16 +1400,14 @@ $$
 
 ___
 
-
-
-##### What is *Curvature*?
-
-___
+:pushpin: **What is *Curvature*? (fml definition) **
 
 The curvature of a circle is simply the reciprocal of its radius. 圆形的曲率是它半径的倒数。
 $$
 \kappa = \lvert\kappa N\rvert = \lvert dT(X)\rvert = 2\pi/2\pi r = 1/r
 $$
+:pushpin: **Curvature with Intuition**
+
 There is an intuitive way perceiving this:
 Curve flattening $\rightarrow$ curvature$(\kappa)\downarrow$ $\rightarrow$ circle grow bigger($r\uparrow$) $\rightarrow$ become straight line with **zero** curvature :
 $$
@@ -1412,12 +1420,6 @@ $$
 <img src="img/curvature-of-curve.gif" alt="curvature-of-curve" style="zoom:50%;" />
 
 ***osculating circle***: the circle in the middle with a radius of $r=\frac{1}{k}$
-
-
-
-
-
-
 
 
 
@@ -1477,7 +1479,7 @@ The above equation tells that: ***how the normal changes*** as we travel along t
 
 
 
-#### Difference between $df(SX)$ and $dN(X)$?
+:pushpin: **Difference between $df(SX)$ and $dN(X)$?**
 
 ___
 
@@ -1507,7 +1509,7 @@ $$
 
 
 
-#### mean curvature and Gaussian curvature
+:pushpin: **mean curvature and Gaussian curvature**
 
 ___
 
@@ -1536,7 +1538,9 @@ $$
 
 
 
-#### *developable surface*
+#### 3.4.1.1. Surface categorized via curvature
+
+:pushpin: ***developable surface***
 
 ___
 
@@ -1548,7 +1552,7 @@ Definition: Surfaces with zero Gaussian curvature are called *developable surfac
 
 
 
-#### *minimal surfaces*
+:pushpin: ***minimal surfaces***
 
 ___
 
@@ -1562,7 +1566,7 @@ Minimal surfaces tend to be *saddle-like*(又称为马鞍面) since principal cu
 
 
 
-#### *hemisphere*
+:pushpin: ***hemisphere***
 
 ___
 
@@ -1570,7 +1574,9 @@ In this case: $\kappa_1=\kappa_2$ , and so principal directions are not uniquely
 
 <img src="img/image-20210129172221482.png" alt="image-20210129172221482" style="zoom:50%;" />
 
-#### Planar Point
+#### 3.4.1.2. Points categorized via curvature
+
+:pushpin: **Planar Point**
 
 ___
 
@@ -1580,7 +1586,7 @@ $K = \kappa_1\kappa_2 = 0$ , it is flat on any direction, therefore $\kappa_n=0$
 
 
 
-#### Parabolic Point
+:pushpin: **Parabolic Point**
 
 ___
 
@@ -1590,7 +1596,7 @@ $K = \kappa_1\kappa_2 = 0$ , cyan direction is flat, therefore one of $\kappa=0,
 
 
 
-#### Hyperbolic Point
+:pushpin: **Hyperbolic Point**
 
 ___
 
@@ -1600,7 +1606,7 @@ $K = \kappa_1\kappa_2 < 0$ , they are with opposite curvature, therefore $K<0$
 
 
 
-#### Elliptic Point
+:pushpin: **Elliptic Point**
 
 ___
 
