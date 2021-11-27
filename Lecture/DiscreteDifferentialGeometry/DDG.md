@@ -1663,8 +1663,7 @@ $$
 df_p(X)=\lim_{h\to0}\frac{f(p+hX)-f(p)}{h}
 $$
 
-
-#### *Jacobian matrix?*
+:pushpin: ***Jacobian matrix?***
 
 ___
 
@@ -1811,7 +1810,9 @@ Built on ***DEC***, the applications are:
 
 
 
-## Vector Spaces - (review)
+## 4.0. Math Review
+
+:pushpin: **Vector Spaces - (review)**
 
 (fml.) A vector space is a set $V$ together with the operations
 
@@ -1841,7 +1842,7 @@ $(a+b)x=ax+bx$
 
 
 
-## Inner Product - (review)
+:pushpin: **Inner Product - (review)**
 
 $\langle\cdot,\cdot\rangle:V\times V\to\mathbb{R}$ , this quantity tells how well two vector "line up" in $V$
 
@@ -1852,8 +1853,6 @@ $\langle\cdot,\cdot\rangle:V\times V\to\mathbb{R}$ , this quantity tells how wel
 ***positivity*** : $\langle x,x\rangle > 0, x\neq0$        $\langle x,x\rangle = 0,x=0$
 
 ***Euclidean inner product*** : $\langle x,y\rangle = \sum_{k=1}^{n}x_iy_i $ 
-
-
 
 
 
@@ -1871,7 +1870,7 @@ ___
 
 
 
-#### direction vs orientation in English
+:pushpin: **direction vs orientation in English**
 
 $l$ : A line encodes a **direction**.(infinity)
 
@@ -1879,21 +1878,21 @@ $v$ : A vector encodes a **direction** AND a definite **orientation**. (finite)
 
 <img src="img/image-20210216145452443.png" alt="image-20210216145452443" style="zoom:50%;" />
 
-#### 0-vector
+:pushpin: **0-vector**
 
 ​	It is a **scalar/scalar value**.  (*magnitude*, no direction) 
 
-#### 1-vector
+:pushpin: **1-vector**
 
 ​	1-vector is just an ordinary vector.
 
-#### 2-vector
+:pushpin: **2-vector**
 
 ​	A pretty good visualization of a 2-vector is to associate any two vectors $u, v$ in three-dimensional space $\mathbb{R}^3$ with the volume spanned by a little parallelogram.
 
 <img src="img/image-20210216162804238.png" alt="image-20210216162804238" style="zoom:67%;" />
 
-#### $k$-vector
+:pushpin: **$k$-vector**
 
 :bangbang: The **wedge** of $k$ vectors is called a “$k$-vector” a.k.a a **volume**!!
 
@@ -1915,7 +1914,7 @@ In $\mathbb{R}^3$, $u\land v\land w$ is the volume spanned by the 3 vectors, cal
 
 <img src="img/image-20210216155231386.png" alt="image-20210216155231386" style="zoom:67%;" />
 
-#### Wedge product - orientation
+:pushpin: **Wedge product - orientation**
 
 In $\mathbb{R}$, there are 2 opposite orientations$(-x,x)$ which can be described as "**forward**" and "**backward**"
 
@@ -1935,7 +1934,7 @@ In $\mathbb{R}^3$, there are 2 opposite orientations corresponding to "**inward*
 
 
 
-####  :bangbang: RULES OF ORIENTATION SWITCHES
+:pushpin:   **:bangbang: RULES OF ORIENTATION SWITCHES**
 
 Any **even permutation** of vectors **preserves** orientation!!!
 
@@ -1953,14 +1952,13 @@ $w\land v\land u = v\land u\land w = u\land w\land v$
 
 
 
-
-#### Wedge product - degeneracy
+:pushpin: **Wedge product - degeneracy**
 
 $u\land u=0$ , geometrically, spans a region of *zero area*.
 
 
 
-#### Wedge product - scaling
+:pushpin: **Wedge product - scaling**
 
 Scaling just one of the vectors by a factor $a\in\mathbb{R}$ will scale the area of our parallelogram by the same amount:
 
@@ -1970,7 +1968,7 @@ $(au)\land v=a(u\land v) = u\land (av)=a(u\land v)$
 
 
 
-#### Wedge product - associativity
+:pushpin:  **Wedge product - associativity**
 
 $u\land v\land w=(u\land v)\land w=u\land (v\land w)$
 
@@ -1978,7 +1976,7 @@ $u\land v\land w=(u\land v)\land w=u\land (v\land w)$
 
 
 
-#### Wedge product - distributivity
+:pushpin: **Wedge product - distributivity**
 
 $u\land v_1 + u\land v_2 = u\land(v_1+v_2)$
 
@@ -1986,7 +1984,7 @@ $u\land v_1 + u\land v_2 = u\land(v_1+v_2)$
 
 
 
-#### Rules of Wedge Product
+:pushpin: **Rules of Wedge Product**
 
 For any collection of vectors $u, v, w \in \mathbb{R}^n$ and scalars $a, b \in\mathbb{R}$ we have
 
@@ -2011,7 +2009,7 @@ Why use "Hodge Star"? The ideology of "**complement**".
 
 
 
-#### Orthogonal Complement - "complement" in Linear Algebra
+:pushpin: **Orthogonal Complement - "complement" in Linear Algebra**
 
 Definition: Let $U\subseteq V$ be a linear subspace of a vector space $V$ with an inner product $\langle\cdot,\cdot\rangle$. The *orthogonal complement* of $U$ is the collection of vectors denoted as $U^\bot$.
 
@@ -2022,7 +2020,7 @@ $$
 
 
 
-#### Hodge Star - "complement" in Exterior Algebra
+:pushpin: **Hodge Star - "complement" in Exterior Algebra**
 
 In exterior algebra, the ***Hodge star***$\star$(pronounced “star”) provides a sort of *orthogonal complement* for $k$-vectors. If we have a $k$-vector $v$ in $\mathbb{R}^n$, then $\star v$ will be an $(n−k)$-vector that is in some sense “complementary.” 
 
@@ -2038,7 +2036,7 @@ The analogy can be summarized:
 
 
 
-#### Hodge Star - orientation & magnitude
+:pushpin: **Hodge Star - orientation & magnitude**
 
 Then the question shifts to how to determine these two?
 
@@ -2064,7 +2062,7 @@ General rules:
 
 
 
-#### Hodge Star - 2D
+:pushpin: **Hodge Star - 2D**
 
 Since  we are talking in $\mathbb{R}^2$, then we have 1-vector $u$. Hodge star $\star u$ will be $(n-k)=2-1=1$-vector. Therefore, it merely is 90 degree rotation.
 
@@ -2132,9 +2130,9 @@ $$
 
 ___
 
-#### Basis
+:pushpin: **Basis**
 
-Definition: Let $V$ be a vector space. A collection of vectors is *linearly independent* if no vector in the collection can be expressed as a linear combination of the others. A linearly independent collection of vectors $\{e_1,...,e_n\}$ is a ***basis*** for $V$ if every vector $v\in V$ can be expressed as:
+**Definition**: Let $V$ be a vector space. A collection of vectors is *linearly independent* if no vector in the collection can be expressed as a linear combination of the others. A linearly independent collection of vectors $\{e_1,...,e_n\}$ is a ***basis*** for $V$ if every vector $v\in V$ can be expressed as:
 $$
 v=v_1e_1+\cdot\cdot\cdot+v_ne_n
 $$
@@ -2144,7 +2142,7 @@ for some collection of coefficients $v_1,...,v_n\in\mathbb{R}$ , i.e., if every 
 
 
 
-#### Basic $k$-Vectors - visualized
+:pushpin: **Basic $k$-Vectors - visualized**
 
 Reminds once again: $k$-Vectors is a **volume**!! Therefore, **basis $k$-vector** is also a **volume**!!
 
@@ -2152,21 +2150,21 @@ Reminds once again: $k$-Vectors is a **volume**!! Therefore, **basis $k$-vector*
 
 
 
-#### Basic $k$-Vectors - amounts
+:pushpin: **Basic $k$-Vectors - amounts**
 
 Consider $V=\mathbb{R}^4$ with basis $\{e_1,e_2,e_3,e_4\}$
 
-**How many basis 2-vectors?
+:thinking: How many basis 2-vectors?
 
-​	$e_1\land e_2, e_1\land e_3,e_2\land e_3, e_1\land e_4, e_2\land e_4, e_3\land e_4$
+> ​		$e_1\land e_2, e_1\land e_3,e_2\land e_3, e_1\land e_4, e_2\land e_4, e_3\land e_4$
 
-**How many basis 3-vectors?
+:thinking: How many basis 3-vectors?
 
-​	$e_1\land e_2\land e_3, e_1\land e_2\land e_4, e_1\land e_3\land e_4,e_2\land e_3\land e_4$
+> ​		$e_1\land e_2\land e_3, e_1\land e_2\land e_4, e_1\land e_3\land e_4,e_2\land e_3\land e_4$
 
-**How many basis 4-vectors?
+:thinking: How many basis 4-vectors?
 
-​	$e_1\land e_2\land e_3\land e_4$
+> ​		$e_1\land e_2\land e_3\land e_4$
 
 The **pattern** is this:
 
@@ -2174,11 +2172,11 @@ The **pattern** is this:
 
 
 
-#### Basic $k$-Vectors - Hodge Star
+:pushpin: **Basic $k$-Vectors - Hodge Star**
 
 Consider $V=\mathbb{R}^3$ with orthogonal basis $\{e_1,e_2,e_3\}$
 
-Given $\alpha:=e_2$, find $\star\alpha$ such that det$(e_2\land\star e_2)=1$
+Given $\alpha:=e_2$, find $\star\alpha$ such that $\det(e_2\land\star e_2)=1$
 
 Must have $\star\alpha=e_3\land e_1$, 
 
@@ -2212,7 +2210,7 @@ ___
 
 
 
-#### Duality in differential geometry and exterior calculus
+:pushpin: **Duality in differential geometry and exterior calculus**
 
 <span style="color:blue">vectors</span> $u$ - vector of any magnitude, objects that get **measured** , 
 
@@ -2226,7 +2224,7 @@ The notation $\alpha(u)$ here is meant to emphasize the idea that $\alpha$ is a 
 
 
 
-#### Dual Space & Covectors
+:pushpin: **Dual Space & Covectors**
 
 Definition: Let $V$ be any real vector space. Its **dual space** $V^*$ is the collection of all **linear functions** $\alpha:V\to\mathbb{R}$ together with the operations of ***addition*** and ***scalar multiplication***:
 $$
@@ -2241,7 +2239,7 @@ Definition: An element of a dual vector space is called a ***dual vector*** or *
 
 
 
-#### Covectors - Example in $\mathbb{R}^3$
+:pushpin: **Covectors - Example in $\mathbb{R}^3$**
 
 linear map $f$ , vectors $u,v$ , scalars $a$ . Then we have:
 
@@ -2261,7 +2259,7 @@ $f(u+v)=f(u)+f(v)$	and	$f(au)=af(u)$
 
 
 
-#### Covectors - Example in Functions
+:pushpin: **Covectors - Example in Functions**
 
 Let $V$ be the set of integrable functions $f:[0,1]\to\mathbb{R}$ a.k.a. the blue,red, and green curve.
 
@@ -2282,7 +2280,7 @@ How to interpret above equation?
 
 
 
-#### Sharp and Flat
+:pushpin: **Sharp and Flat**
 
 ***sharp*** ($\sharp$) : convert a 1-form into a vector
 
@@ -2312,7 +2310,7 @@ $\alpha(\alpha^\sharp)$ , which is equivalent to $\alpha(v)$
 
 
 
-#### Sharp and Flat w/ Inner Product
+:pushpin: **Sharp and Flat w/ Inner Product**
 
 <span style="color:red">$\begin{bmatrix}u_1&u_2&u_3\end{bmatrix}\begin{bmatrix}M_{11}&M_{12}&M_{13}\\M_{12}&M_{22}&M_{23}\\M_{13}&M_{23}&M_{33}\end{bmatrix}$</span><span style="color:blue">$\begin{bmatrix}v_1\\v_2\\v_3\end{bmatrix}$</span>
 
@@ -2320,7 +2318,7 @@ $\alpha(\alpha^\sharp)$ , which is equivalent to $\alpha(v)$
 
 
 
-#### Sharp and Flat - Example
+:pushpin: **Sharp and Flat - Example**
 
 In *curved* space, suppose we want to measure the length of a vector $v$ along the direction of another vector $u$.
 
@@ -2354,17 +2352,45 @@ $$
 
 
 
-#### 0-form
+
+
+:page_with_curl: **SOME NOTES**
+
+___
+
+**(review) Determinants & Signed Volume**
+
+:star:Don't memorize the equation and matrix of determinants. Just remember **determinant = signed volume**
+
+Determinant of $2$-vectors = 2D signed area 
+
+Determinant of $3$-vectors = 3D signed volume
+
+<img src="img/image-20210219125309001.png" alt="image-20210219125309001" style="zoom:50%;" />
+
+**A Note on Notation**
+
+Convention dictates that the argument $u,v$ should be written as $(u,v)$
+
+<img src="img/image-20210220084732555.png" alt="image-20210220084732555" style="zoom:33%;" />
+
+___
+
+
+
+
+
+:pushpin: **0-form**
 
 0-form must take 0-vector and produce a scalar. 0-form is a scalar!
 
 <img src="img/image-20210219230236667.png" alt="image-20210219230236667" style="zoom:50%;" />
 
-*Has ***magnitude***, while it has only one possible "direction".
+Has ***magnitude***, while it has only one possible "direction".
 
 
 
-#### 1-form
+:pushpin: **1-form**
 
 We can of course apply this same expression when $\alpha$ does not have unit length:
 $$
@@ -2378,27 +2404,7 @@ How to interpret?
 
 
 
-#### :page_with_curl:SOME NOTES
-
-___
-
-**(review) Determinants & Signed Volume**
-
-:star:Don't memorize the equation and matrix of determinants. Just remember **determinant = signed volume**
-
-Determinant of 2-vectors = 2D signed area 
-
-Determinant of 3-vectors = 3D signed volume
-
-<img src="img/image-20210219125309001.png" alt="image-20210219125309001" style="zoom:50%;" />
-
-___
-
-
-
-
-
-#### 2-form : measurement of 2-vectors
+:pushpin: **2-form : measurement of 2-vectors**
 
 (*Intuition*) a multilinear measurement of a 2-vector is a size of “shadow” of one parallelogram on another.
 
@@ -2458,7 +2464,7 @@ $$
 
 
 
-#### 3-form : measurement of 3-vectors
+:pushpin: **3-form : measurement of 3-vectors**
 
 (*Intuition*) a multilinear measurement of a 3-vector is in $\mathbb{R}^3$, all 3-vectors have same “direction”, a.k.a. is to measure "magnitude" 
 
@@ -2482,7 +2488,7 @@ Intuitively interpret 3-form: Projected volume of $u,v,w$ gets **scaled** by vol
 
 
 
-### $k$-form
+:pushpin: **$k$-form**
 
 Definition: $k$-form is a *fully antisymmetric*, *multilinear* measurement of a $k$-vector. Typically think of this as a **map** $\alpha$ from **$k$-vectors** to a **scalar**:
 $$
@@ -2517,20 +2523,6 @@ For example, **k=2**:
 
 
 
-#### :page_with_curl:SOME NOTES
-
-___
-
-**A Note on Notation**
-
-Convention dictates that the argument $u,v$ should be written as $(u,v)$
-
-<img src="img/image-20210220084732555.png" alt="image-20210220084732555" style="zoom:33%;" />
-
-___
-
-
-
 
 
 ### 4.2.3. $k$-Forms in Coordinates
@@ -2546,7 +2538,44 @@ The vector can be represented as followed once we have a coordinate system.
 
 
 
-#### Dual Basis: vector basis and covector basis
+:page_with_curl:**SOME NOTES**
+
+___
+
+**Einstein Summation Notation**
+$$
+x^iy_i:=\sum^n_{i=1}x^iy_i
+$$
+
+This convention is by Einstein. However, for clarity, we will stick to use sum symbol. But keep it in mind the convention here since many math books assume you already know.
+
+**Musical Isomorphisms**
+
+We mentioned the sharp$\sharp$ and flat$\flat$ in above. It **also affect the coefficient of vector and covecto**r!!
+
+<img src="img/image-20210220094910315.png" alt="image-20210220094910315" style="zoom:50%;" />
+
+Suppose we have $\alpha(v)=\langle u,v\rangle$ for all $v\in V$. Then:
+$$
+\alpha=\alpha_1e^1+\dotsm+\alpha_ne^n \qquad \begin{matrix}\overset{\sharp}{\Longrightarrow}\\\overset{\flat}{\Longleftarrow}\end{matrix} \qquad u=u^1e_1+\dotsm+u^ne_n
+$$
+:arrow_forward: From	 left(covector, underneath) 		raise pitch(sharp)		to 		right(vector, above),      **coefficient from down to up**
+
+:arrow_backward: From	 right(vector, above)	lower pitch(flat)		to 		left(covector, underneath), 	**coefficient from up to down** 
+
+**Alphabet Notation**
+
+Roman alphabet for vector and vector fields, e.g. $u,v,w,X,Y,Z$
+
+Greek alphabet for covector and $k$-form, e.g. $\alpha,\beta,\gamma$
+
+___
+
+
+
+
+
+:pushpin: **Dual Basis: vector basis and covector basis**
 
 **Vector**:
 
@@ -2585,7 +2614,7 @@ $$
 
 
 
-#### 1-form : Example in coordinates
+:pushpin: **1-form : Example in coordinates**
 
 Considering we have:
 $$
@@ -2610,7 +2639,7 @@ $$
 \end{align}
 $$
 
-#### 2-form : Example in coordinates
+:pushpin: **2-form : Example in coordinates**
 
 Considering we have:
 $$
@@ -2641,39 +2670,6 @@ $$
 
 
 
-#### :page_with_curl:SOME NOTES
-
-___
-
-**Einstein Summation Notation**
-$$
-x^iy_i:=\sum^n_{i=1}x^iy_i
-$$
-
-This convention is by Einstein. However, for clarity, we will stick to use sum symbol. But keep it in mind the convention here since many math books assume you already know.
-
-**Musical Isomorphisms**
-
-We mentioned the sharp$\sharp$ and flat$\flat$ in above. It **also affect the coefficient of vector and covecto**r!!
-
-<img src="img/image-20210220094910315.png" alt="image-20210220094910315" style="zoom:50%;" />
-
-Suppose we have $\alpha(v)=\langle u,v\rangle$ for all $v\in V$. Then:
-$$
-\alpha=\alpha_1e^1+\dotsm+\alpha_ne^n \qquad \begin{matrix}\overset{\sharp}{\Longrightarrow}\\\overset{\flat}{\Longleftarrow}\end{matrix} \qquad u=u^1e_1+\dotsm+u^ne_n
-$$
-:arrow_forward: From	 left(covector, underneath) 		raise pitch(sharp)		to 		right(vector, above),      **coefficient from down to up**
-
-:arrow_backward: From	 right(vector, above)	lower pitch(flat)		to 		left(covector, underneath), 	**coefficient from up to down** 
-
-**Alphabet Notation**
-
-Roman alphabet for vector and vector fields, e.g. $u,v,w,X,Y,Z$
-
-Greek alphabet for covector and $k$-form, e.g. $\alpha,\beta,\gamma$
-
-___
-
 
 
 
@@ -2702,7 +2698,7 @@ Likewise, we can have similar analogy on $k$-form
 
 ___
 
-#### *Differential* 0-Form
+:pushpin: ***Differential* 0-Form**
 
 Definition: Assigns **a scalar** to each point. (no direction, **only magnitude**)
 
@@ -2714,7 +2710,7 @@ E.g., in 2D we have a value at each point $(x_1,x_2)$:
 
 
 
-#### *Differential* 1-Form
+:pushpin: ***Differential* 1-Form**
 
 Definition: Assigns a **1-form** to each point. 
 
@@ -2740,7 +2736,7 @@ Zone C: the 1-vector in the vector field is **opposite** to the 1-form in the di
 
 
 
-#### Differential 2-Form
+:pushpin: ***Differential* 2-Form**
 
 Definition: A differential 2-form is an **area measurement** at each point$(x_1,x_2,x_3)$: 
 
@@ -2754,7 +2750,7 @@ Resulting function says how much a 2-vector field “**lines up**” with a give
 
 
 
-#### *Differential* $k$-Forms :  Pointwise Operations
+:pushpin: ***Differential* $k$-Forms :  Pointwise Operations**
 
 Most operations on differential $k$-forms simply **apply that operation at each point**. Followings are the demo of 3 operation:
 
@@ -2792,7 +2788,7 @@ $$
 
 ___
 
-#### Basis Vector Fields
+:pushpin: **Basis Vector Fields**
 
 Left: basis for *vectors*
 
@@ -2806,9 +2802,9 @@ Right: *basis for vector fields* on $\mathbb{R}^n$ - **constant** vector fields 
 
 
 
-#### Basis Vector Fields 👉 other Vector Fields
+:pushpin: **Basis Vector Fields -> to build :hammer: ->other Vector Fields**
 
-:star::star:$\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2}$ are the ingredients used to construct!! 
+:star::star:$\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2}$ are the ingredients used to construct!!  
 
 **Any other** vector field is then **a linear combination** of the basis vector fields! The **coefficients** of linear combination **can vary** across the domain.
 
@@ -2821,7 +2817,7 @@ $a,b$ are the coefficients and $\frac{\partial}{\partial x^1},\frac{\partial}{\p
 
 
 
-#### Bases for Vector Fields and Differential 1-forms
+:pushpin: **Bases for Vector Fields and Differential 1-forms**
 
 The analogy is nearly identical here:
 
@@ -2843,7 +2839,9 @@ $$
 
 
 
-#### Example: Hodge Star of Differential 1-form
+### 4.3.3. Examples of *Differential* 1-form
+
+:pushpin: **Example: Hodge Star of Differential 1-form**
 
 Consider the differential 1-form:
 
@@ -2882,7 +2880,7 @@ $$
 
 
 
-#### Example: Wedge of Differential 1-Forms
+:pushpin: **Example: Wedge of Differential 1-Forms**
 
 Consider the differential 1-forms:
 $$
@@ -2939,7 +2937,7 @@ In $n$-dimensions, any  positive multiple of  $dx^1\land dx^2\land\dotsm\land dx
 
 
 
-#### Differential 1-form EATS vector field
+:pushpin: **Differential 1-form EATS(measure) vector field**
 
 After digesting lots of knowledge, we finally reached the goal is that **using differential 1-form to measure vector fields**.
 
@@ -2968,7 +2966,7 @@ $$
 
 
 
-#### :star:Differential Forms in $\mathbb{R}^n$ - Summary
+### 4.3.4. Differential Forms in $\mathbb{R}^n$ - Summary:star:
 
 Started with a vector space $V (e.g.,\mathbb{R}^n)$
 •(1-forms) Dual space $V$* of covectors, i.e., linear measurements of vectors
@@ -2985,11 +2983,7 @@ Started with a vector space $V (e.g.,\mathbb{R}^n)$
 
 
 
-
-
-
-
-## 4.3. Exterior Calculus - Differentiation
+## 4.4. Exterior Derivative - Differentiation
 
 :star: Big picture, from exterior algebra to exterior calculus, it aims to solve 2 things:
 
@@ -3008,31 +3002,29 @@ In this section, we will take a deep insight of it.
 
 
 
-### Curl and Divergence - (review)
-
-The following content is a review of calculus.
+### 4.4.1. Math Review
 
 
 
-#### Illustration of Gradient, Divergence, and Curl
+:pushpin: **Illustration of Gradient, Divergence, and Curl**
 
 ![image-20211119181749069](img/image-20211119181749069.png)
 
 
 
-#### What is vector field?
+:pushpin: **What is vector field?**
 
 All the points in the space are associated with a vector.
 
 <img src="img/image-20210330222126040.png" alt="image-20210330222126040" style="zoom:50%;" />
 
-#### What is fluid field?
+:pushpin: **What is fluid field?**
 
 Vector field is a static and steady case while fluid field is dynamic.
 
 ![fluid-field](img/fluid-field.gif)
 
-#### What is divergence?
+:pushpin: **What is divergence?**
 
 <img src="img/divergence-positive.gif" alt="divergence-positive" style="zoom: 80%;" />
 
@@ -3044,7 +3036,7 @@ The divergence of a vector field at a particular point in a plane tell you how m
 
 <img src="img/divergence-positive_flow.gif" alt="divergence-positive_flow"  />
 
-#### What is Curl?
+:pushpin: **What is Curl?**
 
 How much the fluid at the point tends to rotate.
 
@@ -3062,7 +3054,7 @@ One of the application of "curl" is phase flow. Somehow it looks like a dynamic 
 
 ![phase-flow](img/phase-flow.gif)
 
-#### The Equation of Divergence and Curl
+:pushpin: **The Equation of Divergence and Curl**
 
 Divergence: $\text{div F} = \triangledown \cdot \text{F}$ 
 
@@ -3075,11 +3067,276 @@ The **cross product** is expected to **measure** how these **two vectors spin ar
 
 ![how_divergence_curl_calculate](img/how_divergence_curl_calculate.gif)
 
-#### What is partial derivative?
+:pushpin: **What is partial derivative?**
 
 Partial derivative: a partial derivative of a function of **several variables** is its derivative with respect to one of those variables, with the **others held constant**.
 
 Total derivative: (opposite to above) all variables are allowed to vary.
+
+
+
+:pushpin: **Vector Derivatives in Coordinates**
+
+Consider:
+
+:one: a scalar function $\phi:\mathbb{R}^3\to\mathbb{R}$
+
+:two: a vector field: $X = u\frac{\part}{\part x}+v\frac{\part}{\part y}+w\frac{\part}{\part z}$
+
+where:
+
+- $u$, coordinate function: $\mathbb{R}^n\to\mathbb{R}$
+- $v$, coordinate function: $\mathbb{R}^n\to\mathbb{R}$
+- $w$, coordinate function: $\mathbb{R}^n\to\mathbb{R}$
+- $\frac{\part}{\part x}$, standard basis vector field
+- $\frac{\part}{\part y}$, standard basis vector field
+- $\frac{\part}{\part z}$, standard basis vector field
+
+Then the 
+
+$\underline{\text{grad}}$: 
+$$
+\grad\phi=
+\frac{\part\phi}{\part x}\frac{\part}{\part x}+
+\frac{\part\phi}{\part y}\frac{\part}{\part y}+
+\frac{\part\phi}{\part z}\frac{\part}{\part z}
+$$
+$\underline{\text{div}}$: 
+$$
+\grad\cdot X=
+\frac{\part u}{\part x}+
+\frac{\part v}{\part y}+
+\frac{\part w}{\part z}
+$$
+
+
+$\underline{\text{curl}}$:
+$$
+\grad\cross X=
+(\frac{\part w}{\part y}-\frac{\part v}{\part z})\frac{\part}{\part x}+
+(\frac{\part u}{\part z}-\frac{\part w}{\part x})\frac{\part}{\part y}+
+(\frac{\part v}{\part x}-\frac{\part u}{\part y})\frac{\part}{\part z}
+$$
+
+
+
+### 4.4.2. Big Picture of Exterior Derivative
+
+:pushpin: **Definition**
+
+The exterior derivative $d$ is a unique *linear* map:
+$$
+d: \Omega^k\to\Omega^{k+1}
+$$
+$\Omega^k$, the space of all differential $k$-forms
+
+$\Omega^k\to\Omega^{k+1}$, means the $d$ increase the degree of differential form
+
+:pushpin: **Properties**
+
+The exterior derivative $d$ has following properties:
+
+- **differential**
+
+$$
+\text{for }k=0,\space d\phi(X)=D_X\phi
+$$
+
+- **product rule**
+
+$$
+d(\alpha\wedge\beta)=d\alpha\wedge\beta+(-1)^k\alpha\wedge d\beta
+$$
+
+- exactness
+
+$$
+d\circ d=0
+$$
+
+
+
+
+### 4.4.3. Differential
+
+:pushpin: **Prerequisite - Directional Derivative**
+
+The **directional derivative** of a **scalar function** $\phi$ at a **point** $p$ with respect to a **vector** $X$ is the rate at which that function increases as we walk away from $p$ with velocity $X$.
+
+$X$ is a **vector**:
+$$
+D_X\phi\bigg|_{p}:=\lim_{\epsilon\to0}\frac{\phi(p+\epsilon X)-\phi(p)}{\epsilon}
+$$
+If $X$ is a vector field,: then the equation can be simplified as:
+$$
+D_X\phi
+$$
+The result is a *scalar function* whose value at each point $p$ is the directional derivative along the vector $X(p)$
+
+:bulb: **Intuition Understanding of Directional Derivative**
+
+As we walk along a curve $\gamma$ tangent to $X$, how fast will an observed quantity $\phi$ change as we pass through $p$?
+
+<img src="img/image-20211127154222026.png" alt="image-20211127154222026" style="zoom:50%;" />
+
+
+
+:pushpin: **Prerequisite - Gradient**
+
+Let $\phi :\mathbb{R}^n\to\mathbb{R}$. The **gradient** of $\phi$ can be interpreted in the following:
+
+- *Geometric Intuition*: the "**Uphill**" direction
+- *Coordinate Approach*: in Euclidean $\mathbb{R}^n$, it is a list of partials:
+
+(:warning:There is a risk of this approach which it is **hard to see the big picture**.)
+$$
+\grad\phi = 
+\frac{\part\phi}{\part x^1}\frac{\part}{\part x^1}+
+\cdots+
+\frac{\part\phi}{\part x^n}\frac{\part}{\part x^n}=
+\begin{bmatrix}
+\frac{\part\phi}{\part x^1}\cdots\frac{\part\phi}{\part x^n}
+\end{bmatrix}^{T}
+$$
+
+- *Coordinate-free Approach*: 
+
+The gradient is the unique* vector field $\grad\phi$ whose inner product with any vector field $X$ yields the directional derivative $D_X\phi$ along $X$. 
+$$
+\lang\grad\phi, X\rang=D_X\phi\text{ ,for all }X
+$$
+`*` means assuming the function is differentiable.
+
+
+
+:pushpin: **Definition: Differential of exterior derivative $d$**
+
+Before we getting into the definition, we were known the following:
+
+- differential $0$-forms are ordinary scalar functions
+- change in a scalar function can be measured via *differential*
+
+Therefore, we have following definition:
+
+<img src="img/image-20211127171020854.png" alt="image-20211127171020854" style="zoom:50%;" />
+
+> ​	Definition:one:: As unique $1$-form such that applying to **any** vector field gives directional derivative along those directions
+
+$$
+d\phi(X)=D_X\phi
+$$
+
+> ​	Definition:two:: the differential property of exterior derivative can be defined as:
+
+$$
+d\phi:=\frac{\part\phi}{\part x^1}dx^1+\cdots+\frac{\part\phi}{\part x^n}dx^n
+$$
+
+(:warning: It looks very similar to Gradient)
+
+
+
+:pushpin:**Comparison between Gradient and Differential**
+
+| Distinction Label        | Gradient                                                     | Differential of Exterior Derivative                          |
+| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Coordinate-free approach | $\lang\grad\phi, X\rang=D_X\phi$                             | $d\phi(X)=D_X\phi$                                           |
+| Coordinate approach      | $\grad\phi =\frac{\part\phi}{\part x^1}\frac{\part}{\part x^1}+\cdots+\frac{\part\phi}{\part x^n}\frac{\part}{\part x^n}$ | $d\phi:=\frac{\part\phi}{\part x^1}dx^1+\cdots+\frac{\part\phi}{\part x^n}dx^n$ |
+| Identity                 | it is *vector field*                                         | it is *differential 1-form*                                  |
+| Dependency               | depends on *inner product*                                   | does NOT depend on *inner product*                           |
+
+
+
+:pushpin:**Transformation between Gradient and Differential**
+
+- Gradient: it is *vector field*, **get measured**
+- Differential: it is *differential 1-form*, **to measure**
+
+Using the sharp and pound:
+
+- ***sharp*** ($\sharp$) : convert a 1-form into a vector
+
+- ***flat*** ($\flat$) : convert a vector into a 1-form
+
+We can have:
+
+- ($\grad\phi$: Gradient-vector field) :arrow_forward: ($d\phi$: Differential-differential 1-form)
+
+It goes down to the bases for taking the measurement = flat $\flat$ = $(\grad\phi)^{\flat}=d\phi$
+
+- ($\grad\phi$: Gradient-vector field) :arrow_backward: ($d\phi$: Differential-differential 1-form)
+
+It goes up to be measured = sharp $\sharp$ = $\grad\phi=(d\phi)^{\sharp}$
+
+
+
+
+
+### 4.4.4. Product Rule
+
+:pushpin:**Product Rule of Normal Derivative**
+
+For any differentiable function
+$$
+f,g:\mathbb{R}\to\mathbb{R}
+$$
+ the product rule is:
+$$
+(fg)'=f'g+fg'
+$$
+Use the philosophy of infinity:
+$$
+(fg)'(x)=\lim_{h\to0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h}
+$$
+Its geometrical interpretation is:
+
+<img src="img/image-20211127174402182.png" alt="image-20211127174402182" style="zoom:50%;" />
+
+
+
+:pushpin:**Product Rule of Exterior Derivative $d$**
+
+Let
+
+-  $\alpha$,  $k$-form 
+
+- $\beta$,   $l$-form
+
+The product rule is:
+$$
+d(\alpha\wedge\beta)=d\alpha\wedge\beta+(-1)^k\alpha\wedge d\beta
+$$
+The geometric intuition is:
+
+<img src="img/image-20211127180323738.png" alt="image-20211127180323738" style="zoom:50%;" />
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+### 4.4.5. Exactness
+
+
 
 
 
