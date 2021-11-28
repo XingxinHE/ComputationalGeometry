@@ -3312,29 +3312,249 @@ The geometric intuition is:
 
 
 
-:pushpin:****
+:pushpin:**"Recursive Evaluation" in product rule**
 
+In short, "Recursive Evaluation" is to **eliminate** such *derivative* to *zero*.
 
+Suppose we have following **differential $1$-forms** on $\mathbb{R}^n$:
 
-:pushpin:****
+- $\alpha:=udx$
+- $\beta:=vdy$
+- $\gamma=wdz$
 
+and we have following **$0$-forms** that $\mathbb{R}^n\to\mathbb{R}$:
 
+- $u$
+- $v$
+- $w$
 
-:pushpin:****
+and suppose
 
+- $\omega:=\alpha\wedge\beta$
 
+and we need to compute the following:
+$$
+\begin{align}
+d(\omega\wedge\gamma)&=(d\omega)\wedge\gamma+(-1)^2\omega\wedge(d\gamma)\\
+\text{we can eliminate them as followed:}\\
+d\omega&=(d\alpha)\wedge\beta+(-1)^1\alpha\wedge(d\beta)\\
+d\alpha&=d(udx)=(du)\wedge dx+(-1)^0u\cancelto{0}{(ddx)}\\
+d\beta&=d(vdy)=(dv)\wedge dy+(-1)^0v\cancelto{0}{(ddy)}\\
+d\beta&=d(wdz)=(dw)\wedge dz+(-1)^0w\cancelto{0}{(ddz)}\\
+\end{align}
+$$
 
-:pushpin:****
-
-
-
-:pushpin:****
-
-
+:star: **Key Idea**: The "base case" is the 0-forms, i.e., computing the final result boils down to taking the differential of ordinary scalar functions.
 
 
 
 ### 4.4.5. Exactness
+
+:star: **Big Picture**: There are always analogy between `vector calculus` and `exterior calculus`. In this section, we focus on 3 main analogy:
+
+- Gradient
+- Divergence
+- Curl
+
+
+
+:pushpin:**$d\circ d=0$**
+
+Consider: 
+
+a $1$-form $\alpha=udx+vdy+wdz$, 
+
+the coefficient $u,v,w$ are each scalar functions $\mathbb{R}^3\to\mathbb{R}$. 
+
+What is the exterior derivative $d\alpha$ in **coordinates** $x,y,z$?
+$$
+\begin{align}
+
+d\alpha&=d(udx+vdy+wdz)\\
+&=du\wedge dx+u\cancelto{0}{ddx}+dv\wedge dy+ v\cancelto{0}{ddy}+dw\wedge dz+w\cancelto{0}{ddz}\\
+&=
+\begin{matrix}
+(\frac{\part u}{\part x}dx+\frac{\part u}{\part y}dy+\frac{\part u}{\part z}dz)\wedge dx+\\
+(\frac{\part v}{\part x}dx+\frac{\part v}{\part y}dy+\frac{\part v}{\part z}dz)\wedge dy+\\
+(\frac{\part w}{\part x}dx+\frac{\part w}{\part y}dy+\frac{\part w}{\part z}dz)\wedge dz\\
+\end{matrix}\\\\
+&=
+\begin{matrix}
+(\frac{\part u}{\part x}\cancelto{0}{dx\wedge dx}+\frac{\part u}{\part y}dy\wedge dx+\frac{\part u}{\part z}dz\wedge dx)\\
+(\frac{\part v}{\part x}dx\wedge dy+\frac{\part v}{\part y}\cancelto{0}{dy\wedge dy}+\frac{\part v}{\part z}dz\wedge dy)\\
+(\frac{\part w}{\part x}dx\wedge dz+\frac{\part w}{\part y}dy\wedge dz+\frac{\part w}{\part z}\cancelto{0}{dz\wedge dz})\\
+\end{matrix}\\\\
+&=
+-\frac{\part u}{\part y}dx\wedge dy + \frac{\part u}{\part z}dz\wedge dx+\frac{\part v}{\part x}dx\wedge dy
+-\frac{\part v}{\part z}dy\wedge dz - \frac{\part w}{\part x}dz\wedge dx+\frac{\part w}{\part y}dy\wedge dz\\
+&=
+(\frac{\part w}{\part y}-\frac{\part v}{\part z})dy\wedge dz + 
+(\frac{\part u}{\part z}-\frac{\part w}{\part x})dz\wedge dx +
+(\frac{\part v}{\part x}-\frac{\part u}{\part y})dx\wedge dy
+\end{align}
+$$
+
+
+
+
+:pushpin:**Comparison between `Curl of Gradient` and $d\circ d$**
+
+> ​	Curl of Gradient:
+
+<img src="img/image-20211128111645529.png" alt="image-20211128111645529" style="zoom:50%;" />
+
+> ​	$d\circ d$:
+
+<img src="img/image-20211128122121478.png" alt="image-20211128122121478" style="zoom:50%;" />
+
+
+
+
+
+:pushpin:**Comparison between `Curl` and `Exterior Derivative`**
+
+Suppose we have a ***vector field***:
+$$
+X:=u\frac{\part}{\part x}+v\frac{\part}{\part y}+w\frac{\part}{\part z}
+$$
+Its **curl** in vector calculus:
+$$
+\grad\cross X=
+\begin{matrix}
+(\part w/\part y - \part v/\part z)\frac{\part}{\part x}+\\
+(\part u/\part z - \part w/\part x)\frac{\part}{\part y}+\\
+(\part v/\part x - \part u/\part y)\frac{\part}{\part z}
+\end{matrix}
+$$
+Suppose we have a ***differential 1-form***:
+$$
+\alpha = udx+vdy+wdz
+$$
+Its **derivative** is:
+$$
+d\alpha=
+\begin{matrix}
+(\part w/\part y - \part v/\part z)dy\wedge dz+\\
+(\part u/\part z - \part w/\part x)dz\wedge dx+\\
+(\part v/\part x - \part u/\part y)dx\wedge dy
+\end{matrix}
+$$
+
+
+
+
+:pushpin:****
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+### 4.4.6. Examples of Exterior Derivative
+
+:pushpin:**Example 1**
+
+Let $\phi(x,y):=\frac{1}{2}e^{-(x^2+y^2)}$, compute $d\phi$:
+$$
+\begin{align}
+d\phi&=\frac{\part\phi}{\part x}dx+\frac{\part\phi}{\part y}dy\\
+&=-2\phi(xdx+ydy)
+\end{align}
+$$
+
+
+:pushpin:**Example 2**
+
+Let $\alpha(x,y)=xdx+ydy$, compute $d\alpha$:
+$$
+\begin{align}
+d\alpha&=
+(\frac{\part x}{\part x}dx+\frac{\part x}{\part y}dy)\wedge dx
++
+(\frac{\part y}{\part x}dx+\frac{\part y}{\part y}dy)\wedge dy
+\\
+&=dx\wedge dx+dy\wedge dy\\
+&=0+0\\
+&=0
+\end{align}
+$$
+
+
+:pushpin:**Example 3**
+
+Let $\alpha(x,y)=xdx+ydy$, compute $d\star\alpha$:
+$$
+\begin{align}
+d\star\alpha &= d(x\star dx + y\star dy)\\
+&=d(dxy-ydx)\\
+&=dx\wedge dy- dy\wedge dx\\
+&=2dx\wedge dy
+\end{align}
+$$
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
 
 
 
