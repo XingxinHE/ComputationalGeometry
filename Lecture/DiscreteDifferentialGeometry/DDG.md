@@ -3120,7 +3120,7 @@ $$
 
 
 
-### 4.4.2. Big Picture of Exterior Derivative
+### 4.4.2. Big Picture
 
 :pushpin: **Definition**
 
@@ -3148,7 +3148,7 @@ $$
 d(\alpha\wedge\beta)=d\alpha\wedge\beta+(-1)^k\alpha\wedge d\beta
 $$
 
-- exactness
+- **exactness**
 
 $$
 d\circ d=0
@@ -3411,13 +3411,21 @@ $$
 
 
 
-:pushpin:**Comparison between `Curl` and `Exterior Derivative`**
 
-Suppose we have a ***vector field***:
+
+___
+
+:pushpin:**Comparison between `Curl` and $d$**
+
+**Vector Calculus**:
+
+> ​	Suppose we have a ***vector field***:
+
 $$
 X:=u\frac{\part}{\part x}+v\frac{\part}{\part y}+w\frac{\part}{\part z}
 $$
-Its **curl** in vector calculus:
+> ​	Its **curl** in vector calculus:
+
 $$
 \grad\cross X=
 \begin{matrix}
@@ -3426,11 +3434,15 @@ $$
 (\part v/\part x - \part u/\part y)\frac{\part}{\part z}
 \end{matrix}
 $$
-Suppose we have a ***differential 1-form***:
+**Exterior Calculus**:
+
+> ​	Suppose we have a ***differential 1-form***:
+
 $$
 \alpha = udx+vdy+wdz
 $$
-Its **derivative** is:
+> ​	Its **derivative** $d$ is:
+
 $$
 d\alpha=
 \begin{matrix}
@@ -3440,72 +3452,98 @@ d\alpha=
 \end{matrix}
 $$
 
+**Transformation**:
+$$
+\grad\cross X=(\star dX^b)^{\sharp}
+$$
 
 
-
-:pushpin:****
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
+___
 
 
 
 
 
-:pushpin:****
 
 
+:pushpin:**$d\star \alpha$**
 
-:pushpin:****
+Suppose $\alpha=udx+vdy+wdz$, compute $d\star \alpha$
+$$
+\begin{align}
+d\star\alpha
+&=d(\star(udx+vdy+wdz))\\
+&=du\wedge dy\wedge dz+dv\wedge dz\wedge dx+dw\wedge dx\wedge dy\\
+&=\frac{\part u}{\part x}dx\wedge dy\wedge dz+\frac{\part v}{\part y}dy\wedge dz\wedge dx+\frac{\part w}{\part z}dz\wedge dx\wedge dy\\
+&=(\frac{\part u}{\part x}+\frac{\part v}{\part y}+\frac{\part w}{\part z})dx\wedge dy\wedge dz
 
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
+\end{align}
+$$
 
 
 
 
 
-:pushpin:****
+
+___
+
+:pushpin:**Comparison between `Divergence` and $d\star \alpha $** 
+
+**Vector Calculus**:
+
+> ​	Suppose we have a ***vector field***:
+
+$$
+X:=u\frac{\part}{\part x}+v\frac{\part}{\part y}+w\frac{\part}{\part z}
+$$
+
+> ​	Its divergence is:
+
+$$
+\grad\cdot X=\frac{\part u}{\part x}+\frac{\part v}{\part y}+\frac{\part w}{\part z}
+$$
+
+**Exterior Calculus**:
+
+> ​	Suppose we have a ***differential 1-form***:
+
+$$
+\alpha = udx+vdy+wdz
+$$
+
+> ​	The **derivative of its star** is:
+
+$$
+d\star\alpha=(\frac{\part u}{\part x}+\frac{\part v}{\part y}+\frac{\part w}{\part z})dx\wedge dy\wedge dz
+$$
+
+**Transformation**:
+$$
+\grad\cdot X=\star d\star X^b
+$$
+> ​	The $\star d\star$ also called **codifferential**
+
+$$
+\delta:=\star d\star
+$$
+
+___
 
 
 
-:pushpin:****
+
+
+
+
+:pushpin:**Summary - `Vector Derivative` VS `Exterior Derivative`**
+
+<img src="img/exterior_vs_vector.jpg" alt="exterior_vs_vector" style="zoom:50%;" />
 
 
 
 
 
-### 4.4.6. Examples of Exterior Derivative
+### 4.4.6. Examples
 
 :pushpin:**Example 1**
 
@@ -3546,6 +3584,88 @@ d\star\alpha &= d(x\star dx + y\star dy)\\
 &=2dx\wedge dy
 \end{align}
 $$
+
+### 4.4.7. Summary
+
+:pushpin:**Transformation across differential $k$-forms**
+
+We have following operators(算子):
+
+- $d$, exterior derivative
+- $\star$, star
+- $\delta :=\star d\star$
+
+Suppose $\Omega_k$ is differential $k$-form, we can have following transformation:
+
+<img src="img/image-20211128194443000.png" alt="image-20211128194443000" style="zoom:67%;" />
+
+
+
+:pushpin:**Operators as Ingredient**
+
+Imagine if operators $A_1,B_1,C_1$ can compose operator $D_1$ in ***vector calculus***,
+
+its analogy operators $A^1,B^1,C^1$ in ***exterior calculus*** can compose such operator $D^1$.
+
+:star:This is an extremely powerful mindset and reason why we are studying these analogy!!
+
+For example:
+
+> ​	*Laplacian* from *vector calculus*:
+
+$$
+\Delta:=\text{div}\circ\text{grad}
+$$
+
+> ​	*Laplacian* from *exterior calculus*:
+
+$$
+\Delta = \star d\star d
+$$
+
+
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
 
 
 
