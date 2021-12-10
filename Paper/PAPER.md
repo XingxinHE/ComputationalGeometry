@@ -10,7 +10,7 @@ This section is about the classic paper on computational geometry.
 
 
 
-# :brick: Structure of a Paper
+# 🧱Structure of a Paper
 
 - Abstract:eyes:
   - the importance of such topic
@@ -31,9 +31,9 @@ This section is about the classic paper on computational geometry.
 
 
 
-# Discrete Differential-Geometry Operators for Triangulated 2-Manifolds
+## Discrete Differential-Geometry Operators for Triangulated 2-Manifolds
 
-## 1.Abstract:eyes:
+### 1.Abstract:eyes:
 
 :pushpin: **the importance of such topic**
 
@@ -43,7 +43,7 @@ This section is about the classic paper on computational geometry.
 
 **:pushpin:the impact of result**
 
-## 2.Introduction:speaking_head:
+### 2.Introduction:speaking_head:
 
 **:pushpin:definition and the scope of this research**
 
@@ -51,15 +51,15 @@ This section is about the classic paper on computational geometry.
 
 **:pushpin:brief description of your result and impact**
 
-## 3.Main:rice: 方法实验步骤
+### 3.Main:rice: 方法实验步骤
 
-## 4.Result:clapper:
+### 4.Result:clapper:
 
 **:pushpin:the impact of such result**
 
 **:pushpin:different perspective on such result**
 
-## 5.Conclusion & Discussion:pencil2:
+### 5.Conclusion & Discussion:pencil2:
 
 **:pushpin:constraints?**
 
@@ -73,6 +73,28 @@ This section is about the classic paper on computational geometry.
 
 
 
+## What's Real About Virtual Reality?
+
+This is the article wrote by Frederick P. Brooks, Jr. ,Turing Award recipient back in 1999.  When I think of the latest metaverse boom, I can't help admire his imagination and foresight. So what was his assessment of the state of the VR art which was an infant technology 20 years ago? 然后什么被解决了？
+
+:pushpin::pushpin:Technologies
+
+He pointed out 4 most crucial technologies and another 4 auxiliary techniques.
+
+:star:The first 4 crucial are:
+
+- Display📺
+- Rendering Engine⚙
+- Tracking System🖲
+- Ergonomics🎧
+
+
+
+:star: 
+
+
+
+In the end, Prof. Brooks addressed the HOT open challenges.
 
 
 
@@ -84,14 +106,9 @@ This section is about the classic paper on computational geometry.
 
 
 
+## Title
 
-
-
-
-
-# Title
-
-## 1.Abstract:eyes:
+### 1.Abstract:eyes:
 
 :pushpin: **the importance of such topic**
 
@@ -101,7 +118,7 @@ This section is about the classic paper on computational geometry.
 
 **:pushpin:the impact of result**
 
-## 2.Introduction:speaking_head:
+### 2.Introduction:speaking_head:
 
 **:pushpin:definition and the scope of this research**
 
@@ -109,15 +126,15 @@ This section is about the classic paper on computational geometry.
 
 **:pushpin:brief description of your result and impact**
 
-## 3.Main:rice: 方法实验步骤
+### 3.Main:rice: 方法实验步骤
 
-## 4.Result:clapper:
+### 4.Result:clapper:
 
 **:pushpin:the impact of such result**
 
 **:pushpin:different perspective on such result**
 
-## 5.Conclusion & Discussion:pencil2:
+### 5.Conclusion & Discussion:pencil2:
 
 **:pushpin:constraints?**
 
