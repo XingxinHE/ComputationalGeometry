@@ -81,13 +81,10 @@ This is the article written by Frederick P. Brooks, Jr. ,Turing Award recipient,
 
 <center>
 <figure>
-  <img src="https://gitee.com/he_xingxin/img/raw/master/Fred_Brooks.jpg" alt="Brooks" style="width:20%" class="center">
+  <img src="img/Fred_Brooks.jpg" alt="Brooks" style="width:20%" class="center">
   <figcaption>Fig.Frederick P. Brooks, Jr. ©http://www.sdm.de/</figcaption>
 </figure>
 </center>
-
-
-
 
 ### 📌Technologies
 
@@ -104,28 +101,31 @@ Display refers to the visual effect that immerse the user in the virtual world a
 
 <center>
 <figure>
-  <img src="https://gitee.com/he_xingxin/img/raw/master/unity_display.png" style="width:80%" class="center">
+  <img src="img/unity_display.png" style="width:80%" class="center">
   <figcaption>Interior Demo ©ArchVizPRO</figcaption>
 </figure>
 </center>
+
 
 The rendering engine aims to generate ever-changing images which was 20-30 frames per second at that time.
 
 <center>
 <figure>
-  <img src="https://gitee.com/he_xingxin/img/raw/master/unity_rendering.png" style="width:80%" class="center">
+  <img src="img/unity_rendering.png" style="width:80%" class="center">
   <figcaption>Bow and Arrow in VR ©Unity</figcaption>
 </figure>
 </center>
+
 
 The tracking system constantly reports the position and orientation of users.
 
 <center>
 <figure>
-  <img src="https://gitee.com/he_xingxin/img/raw/master/image-20211211231021238.png" style="width:80%" class="center">
+  <img src="img/image-20211211231021238.png" style="width:80%" class="center">
   <figcaption>Tracing virtual reality helmet's position ©Marvelmind Robotics</figcaption>
 </figure>
 </center>
+
 
 The end-to-end system latency builds and maintains the detailed and realistic models of virtual world with ideal smaller than 50ms .
 
@@ -185,10 +185,11 @@ The first refers to merely modeling techniques and we leverage this process by g
 
 <center>
 <figure>
-  <img src="https://gitee.com/he_xingxin/img/raw/master/node_workflow.jpg" style="width:80%" class="center">
+  <img src="img/node_workflow.jpg" style="width:80%" class="center">
   <figcaption>Fig.City generator addon for Blender, ©Scene City.</figcaption>
 </figure>
 </center>
+
 
 
 
