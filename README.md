@@ -107,6 +107,6 @@ My recommended study material is followed:
 
 3.Please cite the authors for their contribution!
 
-[ddg_md]: Lecture/DiscreteDifferentialGeometry/DDG.md
-[gmp_md]: Lecture/GeometryModelingandProcessing/GMP.md
-[paper_md]: Paper/PAPER.md
+[ddg_md]: Lecture/DiscreteDifferentialGeometry/README.md
+[gmp_md]: Lecture/GeometryModelingandProcessing/README.md
+[paper_md]: Paper/README.md
