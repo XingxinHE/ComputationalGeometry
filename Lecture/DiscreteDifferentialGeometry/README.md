@@ -3746,8 +3746,138 @@ $$
 
 
 
-
 ### 4.5.2. Integration
+
+:pushpin:**Integration of Differential $2$-form**
+
+The differential $2$-form($\omega$) means producing an **area** by eating **2** vectors.
+$$
+\omega - \text{differential}\space \text{2-form on }\Omega
+$$
+<img src="img/image-20211222212728097.png" alt="image-20211222212728097" style="zoom: 33%;" />
+
+Then the integration is:
+$$
+\sum_i\omega_{p_i}(u_i,v_i)\Longrightarrow\int_{\Omega}\omega
+$$
+
+
+:pushpin:**Integration of Differential $2$-forms - Example**
+
+Consider a differential $2$-form($\omega$) on the unit square in the plane:
+$$
+\omega:=(x+xy)dx\wedge dy
+$$
+<img src="img/image-20211222213554076.png" alt="image-20211222213554076" style="zoom: 67%;" />
+
+Then the integration is that:
+$$
+\begin{align}
+\int_{\Omega}\omega&=\int_{\Omega}(x+xy)dx\wedge dy\\
+&=\int_0^1\int_0^1(x+xy)dx\wedge dy\\
+&=\cdots=\frac{3}{4}
+\end{align}
+$$
+
+
+:pushpin:**Integration on Curve**
+
+Suppose you have a curve $\gamma$:
+
+<img src="img/image-20211222214729052.png" alt="image-20211222214729052" style="zoom:50%;" />
+
+And you have a differential $1$-form($\alpha$) on $\mathbb{R}^2$:
+
+<img src="img/image-20211222214603388.png" alt="image-20211222214603388" style="zoom: 50%;" />
+
+You can measure the **integration** in light of alignment between **the tangent vector of the curve**:
+$$
+	\int_{\gamma}\alpha\approx\sum_i\alpha_{p_i}(t_i)
+$$
+<img src="img/image-20211222215205208.png" alt="image-20211222215205208" style="zoom: 50%;" />
+
+OK, what if I want to take the integral of $\star\alpha$ rather than $\alpha$.
+
+Now, let me introduce a clever way:
+
+- the  $\star\alpha$ of $\alpha$ is rotate the differential $2$-form counter-clockwise.
+- how about maintaining the $\alpha$, but rotating the tangent vector $t_i$ to normal vector $n_i$ instead?
+
+Therefore, we could have:
+$$
+\int_{\gamma}\star\alpha\approx\sum_i\star\alpha_{p_i}(t_i)=\sum_i\alpha_{p_i}(n_i)
+$$
+
+
+:pushpin:**Integration on Curves - Example**
+
+Consider a constant differential $1$-form($\alpha$):
+$$
+\alpha=dy
+$$
+<img src="img/image-20211222235050097.png" alt="image-20211222235050097" style="zoom:50%;" />
+
+And a unit circle $S$:
+
+<img src="img/image-20211222235330034.png" alt="image-20211222235330034" style="zoom:50%;" />
+
+Then you can also take the tangent vector as a reference:
+
+<img src="img/image-20211222235407012.png" alt="image-20211222235407012" style="zoom:50%;" />
+
+The circle $S^1$ can be seen as:
+$$
+\gamma:[0,2\pi)\to\mathbb{R}^2; s\mapsto(\cos(s),\sin(s))
+$$
+You can compute the integration that:
+$$
+\begin{align}
+\int_{S^1}\alpha&=\int_0^{2\pi}\alpha_{\gamma(s)}(T(s))ds\\
+&=\int_0^{2\pi}\alpha_{\gamma(s)}(-\sin(s)\frac{\part}{\part x}+\cos(s)\frac{\part}{\part y})ds\\
+&=dy(-\sin(s)\frac{\part}{\part x}+\cos(s)\frac{\part}{\part y})ds\\
+&=\int_0^{2\pi}\cos(s)ds=0
+\end{align}
+$$
+
+### 4.5.3. Stoke's Theorem
+
+:pushpin:**What is Boundary?**
+
+Let's denote the *boundary operator* as:
+$$
+\part
+$$
+Then it can be applied to computation of domain and curve:
+
+<img src="img/image-20211223000916307.png" alt="image-20211223000916307" style="zoom: 33%;" />
+
+
+
+:pushpin:**Basic Idea of Boundary**
+
+At an interior point $p$ of a $k$-dimensional set the intersection of an open ball around $p$ with the set <u>looks like</u>[^1] an open $k$-ball; at a boundary point it doesn’t.
+
+<img src="img/image-20211223001012596.png" alt="image-20211223001012596" style="zoom: 33%;" />
+
+[^1]: …is homeomorphic to, in the subspace topology.
+
+
+
+
+
+:pushpin:**Boundary of Boundary**
+
+Boundary of a boundary is always **empty**.
+
+<img src="img/image-20211223001614816.png" alt="image-20211223001614816" style="zoom: 33%;" />
+
+<img src="img/image-20211223001721793.png" alt="image-20211223001721793" style="zoom:33%;" />
+
+
+
+:pushpin:**Fundamental Theorem of Calculus**
+
+
 
 
 
