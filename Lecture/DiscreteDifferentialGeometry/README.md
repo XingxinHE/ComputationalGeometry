@@ -3629,63 +3629,6 @@ $$
 
 
 
-4.5. 
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
-
-
-
-
-
 
 ## 4.5. Integration of $k$-forms
 
@@ -3743,6 +3686,34 @@ To compute the integration of a scalar function, we could say the **integrals of
 $$
 \sum_iA_i\phi(p_i)\Longrightarrow\int_{\Omega}\phi\space dA
 $$
+
+
+
+:pushpin:**Inner Product**
+
+The basic inner product of 2 vectors in $\mathbb{R}^n$:
+$$
+\lang u,v\rang=u^Tv=u_1v_1+u_2v_2+\cdots+u_nv_n
+$$
+The inner product in a geometric way:
+$$
+\lang u,v\rang=\abs{u}\abs{v}\cos\theta
+$$
+<img src="img/image-20211223151218554.png" alt="image-20211223151218554" style="zoom:33%;" />
+
+
+
+:pushpin:**Example - Euclidean Inner Product**
+
+<img src="img/image-20211223151613390.png" alt="image-20211223151613390" style="zoom: 33%;" />
+$$
+\begin{align}
+&u=3e_1+2e_2\\
+&v=2e_1+4e_2\\
+&\lang u,v\rang=3\cdot2+2\cdot4=14
+\end{align}
+$$
+
 
 
 
@@ -3877,7 +3848,283 @@ Boundary of a boundary is always **empty**.
 
 :pushpin:**Fundamental Theorem of Calculus**
 
+In short, the fundamental theorem of calculus can be illustrated as:
+$$
+\int_a^b=\frac{\part\phi}{\part x}dx=\phi(b)-\phi(a)
+$$
+That simply said, the integral from $a$ to $b$ is the volume changed.
 
+<img src="img/fundamental_calculus.jpg" style="zoom:50%;" />
+
+
+
+:pushpin: **Stoke's Theorem**
+
+In one sentence, the theorem is said:
+$$
+\int_{\Omega}d\alpha=\int_{\part\Omega}\alpha
+$$
+
+
+:pushpin:**Example - Divergence Theorem in the perspective of Stoke Theorem**
+
+<img src="img/image-20211223115450793.png" alt="image-20211223115450793" style="zoom:33%;" />
+
+The notation is the following:
+
+- $\Omega$ - the domain
+- $\part\Omega$ - the boundary of the domain
+
+> ​	In *Vector Calculus* perspective:
+
+- $X$  -  the vector field over the domain(like water flow)
+- $\nabla\cdot X$   -  the divergence
+- $\int_{\Omega}\nabla\cdot XdA$  -  the integral over the whole domain $\Omega$ of the divergence of $X$
+- $\int_{\part\Omega}n\cdot Xdl$ - the integral over the boundary of the domain of the normal component of the vector field
+
+Then the divergence theorem in *Vector Calculus* said:
+
+​	<u>the integral over the whole domain $\Omega$ of the divergence of $X$</u> 
+
+​			is **EUQAL** to
+
+​	<u>the integral over the boundary of the domain of the normal component of the vector field</u>
+$$
+\int_{\Omega}\nabla\cdot XdA = \int_{\part\Omega}n\cdot Xdl
+$$
+
+> ​	In *Exterior Calculus* perspective:
+
+From the rule of [exactness](#445-exactness), we know that the analogy of divergence in Exterior Calculus:
+
+- $\alpha$ - the differential $1$-form
+- $d\star\alpha$ - the divergence in the differential form
+
+- $\int_{\Omega}d\star\alpha$ - the integral of the divergence of the differential form over the domain
+
+Then the Stoke theorem in *Exterior Calculus* said:
+
+​	<u>the integral over the whole domain $\Omega$ of the divergence of $d\alpha$</u> 
+
+​			is **EUQAL** to
+
+​	<u>the integral over the boundary of the $\star\alpha$</u>
+
+Therefore:
+$$
+\int_{\Omega}d\star\alpha=\int_{\part\Omega}\star\alpha
+$$
+
+
+> ​	An intuitive interpretation:
+
+<div align="center">
+    <h5>
+        What goes in, must come out!
+    </h5>
+</div>
+
+
+
+> ​	A ZEN interpretation:
+
+<div align="center">
+    <h5>
+        The change we see on the outside is purely a function of the change within.
+        事物外在的变化可以反映其内在变化。
+    </h5>
+</div>
+
+
+
+:pushpin:**Example - Green Theorem in the perspective of Stoke Theorem**
+
+<img src="img/image-20211223142540111.png" alt="image-20211223142540111" style="zoom:33%;" />
+
+The notation is the following:
+
+- $\Omega$ - the domain
+- $\part\Omega$ - the boundary of the domain
+
+> ​	In *Vector Calculus* perspective:
+
+- $X$  -  the vector field over the domain(like water flow)
+- $\nabla\cross X$   -  the curl
+- $\int_{\Omega}\nabla\cross XdA$  -  the integral over the whole domain $\Omega$ of the curl of $X$
+- $\int_{\part\Omega}t\cdot Xdl$ - the integral over the boundary of the domain of the tangent component of the vector field
+
+Then the Green theorem in *Vector Calculus* said:
+
+​	<u>the integral over the whole domain $\Omega$ of the curl of $X$</u> 
+
+​			is **EUQAL** to
+
+​	<u>the integral over the boundary of the domain of the tangent component of the vector field</u>
+$$
+\int_{\Omega}\nabla\cdot XdA = \int_{\part\Omega}n\cdot Xdl
+$$
+
+> ​	In *Exterior Calculus* perspective:
+
+From the rule of [exactness](#445-exactness), we know that the analogy of curl in Exterior Calculus:
+
+- $\alpha$ - the differential $1$-form
+- $d\alpha$ - the curl in the differential form
+
+- $\int_{\Omega}d\alpha$ - the integral of the curl of the differential form over the domain
+
+Then the Stoke theorem in *Exterior Calculus* said:
+
+​	<u>the integral over the whole domain $\Omega$ of the curl of $d\alpha$</u> 
+
+​			is **EUQAL** to
+
+​	<u>the integral over the boundary of the $\alpha$</u>
+
+Therefore:
+$$
+\int_{\Omega}d\alpha=\int_{\part\Omega}\alpha
+$$
+
+
+> ​	An intuitive interpretation:
+
+<div align="center">
+    <h5>
+        What goes around, must come around!
+    </h5>
+</div>
+
+
+
+
+
+
+
+:pushpin:**Example - Fundamental Theorem of Calculus in the perspective of Stoke Theorem**
+
+We know that the fundamental theorem of calculus can be seen as:
+$$
+\int_a^b=\frac{\part\phi}{\part x}dx=\phi(b)-\phi(a)
+$$
+<img src="img/fundamental_calculus.jpg" style="zoom:50%;" />
+
+In the perspective of Stoke Theorem:
+$$
+\int_{[a,b]}d\phi=\int_{\part[a,b]}\phi
+$$
+That is said, the integral of from $a$ to $b$ is the boundary which is the **2** points.
+
+
+
+
+
+:pushpin:**$d\circ d=0$ in the perspective of Stoke Theorem**
+
+In [Exterior Derivative](#445-exactness), we know that:
+$$
+d\circ d=0
+$$
+We can see it in the perspective of Stoke's Theorem:
+$$
+\int_{\Omega}dd\phi=\int_{\part\Omega}d\phi=\int_{\underbrace{\part\part\Omega}_{\empty}}\phi=0
+$$
+Intuitively, the boundary of boundary is empty:
+
+<img src="img/image-20211223144405119.png" alt="image-20211223144405119" style="zoom:67%;" />
+
+
+
+### 4.5.4. Inner Product
+
+In this section, we will talk about the **<u>Inner Product</u>** on Differential $k$-Forms.
+
+:pushpin:**Definition**
+
+Let $\alpha,\beta\in\Omega^k$ be any two differential $k$-forms. Their $L^2$ inner product is defined as:
+$$
+\lang\lang\alpha,\beta\rang\rang:=\int_{\Omega}\star\alpha\wedge\beta
+$$
+
+
+:pushpin:**Example - Inner Product of Differential $1$-Forms**
+
+Consider two differential $1$-form on the unit square $[0,1]\cross[0,1]$ given by:
+$$
+\begin{align}
+\alpha&:=du,\\\beta&:=vdu-udv
+\end{align}
+$$
+Then the inner product is:
+$$
+\begin{align}
+
+\lang\lang\alpha,\beta\rang\rang&=\int_0^1\int_0^1(\star\alpha)\wedge\beta\\
+&=\int_0^1\int_0^1dv\wedge(vdu-udv)\\
+&=-\int_0^1\int_0^1vdu\wedge dv\\
+&=-\frac{1}{2}
+
+\end{align}
+$$
+<img src="img/image-20211223153452434.png" alt="image-20211223153452434" style="zoom: 50%;" />
+
+
+
+### 4.5.5. Summary
+
+:pushpin:**Integration & Stokes’ Theorem**
+
+> ​	Integration
+
+- break domain into small pieces
+- measure each piece with $k$-form
+
+> ​	Stokes’ theorem
+
+- convert region integral to boundary integral:star:
+- super useful—lets us “skip” a derivative
+- special cases: divergence theorem, Green’s theorem, fundamental theorem of calculus, Cauchy’s integral theorem… and many more!
+
+
+
+
+
+:pushpin:**Constraint of Exterior Calculus**
+
+For simplicity, we introduced exterior calculus in **flat spaces** ($\mathbb{R}^n$).:warning:
+
+We cannot directly apply these idea to curve spaces!
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
+
+
+
+
+
+
+:pushpin:****
+
+
+
+:pushpin:****
 
 
 
@@ -4869,3 +5116,6 @@ MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const 
 
 
 
+
+
+[#445-exactness]: 
