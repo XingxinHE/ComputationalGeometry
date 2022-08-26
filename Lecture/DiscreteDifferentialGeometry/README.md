@@ -23,16 +23,7 @@
 
 # Chapter 01: Overview
 
-There are few application of Discrete Differential Geometry:
 
-1. Geometry Processing
-2. Shape Analysis
-3. Machine Learning
-4. Numerical Simulation
-5. Architecture&Design
-6. Discrete Models of Nature
-
-In a nutshell, **GEOMETRY IS EVERYWHERE**!
 
 
 
@@ -56,14 +47,6 @@ ___
 1. No infinity in DDG.
 2. modern language in geometric processing
 3. increasing:arrow_up: impact in 21st century
-
-
-
-:pushpin:**Why *Discrete* Differential Geometry is important?**
-
-___
-
-In a nutshell, DDG translate differential geometry into language suitable for **computation**.
 
 
 
