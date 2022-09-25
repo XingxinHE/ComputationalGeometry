@@ -387,36 +387,6 @@ D: It has a round shape.
 
 ## 2.0. Prerequisite - Convex
 
-### 2.0.1. Convex Set
-
-___
-
-Definition: A subset $S\sub\mathbb{R}^n$ is convex if for  every pair of points $p,q\in S$ the line segment between $p$ and $q$ is contained in $S$.
-
-<img src="img/image-20210209181005100.png" alt="image-20210209181005100" style="zoom:50%;" />
-
-Now you can tell which are convex set:
-
-<img src="img/image-20210209223738504.png" alt="image-20210209223738504" style="zoom:50%;" />
-
-### 2.0.2. Convex Hull
-
-___
-
-Definition: For any subset $S\sub\mathbb{R}^n$, its convex hull $conv(S)$ is the smallest convex set containing $S$, or equivalently, the intersection of all convex set containing $S$.
-
-<img src="img/image-20210209224202999.png" alt="image-20210209224202999" style="zoom:50%;" />
-
-### 2.0.3. Convex Hull - Example
-
-___
-
-**Q:** What is the convex hull of the set $S := \{(\pm1,\pm1,\pm1)\}\sub\mathbb{R}^3$ ?
-
-**A:** A Cube.
-
-<img src="img/image-20210209224603908.png" alt="image-20210209224603908" style="zoom:50%;" />
-
 
 
 ### 2.0.4. Topological Disk
