@@ -405,14 +405,6 @@ The objects in the first row **are** manifolds while the second row **aren't**.
 
 ### 2.1.1. Basic Math
 
-:pushpin: **Linear Independence(for vector)**
-
-___
-
-This is a topic in Linear Algebra.
-
-<img src="img/image-20210209225113143.png" alt="image-20210209225113143" style="zoom:50%;" />
-
 
 
 :pushpin: **Affine Independence(for points)**
@@ -426,23 +418,6 @@ Introduce concept of linear independence to geometry: A collection of points $p_
 
 
 ### 2.1.2. Simplex
-
-___
-
-(intuitive) From left to right, a *k-simplex* is a point, line segment, triangle, a tetrahedron...  *Most of the time, we study  <= $k=3$ .
-
-<img src="img/image-20210209224722707.png" alt="image-20210209224722707" style="zoom:67%;" />
-
-(geometric definition) A ***k-simplex*** is the convex hull of *k+1* affinely-independent points, which also named ***vertices***.
-
-<img src="img/image-20210209225918571.png" alt="image-20210209225918571" style="zoom:50%;" />
-
-| k-simplex | How many vertices? | Image                                                        |
-| --------- | :----------------: | ------------------------------------------------------------ |
-| 0-simplex |     1 = 0 + 1      | <img src="img/image-20210210113121055.png" alt="image-20210210113121055" style="zoom:40%;" /> |
-| 1-simplex |     2 = 1 + 1      | <img src="img/image-20210210113205491.png" alt="image-20210210113205491" style="zoom:40%;" /> |
-| 2-simplex |     3 = 2 + 1      | <img src="img/image-20210210113240662.png" alt="image-20210210113240662" style="zoom:40%;" /> |
-| 3-simplex |     4 = 3 + 1      | <img src="img/image-20210210113257536.png" alt="image-20210210113257536" style="zoom:40%;" /> |
 
 
 
