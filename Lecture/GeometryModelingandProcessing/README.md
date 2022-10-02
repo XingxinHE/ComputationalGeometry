@@ -84,63 +84,12 @@ Math first comes from our life, our ancestors were inspired by mother nature.
 
 ## 1.2. Function
 
-:pushpin: **Set**
-
-Set can be seen as the constrained target we evaluate.
-
 
 
 :pushpin: **Linear Space**
 
 Linear space aims to study the relationship among the elements of a set.
 
-
-
-:pushpin: **Mapping**
-
-For **2** non-empty sets $A, B$, the mapping denotes as $f:A\rarr B$. Such that, for every $a_i$ of $A$, there is one **unique** element $b_i$ in $B$ corresponding to $a_i$. 
-
-$f(a)=b$
-
-- $b$称为$a$的象，$a$称为$b$的原象。
-
-- $A$称为定义域，$B$称为值域。
-
-<img src="img/image-20210904110600276.png" alt="image-20210904110600276" style="zoom:80%;" />
-
-- non-injective surjective function(surjection) 满射
-- injective surjective function(bijection) 双射
-- injective non-surjective function(injection, not a bijection) 单射
-- non-injective non surjective function 非映射
-
-
-
-:pushpin: **Function**
-
-> ​	:bulb:Tips: Please take in consideration the methodology of "set"
-
-A function is **a binary relation between two sets** that associates each element of the first set(nonempty real number$\mathbb{R}$ set) to exactly one element of the second set.
-$$
-y = f(x)
-$$
-
-a.k.a. $x$ is in the set $A$ of left side, $y$ is in the set $B$ of the right side.
-
-<figure>
-    <center>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Xto3minus3x.svg" alt="function" style="width:30%">
-        <figcaption>This is a function</figcaption>
-     </center>
-</figure>
-
-
-
-<figure>
-    <center>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Function_with_two_values_1.svg" alt="notafunction" style="width:30%">
-        <figcaption>This is not a function</figcaption>
-     </center>
-</figure>
 
 
 
@@ -223,23 +172,6 @@ The second equation is much more readable, where $nwt$ **stretch** the curve, $\
         <figcaption>Fourier series</figcaption>
      </center>
 </figure>
-
-
-
-:pushpin: **function composition**
-
-Function composition is an operation that takes two functions $f$ and $g$ and produces a function h such that $h(x) = g(f(x))$, and so on and so on. In CHN, this is very similar to 套娃。
-$$
-(f ∘ f ∘ f ∘ f)(x) = f(f(f(f(x)))) = f^4(x)
-\\\text{sometimes also denoted as}\\
-f=f_k∘f_{k-1}∘\cdots ∘ f_0
-$$
-e.g. Following functions are composed function
-$$
-\frac{1}{1+\big(\frac{2x}{1+x^2}\big)^2}\\\\
-f(x)=\frac{e^x}{x^2+1}
-$$
-
 
 :pushpin: **How to find the desired function?**:star::star::star:
 
