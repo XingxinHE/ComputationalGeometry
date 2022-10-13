@@ -417,90 +417,18 @@ Introduce concept of linear independence to geometry: A collection of points $p_
 
 
 
-### 2.1.2. Simplex
-
-
-
-:pushpin: **Barycentric Coordinates**
-
-___
-
-A **barycentric coordinate system** is a coordinate system in which **the location of a point** is **specified** by **reference** to a **simplex** (a triangle for points in a plane, a tetrahedron四面体 for points in three-dimensional space, etc.). The barycentric coordinates of a point can be interpreted as **masses** placed at the vertices of the simplex, such that the point is the center of mass (or **barycenter**) of these masses. 
-
-
-
-:pushpin: **Barycentric Coordinates Example:  *1-simplex***
-
-___
-
-*1-simplex* is comprised of all **weighted** combinations of the two points where the weights sum to **1**：
-$$
-p(t) = (1-t)a + tb, t\in[0,1]
-$$
-<img src="img/image-20210209234010454.png" alt="image-20210209234010454" style="zoom:33%;" />
-
-Why $a\times(1-t)$ rather than $t$ ? Easy to comprehend, e.g. $t=\frac{3}{4}, p$ inclines to the right, hence the **weight** of $a$ (left) should be small, vice versa.
-
-
-
-:pushpin: **Barycentric Coordinates Example:  *k-simplex***
-
-___
-
-Any point $p$ in a $k$-simplex $\sigma$ can be expressed as a (**non-negative**) weighted combination of the vertices, where the weights sum to **1**. The weights $t_i$ are called *barycentric coordinates*.
-$$
-\sigma = \Bigg\{\sum_{i=0}^kt_ip_i\Bigg|\sum_{i=0}^kt_i=1,t_i\geq0\forall i\Bigg\}
-$$
-<img src="img/image-20210210111906293.png" alt="image-20210210111906293" style="zoom:70%;" />
-
-This is also known as **Convex Combination** which defined as a linear combination of points (which can be vectors, scalars, or more generally **points in an affine space**) where all coefficients are **non-negative** and sum to **1**.
-
-
-
-:pushpin: **Probability Simplex**
-
-___
-
-The *standard n-simplex* is the collection of points which is also known as ***probability simplex***.
-$$
-\sigma := \Bigg\{(x_o,...,x_n)\in\mathbb{R}^{n+1}\Bigg|\sum^{n}_{i=1}x_i=1, x_i\geq0 \forall\Bigg\}
-$$
-<img src="img/image-20210210113856084.png" alt="image-20210210113856084" style="zoom:50%;" />
-
-The above diagram is a *2-simplex* which lies in $\mathbb{R}^3$. Imagine all the possibilities of this simplex... No matter how, they all lie in the triangle $\sigma$ above. Therefore, it is called **probability simplex**.
-
-
 
 ### 2.1.3. Simplicial Complex
 
 ___
 
-(*infml*) **Simplicial Complex** = a bunch of **simplices**.
 
-| Singular单数 | Plural复数 |
-| ------------ | ---------- |
-| Vertex       | Vertices   |
-| Simplex      | Simplicies |
 
 **Q:** What are all the simplices?
 <img src="img/image-20210210150909217.png" alt="image-20210210150909217" style="zoom:50%;" />
 **A:** {6,7,9} {7,10,8} {2,3} {3,4} {4,5} {0} {1}
 {6,7} {7,9} {9,6} {7,8} {8,10} {10,7} {2} {3} {4} {5}
 {6} {7} {8} {9} {10} - simply write down all the **vertices**, **edges** and **faces**.
-
-
-
-:pushpin: **(Abstract) Simplicial Complex  ||  (Geometric) Simplicial Complex**
-
-___
-
-Definition: A (***geometric***) simplicial complex is a *collection* of simplices where (a) the *intersection* of any two simplices is a simplex, and every face of (b) every simplex in the complex is also in the complex.
-
-Definition: Let $S$ be a collection of sets. If for each set $\sigma\in S$ all subsets of $\sigma$ are contained in $S$, then $S$ is an *abstract simplicial complex*. A set $\sigma\in S$ of size $k+1$ is an (***abstract***) simplicial complex.
-
-<img src="img/image-20210210144954732.png" alt="image-20210210144954732" style="zoom:50%;" />
-
-(infml.) You can see these two as <u>torch_geometric.data.Data</u> while the left is *with coordinates and the right is *without coordinates*. You can also see the left as "**fabrication**" which requires everything lines up while the right as "**connectivity**" only.
 
 
 
