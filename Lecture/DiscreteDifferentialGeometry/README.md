@@ -418,105 +418,12 @@ Introduce concept of linear independence to geometry: A collection of points $p_
 
 
 
-### 2.1.3. Simplicial Complex
-
-___
 
 
-
-**Q:** What are all the simplices?
-<img src="img/image-20210210150909217.png" alt="image-20210210150909217" style="zoom:50%;" />
-**A:** {6,7,9} {7,10,8} {2,3} {3,4} {4,5} {0} {1}
-{6,7} {7,9} {9,6} {7,8} {8,10} {10,7} {2} {3} {4} {5}
-{6} {7} {8} {9} {10} - simply write down all the **vertices**, **edges** and **faces**.
-
-
-
-:pushpin: **Abstract Simplicial Complex—Graphs**
-
-___
-
-Any *(undirected) graph* $G = (V,E)$ is an abstract simplicial (1-)complex
-
-<img src="img/image-20210210165920758.png" alt="image-20210210165920758" style="zoom:30%;" />
-
-0-simplices are vertices
-
-1-simplices are edges
-
-
-
-:pushpin: **Abstract Simplicial Complex—Example**
-
-___
-
-Example: Consider the set
-
-$S:=$ {{1,2,:black_heart:}, {2,:black_heart:,:slightly_smiling_face:},{1,2},{2,:black_heart:},{:black_heart:,1},{2,:slightly_smiling_face:},{:black_heart:,:slightly_smiling_face:},{1},{2},{:black_heart:},{:slightly_smiling_face:}}
-
-**Q**: Is this set an abstract simplicial complex? If so, what does it look like?
-**A**: Yes—it’s a pair of 2-simplices (triangles) sharing a single edge:
-
-<img src="img/image-20210210170715166.png" alt="image-20210210170715166" style="zoom:50%;" />
-
-
-
-### 2.1.4. Application of Simplicial Complex
-
-___
-
-There are many applications of simplicial complex, one of which is persistent homology.
-
-![topological data analysis](img/topological data analysis.gif)
-
-The idea is that
-
-1. increase the radius of vertices
-
-2. if overlapped, then connect
-3. track "birth" and "death" of features like connected components, holes, etc
-4. features that persist for a long time are likely "real"
-
-<img src="img/image-20210210171548133.png" alt="image-20210210171548133" style="zoom:50%;" />
-
-As the radius increasing(axis of birth), the "D", "O", "G" are created(**birth**) and **exist for a certain amount of time** until they are connected(**dead**) with excessive radius.
-
-
-
-### 2.1.5. Simplex in Rhino and PyTorch (analogy)
-
-___
-
-| Discrete Differential Geometry | Rhino/Grasshopper Software | PyTorch Geometric                                            |
-| ------------------------------ | -------------------------- | ------------------------------------------------------------ |
-| 0-simplex                      | A point                    | ```x = torch.tensor([0,0,0], dtype=torch.float)```           |
-| 1-simplex                      | An edge                    | ```edge_index = torch.tensor([[0, 1], [1, 0]], dtype=torch.long)``` |
-| 2-simplex                      | A triangle                 | /                                                            |
-| Abstract Simplicial Complex    | NA.                        | ```torch_geometric.data.Data```                              |
-| Geometric Simplicial Complex   | `Rhino.Geometry.Mesh`      | `read_ply` or `read_obj`                                     |
-
-可以把0-simplex, 1-simplex和2-simplex理解为构建几何世界的基本元素，(只有一个点才是0-simplex，2个点是simplicial complex)。而把基本元素拼凑起来才是Mesh。
 
 
 
 ## 2.2. Anatomy of a Simplicial Complex
-
-### 2.2.1. $1$-Complexes & $2$-Complexes
-
-___
-
-Most of the time, **1-complexes** and **2-complexes** are 2 entities been researched the most. The former is called **graphs** which relates to Graph Machine Learning, Graph Theory, Space Syntax, etc. The later is called **triangle mesh**(trimesh) which relates to Architecture, design, manufacturing, everything!
-
-| simplicial k-complexes | alias         | notation      | Image                                                        |
-| ---------------------- | ------------- | ------------- | ------------------------------------------------------------ |
-| simplicial 1-complexes | graph         | $G = (V,E)$   | <img src="img/image-20210210213615618.png" alt="image-20210210213615618" style="zoom:33%;" /> |
-| simplicial 2-complexes | triangle mesh | $K = (V,E,F)$ | <img src="img/image-20210210213627501.png" alt="image-20210210213627501" style="zoom:33%;" /> |
-
-- V = vertices
-- E = edges
-- F = faces
-- *K = komplex(in German)
-
 
 
 ### 2.2.2. Star, Closure, Link, Boundary, and Interior
