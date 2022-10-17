@@ -29,7 +29,7 @@
 
 ## 1.1. What and Why DDG?
 
-:pushpin:**What is Differential Geometry?**
+📌**What is Differential Geometry?**
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 
 
-:pushpin:**What is *Discrete* Differential Geometry?**
+📌**What is *Discrete* Differential Geometry?**
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 ## 1.2. :star::star::star:Study Roadmap of DDG
 
-- :one: Combinatorial Surfaces
+- 1️⃣ Combinatorial Surfaces
 - :two: Exterior Calculus
   - Exterior Algebra
   - Differential Forms (3D calculus)
@@ -73,7 +73,7 @@ ___
 
 ## 1.3. Discrete setting & Smooth setting
 
-:pushpin:**What is discrete setting and smooth setting?**
+📌**What is discrete setting and smooth setting?**
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 
 
-:pushpin:**How to convert smooth setting to discrete setting?**
+📌**How to convert smooth setting to discrete setting?**
 
 ___
 
@@ -95,7 +95,7 @@ We therefore need to determine which properties should be captured.
 
 
 
-:pushpin:**Case 1 - curves in plane: Smooth->Discrete = (ok:smile:)**
+📌**Case 1 - curves in plane: Smooth->Discrete = (ok:smile:)**
 
 ___
 
@@ -111,7 +111,7 @@ In the ***discrete*** setting, a *parameterized curve* is ***piecewise linear***
 
 
 
-:pushpin: **Case 2 - Tangent of a curve: Smooth->Discrete = (not easy:no_mouth: )**
+📌 **Case 2 - Tangent of a curve: Smooth->Discrete = (not easy:no_mouth: )**
 
 ___
 
@@ -157,7 +157,7 @@ P.S. The angle of  $\phi$  is measured with the angle the tangent makes with the
 
 ___
 
-:pushpin:**smooth setting**
+📌**smooth setting**
 
 How to measure?  First let's take a look on the smooth setting:
 
@@ -175,7 +175,7 @@ For the circle(most curvy) in the middle, the length varies a lot.
 
 <img src="img/image-20210208113543296.png" alt="image-20210208113543296" style="zoom:50%;" />
 
-:pushpin:**discrete setting**
+📌**discrete setting**
 
 Suppose we have a single line segment:
 
@@ -205,7 +205,7 @@ $$
 \triangledown_{\gamma_i}L = 2sin(\theta_i/2)N_i
 $$
 
-:pushpin: **sum up**
+📌 **sum up**
 
 in smooth setting, gradient length = curvature × normal($-\kappa N$)
 
@@ -279,7 +279,7 @@ Steiner’s formula says **change in length** is *proportional* to **curvature**
 
 ### 1.4.4. Osculating Circle
 
-:pushpin: **smooth setting**
+📌 **smooth setting**
 
 The curvature is the reciprocal of the radius:
 $$
@@ -289,7 +289,7 @@ $$
 
 <img src="img/image-20210208161533603.png" alt="image-20210208161533603" style="zoom:50%;" />
 
-:pushpin: **discrete setting**
+📌 **discrete setting**
 
 Similarly, what we do in discrete is that:
 
@@ -306,13 +306,13 @@ $$
 
 ___
 
-:pushpin: **Which curvature should we use in application?**
+📌 **Which curvature should we use in application?**
 
 Just pick the right one for your job!
 
 
 
-:pushpin: **Application - Curvature Flow**
+📌 **Application - Curvature Flow**
 
 ___
 
@@ -334,7 +334,7 @@ There are many applications using curvature and curvature flow is just one of th
 
 ___
 
-:pushpin: **smooth setting**
+📌 **smooth setting**
 
 A simple version of this topic is ***curve shortening flow***, where a *closed curve* moves in the **normal** direction with **speed**
 *proportional* to **curvature**.
@@ -353,7 +353,7 @@ $$
 
 
 
-:pushpin: **discrete setting**
+📌 **discrete setting**
 
 *No Free Lunch!!
 
@@ -384,210 +384,6 @@ D: It has a round shape.
 
 
 # Chapter 02 Combinatorial Surfaces
-
-## 2.0. Prerequisite - Convex
-
-
-
-### 2.0.4. Topological Disk
-
-___
-
-A topological disk is **any shape** you can get **by deforming the unit disk** in the plane **without** *tearing* it, *puncturing* it, or *gluing* its edges together. Some examples of shapes that are disks include a flag, a leaf. Some examples of shapes that are not disks include a circle (i.e., *a disk without its interior*), a *hollow* sphere, a *donut*, a fidget *spinner*, and a *teapot*.
-
-The objects in the first row **are** manifolds while the second row **aren't**.
-
-<img src="img/image-20210214090549801.png" alt="image-20210214090549801" style="zoom:50%;" />
-
-
-
-## 2.1. Abstract Simplicial Complex
-
-### 2.1.1. Basic Math
-
-
-
-:pushpin: **Affine Independence(for points)**
-
-___
-
-Introduce concept of linear independence to geometry: A collection of points $p_0,...,p_k$ are affine independent if the vectors $v_i:=p_i-p_0$ are linearly independent.
-
-<img src="img/image-20210209225525559.png" alt="image-20210209225525559" style="zoom:50%;" />
-
-
-
-
-
-
-
-
-
-## 2.2. Anatomy of a Simplicial Complex
-
-
-### 2.2.2. Star, Closure, Link, Boundary, and Interior
-
-$S$ is a given set of simplices.
-
-***Closure*** $Cl(S)$ is the smallest (i.e., fewest elements) subcomplex of $K$ that contains $S$. In the following diagram, $S$ is a set of 1×triangle and an 1×edge.
-
-<img src="img/image-20210210211205145.png" alt="image-20210210211205145" style="zoom:50%;" />
-
-***Star*** $St(S)$ is the collection of all simplices in $K$ that contain any simplex in $S$. In the following diagram, $S$ is a vertex.
-
-<img src="img/image-20210210211654892.png" alt="image-20210210211654892" style="zoom:50%;" />
-
-***Link*** $Lk(S)$ is equal to $Cl(St(S)) \backslash St(Cl(S))$ which means taking out the $star\space St(s)$ from $closure\space Cl(S)$. In the following diagram, $S$ is a vertex.
-
-<img src="img/image-20210210212146475.png" alt="image-20210210212146475" style="zoom:50%;" />
-
-
-
-***Boundary*** $bd(K')$ is a pure $k$-subcomplex $K' \subseteq K$. The boundary is the closure of the set of all simplices $\sigma$ that are proper faces of exactly one simplex of $K'$.
-
-***Interior*** $int(K') = K' \backslash  bd(K')$ is then everything but the boundary (as pictured above)
-
-<img src="img/image-20210214094326255.png" alt="image-20210214094326255" style="zoom:50%;" />
-
-You may wonder what is the difference between ***Link*** and ***Boundary***, ***Closure*** and ***Interior***? Due to their similarity...
-
-:warning: The difference is that ***Link*** and ***Closure*** are referring to **simplex** while ***Link*** and ***Interior*** are referring to **Complex/Subcomplex**.
-
-
-
-
-
-### 2.2.3. Oriented Simplicial Complex
-
-___
-
-***Oriented simplicial complex*** is an abstract simplicial complex where we can assign a **consistent orientation** to every triangle.
-
-***Unorientable simplicial complex*** is the opposite. The famous Möbius band is one of the cases:
-
-<img src="img/image-20210215164317369.png" alt="image-20210215164317369" style="zoom:50%;" />
-
-In this section, the following definitions will be covered:
-
-> ​	:one: Orientation of a 1-Simplex
->
-> ​	:two: Orientation of a 2-Simplex
->
-> ​	:three: Oriented $k$-Simplex
->
-> ​	:four: Oriented 0-Simplex
->
-> ​	:five: Oriented 3-Simplex
->
-> ​	:six: Oriented Simplicial Complex :star:
->
-> ​	:seven: Relative Orientation
-
-
-
-:pushpin: **Orientation of a 1-Simplex**
-
-___
-
-$\{a,b\}$   is ***unordered set***.(NO direction)
-
-$(a,b)$ or $(b,a)$    is ***ordered tuples*** which can be illustrated as followed.
-
-<img src="img/image-20210210214100027.png" alt="image-20210210214100027" style="zoom:33%;" />
-
-Why *orientation* matters? **Integral**.
-$$
-\int^b_a f(x)dx = -\int^a_b f(x)dx
-$$
-
-:pushpin: **Orientation of a 2-Simplex**
-
-___
-
-For a 2-simplex, orientation given by "winding order" of vertices. An ***oriented 2-simplex*** can be specified by a 3-tuple.
-
-<img src="img/image-20210210215052534.png" alt="image-20210210215052534" style="zoom:33%;" />
-
-
-
-:pushpin: **Oriented *k-Simplex***
-
-___
-
-How do we define orientation in general?
-
-<img src="img/image-20210210223018898.png" alt="image-20210210223018898" style="zoom:50%;" />
-
-Definition: An ***oriented k-simplex*** is an *ordered tuple*, up to **even** permutation. 
-
-Why permutation is even? Because there are always **2** orientation **positive-negative** and **clockwise-counterclockwise**. Conventionally, we called the **even-index** permutation as "**positive**" while **odd-index** permutation as "**negative**".
-
-
-
-:pushpin: **Oriented 0-Simplex**
-
-___
-
-What’s the orientation of a single vertex?
-
-<img src="img/image-20210210223557050.png" alt="image-20210210223557050" style="zoom:33%;" />
-
-Only one permutation of vertices(the zero-index), so only one orientation - $(a)$! (Positive).
-
-
-
-:pushpin: **Oriented 3-Simplex**
-
-___
-
-How to determine this...
-
-<img src="img/image-20210210223830301.png" alt="image-20210210223830301" style="zoom:33%;" />
-
-We can use python for permutation.
-
-```python
->>> import itertools
->>> list(itertools.permutations([1,2,3,4]))
-[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]
-```
-
-Therefore you got this:
-
-<img src="img/image-20210210224421535.png" alt="image-20210210224421535" style="zoom:50%;" />
-
-
-
-
-
-:pushpin: **Oriented Simplicial Complex**
-
-___
-
-An ***oriented simplicial complex*** is a simplicial complex where each simplex is assigned an orientation. The *orientation* of a simplex is an ordering of its vertices up to even permutation. One can specify an oriented simplex via one of its representative **ordered tuples**. 
-
-<img src="img/image-20210210225701197.png" alt="image-20210210225701197" style="zoom:50%;" />
-
-
-
-:pushpin: **Relative Orientation**
-
-___
-
-Two distinct oriented simplices have the same ***relative orientation*** if the two (maximal) faces in their intersection have **opposite** orientation.
-
-<img src="img/image-20210210225920570.png" alt="image-20210210225920570" style="zoom:50%;" />
-
-共面的边方向相冲，则为relative orientation.
-
-:warning: The left is referred as **consistent orientation** while the right is referred as **inconsistent orientation**.
-
-
-
-
-
-
 
 ## 2.3. Simplicial Manifold
 
@@ -628,24 +424,6 @@ Manifold triangle mesh is of enormous importance in geometric processing and mod
 | edges(boundary)    | just **1** along the **boundary**                            | <img src="img/image-20210211091329785.png" alt="image-20210211091329785" style="zoom:50%;" /> |
 | vertices           | every vertex is contained in **a single “loop”** of triangles | <img src="img/image-20210211091341963.png" alt="image-20210211091341963" style="zoom:50%;" /> |
 | vertices(boundary) | **a single “fan”** along the **boundary**                    | <img src="img/image-20210211091352783.png" alt="image-20210211091352783" style="zoom:50%;" /> |
-
-
-
-### 2.3.2. Nonmanifold
-
-___
-
-We will henceforth call such configurations **nonmanifold**: meeting at an edge, or multiple “cones” of vertices meeting at a vertex.
-
-<img src="img/image-20210211095856217.png" alt="image-20210211095856217" style="zoom:50%;" />
-
-
-
-:pushpin: **Why Manifold Meshes would be preferable?**
-
-___
-
-In a nutshell, it is neat ingredient for **datastructure** which is easy to process and comfortable to access its "neighbor".
 
 
 
@@ -796,7 +574,7 @@ the orbits of $\eta\circ\rho$ are ***vertices***:
 
 ### 3.1.0. Math Review
 
-:pushpin: **What is *differential* ?**
+📌 **What is *differential* ?**
 
 ___
 (*infml*) =How to *transform* vectors from one space to another. e.g.The $X$ in the left to $df(X)$ in the right by stretching or "pushing" forward.
@@ -826,7 +604,7 @@ $$
 
 
 
-:pushpin: **Different representation of *dot product***
+📌 **Different representation of *dot product***
 
 ___
 In $\mathbb{R}^2$: use angle bracket, e.g.
@@ -847,7 +625,7 @@ $$
 
 
 
-:pushpin: ***metric* of a surface**
+📌 ***metric* of a surface**
 
 ___
 
@@ -860,7 +638,7 @@ $$
 
 
 
-:pushpin: ***vector field***
+📌 ***vector field***
 
 ___
 
@@ -868,7 +646,7 @@ A vector at every point of $M$.
 
 
 
-:pushpin: ***tangent bundle***
+📌 ***tangent bundle***
 
 ___
 
@@ -878,7 +656,7 @@ The set of all tangent vectors of $M$. denoted as $TM$.
 
 
 
-:pushpin: **normal vector**
+📌 **normal vector**
 
 ___
 
@@ -891,7 +669,7 @@ $$
 
 
 
-:pushpin: **orientable**
+📌 **orientable**
 
 ___
 
@@ -905,7 +683,7 @@ The Mobius band on the right is ***NOT orientable***.
 
 
 
-:pushpin: ***Gauss map and Weingarten map?***
+📌 ***Gauss map and Weingarten map?***
 
 ___
 
@@ -925,7 +703,7 @@ The Weingarten map is the differential of $N$ , denoted as $dN$, tell us the cha
 
 ### 3.1.1 Conformal Coordinates
 
-:pushpin: **isometric parameterization?**
+📌 **isometric parameterization?**
 
 ___
 
@@ -947,7 +725,7 @@ However, isometric parameterization does not always exist. Most of the time you 
 
 
 
-:pushpin: **conformal parameterization**
+📌 **conformal parameterization**
 
 ___
 
@@ -1090,7 +868,7 @@ $$
 
 
 
-:pushpin: **Why $T$ and $N$ are always orthogonal?**
+📌 **Why $T$ and $N$ are always orthogonal?**
 
 ___
 
@@ -1126,7 +904,7 @@ Similarly:
 
 
 
-:pushpin: **Frenet-Serret formula in details**
+📌 **Frenet-Serret formula in details**
 
 ___
 
@@ -1135,7 +913,7 @@ $$
 \underbrace{\begin{bmatrix}T'\\N'\\B'\end{bmatrix}}_{Q'\in \mathbb{R}^{3\times3}}= \underbrace{\begin{bmatrix}0&-\kappa&0\\\kappa&0&-\tau\\0&\tau&0\end{bmatrix}}_{A\in \mathbb{R}^{3\times3}}\underbrace{\begin{bmatrix}T\\N\\B\end{bmatrix}}_{Q\in\mathbb{R}^{3\times3}}
 $$
 
-:pushpin: **Why $QQ^T = I$ ?**
+📌 **Why $QQ^T = I$ ?**
 
 We have:
 $$
@@ -1163,13 +941,13 @@ $$
 
 ___
 
-:pushpin: **What is *Curvature*? (fml definition) **
+📌 **What is *Curvature*? (fml definition) **
 
 The curvature of a circle is simply the reciprocal of its radius. 圆形的曲率是它半径的倒数。
 $$
 \kappa = \lvert\kappa N\rvert = \lvert dT(X)\rvert = 2\pi/2\pi r = 1/r
 $$
-:pushpin: **Curvature with Intuition**
+📌 **Curvature with Intuition**
 
 There is an intuitive way perceiving this:
 Curve flattening $\rightarrow$ curvature$(\kappa)\downarrow$ $\rightarrow$ circle grow bigger($r\uparrow$) $\rightarrow$ become straight line with **zero** curvature :
@@ -1242,7 +1020,7 @@ The above equation tells that: ***how the normal changes*** as we travel along t
 
 
 
-:pushpin: **Difference between $df(SX)$ and $dN(X)$?**
+📌 **Difference between $df(SX)$ and $dN(X)$?**
 
 ___
 
@@ -1272,7 +1050,7 @@ $$
 
 
 
-:pushpin: **mean curvature and Gaussian curvature**
+📌 **mean curvature and Gaussian curvature**
 
 ___
 
@@ -1303,7 +1081,7 @@ $$
 
 #### 3.4.1.1. Surface categorized via curvature
 
-:pushpin: ***developable surface***
+📌 ***developable surface***
 
 ___
 
@@ -1315,7 +1093,7 @@ Definition: Surfaces with zero Gaussian curvature are called *developable surfac
 
 
 
-:pushpin: ***minimal surfaces***
+📌 ***minimal surfaces***
 
 ___
 
@@ -1329,7 +1107,7 @@ Minimal surfaces tend to be *saddle-like*(又称为马鞍面) since principal cu
 
 
 
-:pushpin: ***hemisphere***
+📌 ***hemisphere***
 
 ___
 
@@ -1339,7 +1117,7 @@ In this case: $\kappa_1=\kappa_2$ , and so principal directions are not uniquely
 
 #### 3.4.1.2. Points categorized via curvature
 
-:pushpin: **Planar Point**
+📌 **Planar Point**
 
 ___
 
@@ -1349,7 +1127,7 @@ $K = \kappa_1\kappa_2 = 0$ , it is flat on any direction, therefore $\kappa_n=0$
 
 
 
-:pushpin: **Parabolic Point**
+📌 **Parabolic Point**
 
 ___
 
@@ -1359,7 +1137,7 @@ $K = \kappa_1\kappa_2 = 0$ , cyan direction is flat, therefore one of $\kappa=0,
 
 
 
-:pushpin: **Hyperbolic Point**
+📌 **Hyperbolic Point**
 
 ___
 
@@ -1369,7 +1147,7 @@ $K = \kappa_1\kappa_2 < 0$ , they are with opposite curvature, therefore $K<0$
 
 
 
-:pushpin: **Elliptic Point**
+📌 **Elliptic Point**
 
 ___
 
@@ -1426,7 +1204,7 @@ $$
 df_p(X)=\lim_{h\to0}\frac{f(p+hX)-f(p)}{h}
 $$
 
-:pushpin: ***Jacobian matrix?***
+📌 ***Jacobian matrix?***
 
 ___
 
@@ -1575,7 +1353,7 @@ Built on ***DEC***, the applications are:
 
 ## 4.0. Math Review
 
-:pushpin: **Vector Spaces - (review)**
+📌 **Vector Spaces - (review)**
 
 (fml.) A vector space is a set $V$ together with the operations
 
@@ -1605,7 +1383,7 @@ $(a+b)x=ax+bx$
 
 
 
-:pushpin: **Inner Product - (review)**
+📌 **Inner Product - (review)**
 
 $\langle\cdot,\cdot\rangle:V\times V\to\mathbb{R}$ , this quantity tells how well two vector "line up" in $V$
 
@@ -1633,7 +1411,7 @@ ___
 
 
 
-:pushpin: **direction vs orientation in English**
+📌 **direction vs orientation in English**
 
 $l$ : A line encodes a **direction**.(infinity)
 
@@ -1641,21 +1419,21 @@ $v$ : A vector encodes a **direction** AND a definite **orientation**. (finite)
 
 <img src="img/image-20210216145452443.png" alt="image-20210216145452443" style="zoom:50%;" />
 
-:pushpin: **0-vector**
+📌 **0-vector**
 
 ​	It is a **scalar/scalar value**.  (*magnitude*, no direction) 
 
-:pushpin: **1-vector**
+📌 **1-vector**
 
 ​	1-vector is just an ordinary vector.
 
-:pushpin: **2-vector**
+📌 **2-vector**
 
 ​	A pretty good visualization of a 2-vector is to associate any two vectors $u, v$ in three-dimensional space $\mathbb{R}^3$ with the volume spanned by a little parallelogram.
 
 <img src="img/image-20210216162804238.png" alt="image-20210216162804238" style="zoom:67%;" />
 
-:pushpin: **$k$-vector**
+📌 **$k$-vector**
 
 :bangbang: The **wedge** of $k$ vectors is called a “$k$-vector” a.k.a a **volume**!!
 
@@ -1677,7 +1455,7 @@ In $\mathbb{R}^3$, $u\land v\land w$ is the volume spanned by the 3 vectors, cal
 
 <img src="img/image-20210216155231386.png" alt="image-20210216155231386" style="zoom:67%;" />
 
-:pushpin: **Wedge product - orientation**
+📌 **Wedge product - orientation**
 
 In $\mathbb{R}$, there are 2 opposite orientations$(-x,x)$ which can be described as "**forward**" and "**backward**"
 
@@ -1697,7 +1475,7 @@ In $\mathbb{R}^3$, there are 2 opposite orientations corresponding to "**inward*
 
 
 
-:pushpin:   **:bangbang: RULES OF ORIENTATION SWITCHES**
+📌   **:bangbang: RULES OF ORIENTATION SWITCHES**
 
 Any **even permutation** of vectors **preserves** orientation!!!
 
@@ -1715,13 +1493,13 @@ $w\land v\land u = v\land u\land w = u\land w\land v$
 
 
 
-:pushpin: **Wedge product - degeneracy**
+📌 **Wedge product - degeneracy**
 
 $u\land u=0$ , geometrically, spans a region of *zero area*.
 
 
 
-:pushpin: **Wedge product - scaling**
+📌 **Wedge product - scaling**
 
 Scaling just one of the vectors by a factor $a\in\mathbb{R}$ will scale the area of our parallelogram by the same amount:
 
@@ -1731,7 +1509,7 @@ $(au)\land v=a(u\land v) = u\land (av)=a(u\land v)$
 
 
 
-:pushpin:  **Wedge product - associativity**
+📌  **Wedge product - associativity**
 
 $u\land v\land w=(u\land v)\land w=u\land (v\land w)$
 
@@ -1739,7 +1517,7 @@ $u\land v\land w=(u\land v)\land w=u\land (v\land w)$
 
 
 
-:pushpin: **Wedge product - distributivity**
+📌 **Wedge product - distributivity**
 
 $u\land v_1 + u\land v_2 = u\land(v_1+v_2)$
 
@@ -1747,7 +1525,7 @@ $u\land v_1 + u\land v_2 = u\land(v_1+v_2)$
 
 
 
-:pushpin: **Rules of Wedge Product**
+📌 **Rules of Wedge Product**
 
 For any collection of vectors $u, v, w \in \mathbb{R}^n$ and scalars $a, b \in\mathbb{R}$ we have
 
@@ -1772,7 +1550,7 @@ Why use "Hodge Star"? The ideology of "**complement**".
 
 
 
-:pushpin: **Orthogonal Complement - "complement" in Linear Algebra**
+📌 **Orthogonal Complement - "complement" in Linear Algebra**
 
 Definition: Let $U\subseteq V$ be a linear subspace of a vector space $V$ with an inner product $\langle\cdot,\cdot\rangle$. The *orthogonal complement* of $U$ is the collection of vectors denoted as $U^\bot$.
 
@@ -1783,7 +1561,7 @@ $$
 
 
 
-:pushpin: **Hodge Star - "complement" in Exterior Algebra**
+📌 **Hodge Star - "complement" in Exterior Algebra**
 
 In exterior algebra, the ***Hodge star***$\star$(pronounced “star”) provides a sort of *orthogonal complement* for $k$-vectors. If we have a $k$-vector $v$ in $\mathbb{R}^n$, then $\star v$ will be an $(n−k)$-vector that is in some sense “complementary.” 
 
@@ -1799,7 +1577,7 @@ The analogy can be summarized:
 
 
 
-:pushpin: **Hodge Star - orientation & magnitude**
+📌 **Hodge Star - orientation & magnitude**
 
 Then the question shifts to how to determine these two?
 
@@ -1825,7 +1603,7 @@ General rules:
 
 
 
-:pushpin: **Hodge Star - 2D**
+📌 **Hodge Star - 2D**
 
 Since  we are talking in $\mathbb{R}^2$, then we have 1-vector $u$. Hodge star $\star u$ will be $(n-k)=2-1=1$-vector. Therefore, it merely is 90 degree rotation.
 
@@ -1893,7 +1671,7 @@ $$
 
 ___
 
-:pushpin: **Basis**
+📌 **Basis**
 
 **Definition**: Let $V$ be a vector space. A collection of vectors is *linearly independent* if no vector in the collection can be expressed as a linear combination of the others. A linearly independent collection of vectors $\{e_1,...,e_n\}$ is a ***basis*** for $V$ if every vector $v\in V$ can be expressed as:
 $$
@@ -1905,7 +1683,7 @@ for some collection of coefficients $v_1,...,v_n\in\mathbb{R}$ , i.e., if every 
 
 
 
-:pushpin: **Basic $k$-Vectors - visualized**
+📌 **Basic $k$-Vectors - visualized**
 
 Reminds once again: $k$-Vectors is a **volume**!! Therefore, **basis $k$-vector** is also a **volume**!!
 
@@ -1913,7 +1691,7 @@ Reminds once again: $k$-Vectors is a **volume**!! Therefore, **basis $k$-vector*
 
 
 
-:pushpin: **Basic $k$-Vectors - amounts**
+📌 **Basic $k$-Vectors - amounts**
 
 Consider $V=\mathbb{R}^4$ with basis $\{e_1,e_2,e_3,e_4\}$
 
@@ -1935,7 +1713,7 @@ The **pattern** is this:
 
 
 
-:pushpin: **Basic $k$-Vectors - Hodge Star**
+📌 **Basic $k$-Vectors - Hodge Star**
 
 Consider $V=\mathbb{R}^3$ with orthogonal basis $\{e_1,e_2,e_3\}$
 
@@ -1973,7 +1751,7 @@ ___
 
 
 
-:pushpin: **Duality in differential geometry and exterior calculus**
+📌 **Duality in differential geometry and exterior calculus**
 
 <span style="color:blue">vectors</span> $u$ - vector of any magnitude, objects that get **measured** , 
 
@@ -1987,7 +1765,7 @@ The notation $\alpha(u)$ here is meant to emphasize the idea that $\alpha$ is a 
 
 
 
-:pushpin: **Dual Space & Covectors**
+📌 **Dual Space & Covectors**
 
 Definition: Let $V$ be any real vector space. Its **dual space** $V^*$ is the collection of all **linear functions** $\alpha:V\to\mathbb{R}$ together with the operations of ***addition*** and ***scalar multiplication***:
 $$
@@ -2002,7 +1780,7 @@ Definition: An element of a dual vector space is called a ***dual vector*** or *
 
 
 
-:pushpin: **Covectors - Example in $\mathbb{R}^3$**
+📌 **Covectors - Example in $\mathbb{R}^3$**
 
 linear map $f$ , vectors $u,v$ , scalars $a$ . Then we have:
 
@@ -2022,7 +1800,7 @@ $f(u+v)=f(u)+f(v)$	and	$f(au)=af(u)$
 
 
 
-:pushpin: **Covectors - Example in Functions**
+📌 **Covectors - Example in Functions**
 
 Let $V$ be the set of integrable functions $f:[0,1]\to\mathbb{R}$ a.k.a. the blue,red, and green curve.
 
@@ -2043,7 +1821,7 @@ How to interpret above equation?
 
 
 
-:pushpin: **Sharp and Flat**
+📌 **Sharp and Flat**
 
 ***sharp*** ($\sharp$) : convert a 1-form into a vector
 
@@ -2073,7 +1851,7 @@ $\alpha(\alpha^\sharp)$ , which is equivalent to $\alpha(v)$
 
 
 
-:pushpin: **Sharp and Flat w/ Inner Product**
+📌 **Sharp and Flat w/ Inner Product**
 
 <span style="color:red">$\begin{bmatrix}u_1&u_2&u_3\end{bmatrix}\begin{bmatrix}M_{11}&M_{12}&M_{13}\\M_{12}&M_{22}&M_{23}\\M_{13}&M_{23}&M_{33}\end{bmatrix}$</span><span style="color:blue">$\begin{bmatrix}v_1\\v_2\\v_3\end{bmatrix}$</span>
 
@@ -2081,7 +1859,7 @@ $\alpha(\alpha^\sharp)$ , which is equivalent to $\alpha(v)$
 
 
 
-:pushpin: **Sharp and Flat - Example**
+📌 **Sharp and Flat - Example**
 
 In *curved* space, suppose we want to measure the length of a vector $v$ along the direction of another vector $u$.
 
@@ -2143,7 +1921,7 @@ ___
 
 
 
-:pushpin: **0-form**
+📌 **0-form**
 
 0-form must take 0-vector and produce a scalar. 0-form is a scalar!
 
@@ -2153,7 +1931,7 @@ Has ***magnitude***, while it has only one possible "direction".
 
 
 
-:pushpin: **1-form**
+📌 **1-form**
 
 We can of course apply this same expression when $\alpha$ does not have unit length:
 $$
@@ -2167,7 +1945,7 @@ How to interpret?
 
 
 
-:pushpin: **2-form : measurement of 2-vectors**
+📌 **2-form : measurement of 2-vectors**
 
 (*Intuition*) a multilinear measurement of a 2-vector is a size of “shadow” of one parallelogram on another.
 
@@ -2227,7 +2005,7 @@ $$
 
 
 
-:pushpin: **3-form : measurement of 3-vectors**
+📌 **3-form : measurement of 3-vectors**
 
 (*Intuition*) a multilinear measurement of a 3-vector is in $\mathbb{R}^3$, all 3-vectors have same “direction”, a.k.a. is to measure "magnitude" 
 
@@ -2251,13 +2029,13 @@ Intuitively interpret 3-form: Projected volume of $u,v,w$ gets **scaled** by vol
 
 
 
-:pushpin: **$k$-form**
+📌 **$k$-form**
 
 Definition: $k$-form is a *fully antisymmetric*, *multilinear* measurement of a $k$-vector. Typically think of this as a **map** $\alpha$ from **$k$-vectors** to a **scalar**:
 $$
 \alpha:\underbrace{V\times\dotsm V}_{\text{$k$ times}}\to\mathbb{R}
 $$
-:one:**Multilinear** means "linear in each argument", e.g. for a 2-form:
+1️⃣**Multilinear** means "linear in each argument", e.g. for a 2-form:
 $$
 \begin{align}
 \alpha(au+bv,w)&=a\alpha(u,w)+b\alpha(v,w)\\
@@ -2338,7 +2116,7 @@ ___
 
 
 
-:pushpin: **Dual Basis: vector basis and covector basis**
+📌 **Dual Basis: vector basis and covector basis**
 
 **Vector**:
 
@@ -2371,13 +2149,13 @@ e^i(e_j)=\begin{cases}
 $$
 :star:How to interpret? Take a look on:
 
-:one:$e_1$ of vector basis and $e^1$ of covector basis, they are with **same** $n=1$, therefore, they are **lined up**, same amount equivalence.
+1️⃣$e_1$ of vector basis and $e^1$ of covector basis, they are with **same** $n=1$, therefore, they are **lined up**, same amount equivalence.
 
 :two: $e_1$ of vector basis and $e^2$ of covector basis, they are with **different** $n$, therefore, they are **not lined up**, in this case orthogonal! Therefore it is 0.
 
 
 
-:pushpin: **1-form : Example in coordinates**
+📌 **1-form : Example in coordinates**
 
 Considering we have:
 $$
@@ -2402,7 +2180,7 @@ $$
 \end{align}
 $$
 
-:pushpin: **2-form : Example in coordinates**
+📌 **2-form : Example in coordinates**
 
 Considering we have:
 $$
@@ -2461,7 +2239,7 @@ Likewise, we can have similar analogy on $k$-form
 
 ___
 
-:pushpin: ***Differential* 0-Form**
+📌 ***Differential* 0-Form**
 
 Definition: Assigns **a scalar** to each point. (no direction, **only magnitude**)
 
@@ -2473,7 +2251,7 @@ E.g., in 2D we have a value at each point $(x_1,x_2)$:
 
 
 
-:pushpin: ***Differential* 1-Form**
+📌 ***Differential* 1-Form**
 
 Definition: Assigns a **1-form** to each point. 
 
@@ -2499,7 +2277,7 @@ Zone C: the 1-vector in the vector field is **opposite** to the 1-form in the di
 
 
 
-:pushpin: ***Differential* 2-Form**
+📌 ***Differential* 2-Form**
 
 Definition: A differential 2-form is an **area measurement** at each point$(x_1,x_2,x_3)$: 
 
@@ -2513,11 +2291,11 @@ Resulting function says how much a 2-vector field “**lines up**” with a give
 
 
 
-:pushpin: ***Differential* $k$-Forms :  Pointwise Operations**
+📌 ***Differential* $k$-Forms :  Pointwise Operations**
 
 Most operations on differential $k$-forms simply **apply that operation at each point**. Followings are the demo of 3 operation:
 
-:one: Hodge Star
+1️⃣ Hodge Star
 
 :two: Wedge
 
@@ -2525,7 +2303,7 @@ Most operations on differential $k$-forms simply **apply that operation at each 
 
 Consider two differential forms $α, β$ on $\mathbb{R}^n$. At each point $p := (x_1,…,x_n)$, the
 
-:one:	apply the Hodge star to the individual $k$ forms at each point $p$
+1️⃣	apply the Hodge star to the individual $k$ forms at each point $p$
 $$
 \begin{align}
 (\star\alpha)_p&:=\star(\alpha_p)\\
@@ -2551,7 +2329,7 @@ $$
 
 ___
 
-:pushpin: **Basis Vector Fields**
+📌 **Basis Vector Fields**
 
 Left: basis for *vectors*
 
@@ -2565,7 +2343,7 @@ Right: *basis for vector fields* on $\mathbb{R}^n$ - **constant** vector fields 
 
 
 
-:pushpin: **Basis Vector Fields -> to build :hammer: ->other Vector Fields**
+📌 **Basis Vector Fields -> to build :hammer: ->other Vector Fields**
 
 :star::star:$\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2}$ are the ingredients used to construct!!  
 
@@ -2580,7 +2358,7 @@ $a,b$ are the coefficients and $\frac{\partial}{\partial x^1},\frac{\partial}{\p
 
 
 
-:pushpin: **Bases for Vector Fields and Differential 1-forms**
+📌 **Bases for Vector Fields and Differential 1-forms**
 
 The analogy is nearly identical here:
 
@@ -2604,7 +2382,7 @@ $$
 
 ### 4.3.3. Examples of *Differential* 1-form
 
-:pushpin: **Example: Hodge Star of Differential 1-form**
+📌 **Example: Hodge Star of Differential 1-form**
 
 Consider the differential 1-form:
 
@@ -2643,7 +2421,7 @@ $$
 
 
 
-:pushpin: **Example: Wedge of Differential 1-Forms**
+📌 **Example: Wedge of Differential 1-Forms**
 
 Consider the differential 1-forms:
 $$
@@ -2700,7 +2478,7 @@ In $n$-dimensions, any  positive multiple of  $dx^1\land dx^2\land\dotsm\land dx
 
 
 
-:pushpin: **Differential 1-form EATS(measure) vector field**
+📌 **Differential 1-form EATS(measure) vector field**
 
 After digesting lots of knowledge, we finally reached the goal is that **using differential 1-form to measure vector fields**.
 
@@ -2773,25 +2551,25 @@ In this section, we will take a deep insight of it.
 
 
 
-:pushpin: **Illustration of Gradient, Divergence, and Curl**
+📌 **Illustration of Gradient, Divergence, and Curl**
 
 ![image-20211119181749069](img/image-20211119181749069.png)
 
 
 
-:pushpin: **What is vector field?**
+📌 **What is vector field?**
 
 All the points in the space are associated with a vector.
 
 <img src="img/image-20210330222126040.png" alt="image-20210330222126040" style="zoom:50%;" />
 
-:pushpin: **What is fluid field?**
+📌 **What is fluid field?**
 
 Vector field is a static and steady case while fluid field is dynamic.
 
 ![fluid-field](img/fluid-field.gif)
 
-:pushpin: **What is divergence?**
+📌 **What is divergence?**
 
 <img src="img/divergence-positive.gif" alt="divergence-positive" style="zoom: 80%;" />
 
@@ -2803,7 +2581,7 @@ The divergence of a vector field at a particular point in a plane tell you how m
 
 <img src="img/divergence-positive_flow.gif" alt="divergence-positive_flow"  />
 
-:pushpin: **What is Curl?**
+📌 **What is Curl?**
 
 How much the fluid at the point tends to rotate.
 
@@ -2821,7 +2599,7 @@ One of the application of "curl" is phase flow. Somehow it looks like a dynamic 
 
 ![phase-flow](img/phase-flow.gif)
 
-:pushpin: **The Equation of Divergence and Curl**
+📌 **The Equation of Divergence and Curl**
 
 Divergence: $\text{div F} = \triangledown \cdot \text{F}$ 
 
@@ -2834,7 +2612,7 @@ The **cross product** is expected to **measure** how these **two vectors spin ar
 
 ![how_divergence_curl_calculate](img/how_divergence_curl_calculate.gif)
 
-:pushpin: **What is partial derivative?**
+📌 **What is partial derivative?**
 
 Partial derivative: a partial derivative of a function of **several variables** is its derivative with respect to one of those variables, with the **others held constant**.
 
@@ -2842,11 +2620,11 @@ Total derivative: (opposite to above) all variables are allowed to vary.
 
 
 
-:pushpin: **Vector Derivatives in Coordinates**
+📌 **Vector Derivatives in Coordinates**
 
 Consider:
 
-:one: a scalar function $\phi:\mathbb{R}^3\to\mathbb{R}$
+1️⃣ a scalar function $\phi:\mathbb{R}^3\to\mathbb{R}$
 
 :two: a vector field: $X = u\frac{\part}{\part x}+v\frac{\part}{\part y}+w\frac{\part}{\part z}$
 
@@ -2889,7 +2667,7 @@ $$
 
 ### 4.4.2. Big Picture
 
-:pushpin: **Definition**
+📌 **Definition**
 
 The exterior derivative $d$ is a unique *linear* map:
 $$
@@ -2899,7 +2677,7 @@ $\Omega^k$, the space of all differential $k$-forms
 
 $\Omega^k\to\Omega^{k+1}$, means the $d$ increase the degree of differential form
 
-:pushpin: **Properties**
+📌 **Properties**
 
 The exterior derivative $d$ has following properties:
 
@@ -2926,7 +2704,7 @@ $$
 
 ### 4.4.3. Differential
 
-:pushpin: **Prerequisite - Directional Derivative**
+📌 **Prerequisite - Directional Derivative**
 
 The **directional derivative** of a **scalar function** $\phi$ at a **point** $p$ with respect to a **vector** $X$ is the rate at which that function increases as we walk away from $p$ with velocity $X$.
 
@@ -2948,7 +2726,7 @@ As we walk along a curve $\gamma$ tangent to $X$, how fast will an observed quan
 
 
 
-:pushpin: **Prerequisite - Gradient**
+📌 **Prerequisite - Gradient**
 
 Let $\phi :\mathbb{R}^n\to\mathbb{R}$. The **gradient** of $\phi$ can be interpreted in the following:
 
@@ -2976,7 +2754,7 @@ $$
 
 
 
-:pushpin: **Definition: Differential of exterior derivative $d$**
+📌 **Definition: Differential of exterior derivative $d$**
 
 Before we getting into the definition, we were known the following:
 
@@ -2987,7 +2765,7 @@ Therefore, we have following definition:
 
 <img src="img/image-20211127171020854.png" alt="image-20211127171020854" style="zoom:50%;" />
 
-> ​	Definition:one:: As unique $1$-form such that applying to **any** vector field gives directional derivative along those directions
+> ​	Definition1️⃣: As unique $1$-form such that applying to **any** vector field gives directional derivative along those directions
 
 $$
 d\phi(X)=D_X\phi
@@ -3003,7 +2781,7 @@ $$
 
 
 
-:pushpin:**Comparison between Gradient and Differential**
+📌**Comparison between Gradient and Differential**
 
 | Distinction Label        | Gradient                                                     | Differential of Exterior Derivative                          |
 | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -3014,7 +2792,7 @@ $$
 
 
 
-:pushpin:**Transformation between Gradient and Differential**
+📌**Transformation between Gradient and Differential**
 
 - Gradient: it is *vector field*, **get measured**
 - Differential: it is *differential 1-form*, **to measure**
@@ -3041,7 +2819,7 @@ It goes up to be measured = sharp $\sharp$ = $\grad\phi=(d\phi)^{\sharp}$
 
 ### 4.4.4. Product Rule
 
-:pushpin:**Product Rule of Normal Derivative**
+📌**Product Rule of Normal Derivative**
 
 For any differentiable function
 $$
@@ -3061,7 +2839,7 @@ Its geometrical interpretation is:
 
 
 
-:pushpin:**Product Rule of Exterior Derivative $d$**
+📌**Product Rule of Exterior Derivative $d$**
 
 Let
 
@@ -3079,7 +2857,7 @@ The geometric intuition is:
 
 
 
-:pushpin:**"Recursive Evaluation" in product rule**
+📌**"Recursive Evaluation" in product rule**
 
 In short, "Recursive Evaluation" is to **eliminate** such *derivative* to *zero*.
 
@@ -3125,7 +2903,7 @@ $$
 
 
 
-:pushpin:**$d\circ d=0$**
+📌**$d\circ d=0$**
 
 Consider: 
 
@@ -3164,7 +2942,7 @@ $$
 
 
 
-:pushpin:**Comparison between `Curl of Gradient` and $d\circ d$**
+📌**Comparison between `Curl of Gradient` and $d\circ d$**
 
 > ​	Curl of Gradient:
 
@@ -3182,7 +2960,7 @@ $$
 
 ___
 
-:pushpin:**Comparison between `Curl` and $d$**
+📌**Comparison between `Curl` and $d$**
 
 **Vector Calculus**:
 
@@ -3233,7 +3011,7 @@ ___
 
 
 
-:pushpin:**$d\star \alpha$**
+📌**$d\star \alpha$**
 
 Suppose $\alpha=udx+vdy+wdz$, compute $d\star \alpha$
 $$
@@ -3254,7 +3032,7 @@ $$
 
 ___
 
-:pushpin:**Comparison between `Divergence` and $d\star \alpha $** 
+📌**Comparison between `Divergence` and $d\star \alpha $** 
 
 **Vector Calculus**:
 
@@ -3302,7 +3080,7 @@ ___
 
 
 
-:pushpin:**Summary - `Vector Derivative` VS `Exterior Derivative`**
+📌**Summary - `Vector Derivative` VS `Exterior Derivative`**
 
 <img src="img/exterior_vs_vector.jpg" alt="exterior_vs_vector" style="zoom:50%;" />
 
@@ -3312,7 +3090,7 @@ ___
 
 ### 4.4.6. Examples
 
-:pushpin:**Example 1**
+📌**Example 1**
 
 Let $\phi(x,y):=\frac{1}{2}e^{-(x^2+y^2)}$, compute $d\phi$:
 $$
@@ -3323,7 +3101,7 @@ d\phi&=\frac{\part\phi}{\part x}dx+\frac{\part\phi}{\part y}dy\\
 $$
 
 
-:pushpin:**Example 2**
+📌**Example 2**
 
 Let $\alpha(x,y)=xdx+ydy$, compute $d\alpha$:
 $$
@@ -3340,7 +3118,7 @@ d\alpha&=
 $$
 
 
-:pushpin:**Example 3**
+📌**Example 3**
 
 Let $\alpha(x,y)=xdx+ydy$, compute $d\star\alpha$:
 $$
@@ -3354,7 +3132,7 @@ $$
 
 ### 4.4.7. Summary
 
-:pushpin:**Transformation across differential $k$-forms**
+📌**Transformation across differential $k$-forms**
 
 We have following operators(算子):
 
@@ -3368,7 +3146,7 @@ Suppose $\Omega_k$ is differential $k$-form, we can have following transformatio
 
 
 
-:pushpin:**Operators as Ingredient**
+📌**Operators as Ingredient**
 
 Imagine if operators $A_1,B_1,C_1$ can compose operator $D_1$ in ***vector calculus***,
 
@@ -3405,7 +3183,7 @@ $$
 
 ### 4.5.1. Math Review
 
-:pushpin:**Integration of Area**
+📌**Integration of Area**
 
 Suppose you have a closed domain $\Omega$, and you want to compute its area.
 
@@ -3429,7 +3207,7 @@ $$
 
 
 
-:pushpin:**Integration of Scalar Functions**
+📌**Integration of Scalar Functions**
 
 Suppose you have a closed domain $\Omega$:
 
@@ -3452,7 +3230,7 @@ $$
 
 
 
-:pushpin:**Inner Product**
+📌**Inner Product**
 
 The basic inner product of 2 vectors in $\mathbb{R}^n$:
 $$
@@ -3466,7 +3244,7 @@ $$
 
 
 
-:pushpin:**Example - Euclidean Inner Product**
+📌**Example - Euclidean Inner Product**
 
 <img src="img/image-20211223151613390.png" alt="image-20211223151613390" style="zoom: 33%;" />
 $$
@@ -3482,7 +3260,7 @@ $$
 
 ### 4.5.2. Integration
 
-:pushpin:**Integration of Differential $2$-form**
+📌**Integration of Differential $2$-form**
 
 The differential $2$-form($\omega$) means producing an **area** by eating **2** vectors.
 $$
@@ -3496,7 +3274,7 @@ $$
 $$
 
 
-:pushpin:**Integration of Differential $2$-forms - Example**
+📌**Integration of Differential $2$-forms - Example**
 
 Consider a differential $2$-form($\omega$) on the unit square in the plane:
 $$
@@ -3514,7 +3292,7 @@ $$
 $$
 
 
-:pushpin:**Integration on Curve**
+📌**Integration on Curve**
 
 Suppose you have a curve $\gamma$:
 
@@ -3543,7 +3321,7 @@ $$
 $$
 
 
-:pushpin:**Integration on Curves - Example**
+📌**Integration on Curves - Example**
 
 Consider a constant differential $1$-form($\alpha$):
 $$
@@ -3575,7 +3353,7 @@ $$
 
 ### 4.5.3. Stoke's Theorem
 
-:pushpin:**What is Boundary?**
+📌**What is Boundary?**
 
 Let's denote the *boundary operator* as:
 $$
@@ -3587,7 +3365,7 @@ Then it can be applied to computation of domain and curve:
 
 
 
-:pushpin:**Basic Idea of Boundary**
+📌**Basic Idea of Boundary**
 
 At an interior point $p$ of a $k$-dimensional set the intersection of an open ball around $p$ with the set <u>looks like</u>[^1] an open $k$-ball; at a boundary point it doesn’t.
 
@@ -3599,7 +3377,7 @@ At an interior point $p$ of a $k$-dimensional set the intersection of an open ba
 
 
 
-:pushpin:**Boundary of Boundary**
+📌**Boundary of Boundary**
 
 Boundary of a boundary is always **empty**.
 
@@ -3609,7 +3387,7 @@ Boundary of a boundary is always **empty**.
 
 
 
-:pushpin:**Fundamental Theorem of Calculus**
+📌**Fundamental Theorem of Calculus**
 
 In short, the fundamental theorem of calculus can be illustrated as:
 $$
@@ -3621,7 +3399,7 @@ That simply said, the integral from $a$ to $b$ is the volume changed.
 
 
 
-:pushpin: **Stoke's Theorem**
+📌 **Stoke's Theorem**
 
 In one sentence, the theorem is said:
 $$
@@ -3629,7 +3407,7 @@ $$
 $$
 
 
-:pushpin:**Example - Divergence Theorem in the perspective of Stoke Theorem**
+📌**Example - Divergence Theorem in the perspective of Stoke Theorem**
 
 <img src="img/image-20211223115450793.png" alt="image-20211223115450793" style="zoom:33%;" />
 
@@ -3700,7 +3478,7 @@ $$
 
 
 
-:pushpin:**Example - Green Theorem in the perspective of Stoke Theorem**
+📌**Example - Green Theorem in the perspective of Stoke Theorem**
 
 <img src="img/image-20211223142540111.png" alt="image-20211223142540111" style="zoom:33%;" />
 
@@ -3764,7 +3542,7 @@ $$
 
 
 
-:pushpin:**Example - Fundamental Theorem of Calculus in the perspective of Stoke Theorem**
+📌**Example - Fundamental Theorem of Calculus in the perspective of Stoke Theorem**
 
 We know that the fundamental theorem of calculus can be seen as:
 $$
@@ -3782,7 +3560,7 @@ That is said, the integral of from $a$ to $b$ is the boundary which is the **2**
 
 
 
-:pushpin:**$d\circ d=0$ in the perspective of Stoke Theorem**
+📌**$d\circ d=0$ in the perspective of Stoke Theorem**
 
 In [Exterior Derivative](#445-exactness), we know that:
 $$
@@ -3802,7 +3580,7 @@ Intuitively, the boundary of boundary is empty:
 
 In this section, we will talk about the **<u>Inner Product</u>** on Differential $k$-Forms.
 
-:pushpin:**Definition**
+📌**Definition**
 
 Let $\alpha,\beta\in\Omega^k$ be any two differential $k$-forms. Their $L^2$ inner product is defined as:
 $$
@@ -3810,7 +3588,7 @@ $$
 $$
 
 
-:pushpin:**Example - Inner Product of Differential $1$-Forms**
+📌**Example - Inner Product of Differential $1$-Forms**
 
 Consider two differential $1$-form on the unit square $[0,1]\cross[0,1]$ given by:
 $$
@@ -3835,7 +3613,7 @@ $$
 
 ### 4.5.5. Summary
 
-:pushpin:**Integration & Stokes’ Theorem**
+📌**Integration & Stokes’ Theorem**
 
 > ​	Integration
 
@@ -3852,7 +3630,7 @@ $$
 
 
 
-:pushpin:**Constraint of Exterior Calculus**
+📌**Constraint of Exterior Calculus**
 
 For simplicity, we introduced exterior calculus in **flat spaces** ($\mathbb{R}^n$).:warning:
 
@@ -3862,32 +3640,32 @@ We cannot directly apply these idea to curve spaces!
 
 
 
-:pushpin:****
+📌****
 
 
 
-:pushpin:****
-
-
-
-
-
-:pushpin:****
-
-
-
-:pushpin:****
+📌****
 
 
 
 
 
-
-:pushpin:****
-
+📌****
 
 
-:pushpin:****
+
+📌****
+
+
+
+
+
+
+📌****
+
+
+
+📌****
 
 
 
@@ -4167,7 +3945,7 @@ SparseMatrix<size_t> SimplicialComplexOperators::buildFaceEdgeAdjacencyMatrix() 
 
 
 
-:pushpin: **What is `size_t`?**
+📌 **What is `size_t`?**
 
 It is a data structure define by the architect. Just remember it is related to the architecture of your device like `x32` or `x64`.
 
@@ -4181,13 +3959,13 @@ It is a data structure define by the architect. Just remember it is related to t
 
 
 
-:pushpin: **Recap of Adjacency Matrix**
+📌 **Recap of Adjacency Matrix**
 
 You can review [topological data structure](#24-topological-data-structures).
 
 
 
-:pushpin: **A0 and A1 Matrix**
+📌 **A0 and A1 Matrix**
 
 In the framework of `ddg-exercise`, they are:
 
@@ -4196,7 +3974,7 @@ In the framework of `ddg-exercise`, they are:
 
 
 
-:pushpin: **How to remember what is A0 and A1?**
+📌 **How to remember what is A0 and A1?**
 
 I would like to interpret this way.
 
@@ -4210,7 +3988,7 @@ e.g.
 
 
 
-:pushpin: **$E^0$/$A^0$ and $E^1$/$A^1$ matrix**
+📌 **$E^0$/$A^0$ and $E^1$/$A^1$ matrix**
 
 $E^0$/$A^0$ in short:
 
@@ -4233,7 +4011,7 @@ How to do it?
 
 
 
-:pushpin: **Algorithm**
+📌 **Algorithm**
 
 ```
 get the amount of vertices as nVertices
@@ -4252,7 +4030,7 @@ The data structure of Triplet is [here](https://eigen.tuxfamily.org/dox/classEig
 
 
 
-:pushpin: **Task 1 Solution**
+📌 **Task 1 Solution**
 
 ```c++
 SparseMatrix<size_t> SimplicialComplexOperators::buildVertexEdgeAdjacencyMatrix() const {
@@ -4276,7 +4054,7 @@ SparseMatrix<size_t> SimplicialComplexOperators::buildVertexEdgeAdjacencyMatrix(
 
 
 
-:pushpin: **Task 2 Solution**
+📌 **Task 2 Solution**
 
 It is similar to `Build Vertex-Edge Adjacency Matrix`, except you have to loop the edges of a face.
 
@@ -4345,7 +4123,7 @@ Vector<size_t> SimplicialComplexOperators::buildFaceVector(const MeshSubset& sub
 
 
 
-:pushpin: **What is the input? Recap of simplex**
+📌 **What is the input? Recap of simplex**
 
 Input is `MeshSubset& subset` which are **selected subset of simplices**.
 
@@ -4353,7 +4131,7 @@ For example, a manifold mesh is a simplicial COMPLEX. Its elements are simplices
 
 
 
-:pushpin: **What is XXX Vector exactly?**
+📌 **What is XXX Vector exactly?**
 
 It is a SPARSE vector whose dimension corresponds to the elements of simplicial complex.
 
@@ -4368,7 +4146,7 @@ Suppose it is a vertex vector above and it means the simplices are the **1st**, 
 
 
 
-:pushpin:**Solution**
+📌**Solution**
 
 ```c++
 Vector<size_t> SimplicialComplexOperators::buildVertexVector(const MeshSubset& subset) const {
@@ -4435,13 +4213,13 @@ To review the concept of `star`, `closure`, `link`, and `boundary`. Please click
 
 ![star_cpp](img/star_cpp.jpg)
 
-:pushpin:**Overview of `Star`**
+📌**Overview of `Star`**
 
 In short, the star of an object is what enclose it. For example, an edge encloses a point, a face encloses an edge. Therefore, the star of a subset is what encloses it.
 
 
 
-:pushpin:**Initial attempt**
+📌**Initial attempt**
 
 ```c++
 MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
@@ -4473,7 +4251,7 @@ MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
 
 
 
-:pushpin:**Evaluation of 1st attempt**
+📌**Evaluation of 1st attempt**
 
 There are **TWO** big shortages in my code.
 
@@ -4482,7 +4260,7 @@ There are **TWO** big shortages in my code.
 
 
 
-:pushpin:**Implementation**
+📌**Implementation**
 
 - The following `for` loop can be deleted since the second `for` loop will add faces from edges
 
@@ -4495,13 +4273,13 @@ for (Face f : mesh->vertex(iVertex).adjacentFaces())
 
 - To speed up computing, we can take advantage of Matrix-computing in Eigen library.
 
-  - :one: First, what encloses vertex, it is edge. Therefore, we can use `vertex-edge` adjacent matrix to have the edge vector
+  - 1️⃣ First, what encloses vertex, it is edge. Therefore, we can use `vertex-edge` adjacent matrix to have the edge vector
 
   - :two: Second, after adding edges, we can use `edge-face` adjacent matrix to have face vector.
 
 
 
-:pushpin:**Final Solution**
+📌**Final Solution**
 
 ```c++
 MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
@@ -4544,13 +4322,13 @@ MeshSubset SimplicialComplexOperators::star(const MeshSubset& subset) const {
 
 ![closure_cpp](img/closure_cpp.jpg)
 
-:pushpin:**Overview of `closure`**
+📌**Overview of `closure`**
 
 In short, the `closure` of a mesh subset is its downward level. For instance, the `closure` of a face is its edges and vertices. The `closure` of an edge is its vertices. There is no `closure` of a vertex since it has no downward level.
 
 
 
-:pushpin:**Initial Attempt**
+📌**Initial Attempt**
 
 ```c++
 MeshSubset SimplicialComplexOperators::closure(const MeshSubset& subset) const {
@@ -4588,7 +4366,7 @@ MeshSubset SimplicialComplexOperators::closure(const MeshSubset& subset) const {
 
 
 
-:pushpin:**Evaluation of 1st attempt**
+📌**Evaluation of 1st attempt**
 
 Same with the solution of `Star` , there are **TWO** big shortages in my code.
 
@@ -4597,7 +4375,7 @@ Same with the solution of `Star` , there are **TWO** big shortages in my code.
 
 
 
-:pushpin:**Implementation**
+📌**Implementation**
 
 - The following `for` loop can be deleted since the second `for` loop will add faces from edges
 
@@ -4610,12 +4388,12 @@ for (Vertex v : mesh->face(iFace).adjacentVertices())
 
 - To speed up computing, we can take advantage of Matrix-computing in Eigen library as we did in `Star`.
 
-  - :one: Use `face-edge` matrix and `edge-vertex` matrix, a downward solution
+  - 1️⃣ Use `face-edge` matrix and `edge-vertex` matrix, a downward solution
   - :two: Use matrix operation to speed up
 
 
 
-:pushpin:**Final Solution**
+📌**Final Solution**
 
 ```c++
 MeshSubset SimplicialComplexOperators::closure(const MeshSubset& subset) const {
@@ -4656,7 +4434,7 @@ MeshSubset SimplicialComplexOperators::closure(const MeshSubset& subset) const {
 
 ***Link*** $Lk(S)$ is equal to $Cl(St(S)) \backslash St(Cl(S))$ which means taking out the $star\space St(s)$ from $closure\space Cl(S)$. In the following diagram, $S$ is a vertex.
 
-:pushpin:**Solution**
+📌**Solution**
 
 With development of `Star` and `Closure`, the `Link` can be computed via $Cl(St(S)) \backslash St(Cl(S))$.
 
@@ -4676,11 +4454,11 @@ MeshSubset SimplicialComplexOperators::link(const MeshSubset& subset) const {
 
 ### 1.6 isComplex
 
-:pushpin: **Definition**
+📌 **Definition**
 
 A MeshSubset is a `complex` **if and only** if its `closure` is itself.
 
-:pushpin:**Assignment**
+📌**Assignment**
 
 The method is expected to return a `bool` to see if this is a `complex`.
 
@@ -4694,7 +4472,7 @@ bool SimplicialComplexOperators::isComplex(const MeshSubset& subset) const {
 
 
 
-:pushpin:**Solution**
+📌**Solution**
 
 ```c++
 bool SimplicialComplexOperators::isComplex(const MeshSubset& subset) const {
@@ -4709,11 +4487,11 @@ bool SimplicialComplexOperators::isComplex(const MeshSubset& subset) const {
 
 ### 1.7 isPureComplex
 
-:pushpin:**Definition**
+📌**Definition**
 
 A complex $K$ is a pure $k$-*simplicial complex* if every simplex $\sigma'\in K $ is contained in some simplex of degree $k$ (possibly itself).
 
-:pushpin: **Category**
+📌 **Category**
 
 The following is the category of $k$ degree.
 
@@ -4723,7 +4501,7 @@ The following is the category of $k$ degree.
 | 1-simplex   | An edge    |
 | 2-simplex   | A triangle |
 
-:pushpin:**Assignment**
+📌**Assignment**
 
 The method is expected to compute the degree of this meshsubset in `int`.
 
@@ -4735,7 +4513,7 @@ int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
 }
 ```
 
-:pushpin: **Illustration**
+📌 **Illustration**
 
 The diagram illustrates the degree of $k$ of a pure complex.
 
@@ -4745,7 +4523,7 @@ The diagram illustrates those NOT a complex. For example, the vertex of an edge 
 
 <img src="img/isPureComplex_Not.jpg" style="zoom:33%;" />
 
-:pushpin:**Solution**
+📌**Solution**
 
 It can be sliced into following steps:
 
@@ -4815,11 +4593,11 @@ int SimplicialComplexOperators::isPureComplex(const MeshSubset& subset) const {
 
 <img src="img/boundary_cpp.jpg" style="zoom:33%;" />
 
-:pushpin:**Definition**
+📌**Definition**
 
 ***Boundary*** $bd(K')$ is a pure $k$-subcomplex $K' \subseteq K$. The boundary is the closure of the set of all simplices $\sigma$ that are proper faces of exactly one simplex of $K'$.
 
-:pushpin:**Assignment**
+📌**Assignment**
 
 Return a meshsubset representing the boundary.
 
@@ -4831,7 +4609,7 @@ MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const 
 }
 ```
 
-:pushpin:**Solution**
+📌**Solution**
 
 ```c++
 MeshSubset SimplicialComplexOperators::boundary(const MeshSubset& subset) const {
