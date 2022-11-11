@@ -943,16 +943,6 @@ $$
 
 #### 3.4.1.1. Surface categorized via curvature
 
-📌 ***developable surface***
-
-___
-
-Definition: Surfaces with zero Gaussian curvature are called *developable surfaces* because they can be “***developed***” or flattened out into the plane without any stretching or tearing. e.g. 你可以把一张A4纸卷成一个圆柱体
-
-<img src="img/image-20210129164124483.png" alt="image-20210129164124483" style="zoom:50%;" />
-
-
-
 
 
 📌 ***minimal surfaces***
